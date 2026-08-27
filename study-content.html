@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/study-content.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Anton+SC&family=DM+Serif+Text:ital@0;1&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="hero">
+        <div class="nav">
+            <div class="background" id="background">
+                <button class="menu__icon" id="menu_icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="h1">
+                <h2 id="menuText">Menu</h2>
+            </div>
+            <div id="menu" class="menu">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="study.html"><i class="fa-solid fa-book"></i> Study</a>
+                <a href="practice.html"><i class="fa-solid fa-pen"></i> Practice</a>
+                <a href="project.html"><i class="fa-solid fa-laptop"></i> Project</a>
+                <a href="interview.html"><i class="fa-solid fa-microphone"></i> Interview</a>
+            </div>
+
+
+            <div class="header-details" style="margin-left: auto; display: flex; gap: 15px; padding-right: 20px;">
+                <span id="display-dept" class="label-box">Dept: --</span>
+                <span id="display-topic" class="label-box">Subject: --</span>
+            </div>
+        </div>
+        <hr>
+        <div class="main-container">
+
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3>TOPICS</h3>
+                </div>
+                <div class="topic-list" id="topic-list">
+                </div>
+                <div class="practice-section" style="margin-top: 30px; padding: 0 5px;">
+                    <button id="btn-practice-go" class="practice-btn">
+                        Practice Page
+                    </button>
+                </div>
+
+            </aside>
+            <hr class="vertical">
+
+            <!-- SECTION 2: Topic Content (Middle) -->
+            <main class="content-display">
+                <!-- Default View: Start-la idhu mattum theriyum -->
+                <div class="empty-state" id="empty-view">
+                    <h3>Select a topic</h3>
+                    <p>Click any topic from the left panel to start</p>
+                </div>
+
+                <!-- Questions View: Topic click panna idhu display aagum -->
+                <div id="topic-real-content" style="display:none;">
+                    <h2 id="current-topic-title">Topic Name</h2>
+                    <div class="separator"></div>
+                    <div id="questions-container">
+                        <!-- JS dynamic-ah questions-ah inga inject pannum -->
+                    </div>
+                </div>
+            </main>
+            <hr class="vertical2">
+            <!-- SECTION 3: Tools Sidebar (Right) -->
+            <aside class="tools-sidebar">
+                <!-- Study Timer Card -->
+                <div class="tool-card timer-card">
+                    <h4>STUDY TIMER</h4>
+                    <div class="timer-inputs">
+                        <div class="input-group">
+                            <input type="number" id="hr-input" placeholder="00" min="0" max="99">
+                            <label>Hours</label>
+                        </div>
+                        <span>:</span>
+                        <div class="input-group">
+                            <input type="number" id="min-input" placeholder="00" min="0" max="59">
+                            <label>Minutes</label>
+                        </div>
+                        <span>:</span>
+                        <div class="input-group">
+                            <input type="number" id="sec-input" placeholder="00" min="0" max="59">
+                            <label>Seconds</label>
+                        </div>
+                    </div>
+                    <div class="timer-display" style="font-size: 2rem; text-align: center; margin-bottom: 15px;">
+                        00:00:00</div>
+                    <div class="timer-controls">
+                        <button class="btn-start">Start</button>
+                        <button class="btn-pause">Pause</button>
+                        <button class="btn-reset">Reset</button>
+                    </div>
+                </div> <!-- Notes Card -->
+                <div class="tool-card notes-card">
+                    <h4>NOTES</h4>
+                    <textarea id="topic-notes" placeholder="Write your notes here..."></textarea>
+                    <div class="note-tools" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <!-- Navigation Buttons -->
+                        <button onclick="goBack()" id="btn-back"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                        <button onclick="goNext()" id="btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+
+                        <!-- Action Buttons -->
+                        <button onclick="saveCurrentTopic()">Save Topic</button>
+                        <button onclick="downloadFullNotes()">Download All</button>
+                        <button onclick="newTopic()">New Topic</button>
+                        <button onclick="clearCurrentNotes()">Clear</button>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+        <script src="JS/Question.js"></script>
+
+        <script src="JS/database-json.js"></script>
+
+        <script src="JS/study-content.js"></script>
+
+
+</body>
+
+</html>

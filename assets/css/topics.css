@@ -1,0 +1,167 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a1a6e 0%, #6c63ff 50%, #2d1b69 100%);
+      min-height: 100vh;
+      padding: 60px 24px;
+    }
+ 
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+ 
+    .section-title h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: white;
+      margin-bottom: 10px;
+    }
+ 
+    .section-title p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+    }
+ 
+    .highlight {
+      color: #a370f0;
+    }
+ 
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+ 
+    /* Card */
+    .card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 28px 24px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+ 
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 20px 20px 0 0;
+    }
+ 
+    .card::after {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, var(--accent), transparent 70%);
+      opacity: 0.12;
+      border-radius: 50%;
+      transition: opacity 0.3s ease;
+    }
+ 
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+ 
+    .card:hover::after {
+      opacity: 0.25;
+    }
+ 
+    /* Accent colors per card */
+    .card-web ,.card-physics { --accent: #bfe70d; }
+    .card-app ,.card-chemistry { --accent: #43e97b;}
+    .card-ai  ,.card-biology     { --accent: #f7971e; }
+    .card-data,.card-environ     { --accent: #38f9d7; }
+    .card-cyber ,.card-astro   { --accent: #ff6584; }
+    .card-cloud ,.card-biotech   { --accent: #4facfe; }
+    .card-python,.card-neuro   { --accent: #ffe259; }
+    .card-micro {--accent:#85062c;} 
+    .card-geology{--accent:#1a0344;}
+    /* Icon */
+    .card-icon {
+      width: 56px; height: 56px;
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+ 
+    /* Card content */
+    .card h3 {
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+ 
+    .card p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+ 
+    /* Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+ 
+    .tag {
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+ 
+    /* Card footer */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+ 
+    .card-badge {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+ 
+    .card-arrow {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+ 
+    .card:hover .card-arrow {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+      transform: rotate(45deg);
+    }

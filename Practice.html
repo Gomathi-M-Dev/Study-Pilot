@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning</title>
+
+    <link rel="icon" href="./img/Rocket .jpeg">
+    <link rel="stylesheet" href="./assets/css/study.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Anton+SC&family=DM+Serif+Text:ital@0;1&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <!-- Background Image -->
+        <img class="img" src="./assets/img/Background4.jpeg">
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="categories">
+                <img class="logo" src="./assets/img/Rocket icon.png">
+                <h1 class="web-name">StudyPilot</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="study.html">Study</a></li>
+                <li><a href="Practice.html">Practice</a></li>
+                <li><a href="http://localhost:5173/SkillPilot-React/">Project</a></li>
+                <li><a href="interview.html">Interview</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1 class="content1">Start Building Your Future Today</h1>
+
+            <img src="./assets/img/Book.png" class="book-img">
+
+
+        </div>
+        <div class="input-wrapper">
+            <div class="custom-select" id="deptSelect">
+                <div class="select-selected" id="selectBox">
+                    <span id="selectText">Select Department</span>
+                    <span class="arrow">▼</span>
+                </div>
+
+                <div class="select-options" id="optionsList">
+                    <div class="select-option placeholder" data-value="">Select Department</div>
+                    <div class="select-option" data-value="cs"><span class="opt-icon">💻</span> CS/IT</div>
+                    <div class="select-option" data-value="science"><span class="opt-icon">🔬</span>Science</div>
+                    <div class="select-option" data-value="arts"><span class="opt-icon">🎨</span>Arts</div>
+                    <div class="select-option" data-value="maths"><span class="opt-icon">📐</span>Maths</div>
+                    <div class="select-option" data-value="engineer"><span class="opt-icon">📐</span>Engineer</div>
+                    <div class="select-option" data-value="commerce"><span class="opt-icon">💼</span>Commerce</div>
+                    <div class="select-option" data-value="law"><span class="opt-icon">📖</span>Law</div>
+                    <div class="select-option" data-value="MBA"><span class="opt-icon">🗣️</span>MBA</div>
+                    <div class="select-option" data-value="agri"><span class="opt-icon">📐</span>Agriculture</div>
+
+                </div>
+                <div class="btn">
+                    <button class="cssbuttons-io-button">
+                        Get started
+                        <div class="icon">
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+</body>
+<script>
+    const selectBox = document.getElementById('selectBox');
+    const selectText = document.getElementById('selectText');
+    const optionsList = document.getElementById('optionsList');
+
+    selectBox.addEventListener('click', () => {
+        selectBox.classList.toggle('active');
+        optionsList.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.select-option').forEach(option => {
+        option.addEventListener('click', function () {
+            const value = this.dataset.value;
+            if (!value) return;
+
+            selectText.textContent = this.textContent.trim();
+            selectBox.classList.add('has-value');
+
+            document.querySelectorAll('.select-option').forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+
+            selectBox.classList.remove('active');
+            optionsList.classList.remove('open');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!document.getElementById('deptSelect').contains(e.target)) {
+            selectBox.classList.remove('active');
+            optionsList.classList.remove('open');
+        }
+    });
+    let selectedDept = "";
+
+    document.querySelectorAll('.select-option').forEach(option => {
+        option.addEventListener('click', function () {
+            selectedDept = this.dataset.value;
+        });
+    });
+
+    const startBtn = document.querySelector('.cssbuttons-io-button');
+
+    startBtn.addEventListener('click', () => {
+        if (!selectedDept) {
+            alert("Select any Department");
+            return;
+        }
+
+        localStorage.setItem("dept", selectedDept);
+        localStorage.setItem("mode", "practice");
+        window.location.href =`${selectedDept}.html`;
+
+
+
+    });
+</script>
+<script src="JS/topic.js"></script>
+
+</html>

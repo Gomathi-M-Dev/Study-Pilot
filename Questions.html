@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/question.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo"><span>✈️</span> StudyPilot</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="study.html">Study</a></li>
+            <li><a href="Practice.html">Practice</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="interview.html">Interview</a></li>
+        </ul>
+    </nav>
+
+    <div class="breadcrumb">
+        <span>Practice</span><span class="sep">›</span>
+        <span id="breadcrumb-dept">-</span><span class="sep">›</span>
+        <span class="active" id="breadcrumb-topic">-</span>
+    </div>
+
+    <div class="page-header">
+        <div class="topic-badge" id="topic-badge">📚 Topic</div>
+        <h1>Practice <span>Questions</span></h1>
+        <p id="topic-desc">Test your knowledge</p>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-number" id="total-count">0</div>
+            <div class="stat-label">Total</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number" id="easy-count" style="color:#43e97b;">0</div>
+            <div class="stat-label">Easy</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number" id="medium-count" style="color:#ffe259;">0</div>
+            <div class="stat-label">Medium</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number" id="hard-count" style="color:#ff6584;">0</div>
+            <div class="stat-label">Hard</div>
+        </div>
+    </div>
+
+    <div class="filter-tabs">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="Easy">Easy</button>
+        <button class="tab" data-filter="Medium">Medium</button>
+        <button class="tab" data-filter="Hard">Hard</button>
+    </div>
+
+    <div class="questions-wrapper" id="questions-container">
+        <div class="loading">⏳ Loading questions...</div>
+    </div>
+    <div id="questions-container" class="layout-panel-grid">
+    </div>
+
+    <div class="action-footer-row">
+        <button id="complete-assessment-trigger-btn" onclick="evaluateAssessmentAnswers()"
+            class="assessment-trigger-btn" style="display: none;">Complete Assessment</button>
+    </div>
+    </div>
+
+    <div id="assessment-score-overlay" class="assessment-blur-screen-overlay hide">
+        <div class="gauge-dynamic-presentation-box" style="position: relative;">
+
+            <svg class="gauge-vector-canvas" viewBox="0 0 200 120">
+                <path class="gauge-track-line" d="M 25 110 A 75 75 0 0 1 175 110" fill="none"
+                    stroke="rgba(255, 255, 255, 0.05)" stroke-width="10" stroke-linecap="round" />
+                <path id="gauge-progress" class="gauge-dynamic-fill" d="M 25 110 A 75 75 0 0 1 175 110" fill="none"
+                    stroke="url(#reference-speed-gradient)" stroke-width="10" stroke-linecap="round" />
+                <defs>
+                    <linearGradient id="reference-speed-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff6b81" />
+                        <stop offset="50%" stop-color="#ffa502" />
+                        <stop offset="100%" stop-color="#2ed573" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <div class="gauge-numerical-core">
+                <span id="score-percentage-text" class="minimal-score-val">0%</span>
+                <span class="minimal-score-tag">SCORE</span>
+            </div>
+
+            <div id="gauge-rotator-group" class="gauge-rotator-harness">
+                <div class="indicator-pointer-node"></div>
+            </div>
+
+            <div class="avatar-illustration-container"
+                style="position: absolute !important; transform: rotate(0deg) !important; animation: none !important;">
+                <div id="avatar-speech-bubble" class="speech-bubble-popup" style="transform: rotate(0deg) !important;">
+                    Keep going! 💪</div>
+
+                <div id="avatar-render-graphics" class="avatar-dynamic-graphic-box class-high-zone"
+                    style="transform: rotate(0deg) !important;">
+                    <div class="character-hair"></div>
+                    <div class="character-face">
+                        <div class="char-eye left"></div>
+                        <div class="char-eye right"></div>
+                        <div class="char-mouth"></div>
+                    </div>
+                    <div class="character-suit-body"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="minimal-banner-row">
+            <button id="score-status-banner-btn" onclick="location.reload()" class="minimal-status-btn-badge">👍 Good
+                Work!</button>
+        </div>
+    </div>
+    <script src="./JS/Question.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    width: 88%;
+    height: 525px;
+}
+
+/* Background */
+.img {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 7%;
+    border: 1px solid tr;
+    border-radius: 18px;
+    transition:
+        transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    will-change: transform;
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), 0 20px 40px rgba(0, 0, 0, 0.4);
+
+}
+
+.img:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), 0 20px 40px rgba(0, 0, 0, 0.5);
+
+
+}
+
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    margin-left: 125px;
+    margin-top: 45px;
+    border: 1px solid tr;
+    border-radius: 18px;
+    transition:
+        transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    will-change: transform;
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), 0 20px 40px rgba(0, 0, 0, 0.4);
+
+
+}
+
+.web-name {
+    color: white;
+    margin-top: 40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-weight: bold;
+
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 160px;
+    list-style: none;
+    margin-top: 40px;
+}
+
+li {
+    margin-right: -120px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Content */
+.content {
+    display: flex;
+    position: absolute;
+    top: 25%;
+    left: 8%;
+}
+
+.content1 {
+    width: 50%;
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: 78px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+
+.input-wrapper {
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    gap: 10px;
+
+}
+button {
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
+
+/* From Uiverse.io by adamgiebl */ 
+.cssbuttons-io-button {
+  background: #a370f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}

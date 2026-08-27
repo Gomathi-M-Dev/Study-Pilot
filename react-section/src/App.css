@@ -1,0 +1,13 @@
+.start{
+  display: flex;
+  gap:15px
+}
+
+.btn1,.btn2{
+  background-color: rgb(214, 26, 57);
+  color: black;
+  border-radius: 8px;
+  width:40px;
+  padding: 12px;
+  text-align: center;
+}
