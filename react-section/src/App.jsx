@@ -9,16 +9,108 @@ import Button from "./components/Button";
 import Product_card from "./components/Product-card";
 import e_commerce from "./assets/e-commerce.png";
 import logo from "./assets/rocket.png";
+import Projects from './pages/Project';
 
 
 
+const courses = {
+  "Computer Science": [
+    "IT",
+    "DS",
+    "AI",
+    "ML"
+  ],
 
+  "Science": [
+    "Physics",
+    "Chemistry",
+    "Botany",
+    "Zoology",
+    "Maths"
+  ],
+
+  "Arts": [
+    "Tamil",
+    "English",
+    "History",
+    "Economics"
+  ],
+
+  "Engineering": [
+    "CSE",
+    "ECE",
+    "EEE",
+    "Civil"
+  ],
+
+  "Commerce": [
+    "B.Com",
+    "CA",
+    "Accounting & Finance",
+    "BBA"
+  ]
+};
+const technologies = {
+
+  "Computer Science": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Tailwind",
+    "Next.js",
+    "TypeScript",
+    "Python",
+    "FastAPI",
+    "Chart.js"
+  ],
+
+  "Science": [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "JavaScript",
+    "React"
+  ],
+
+  "Arts": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Canva",
+    "Figma"
+  ],
+
+  "Engineering": [
+    "C",
+    "C++",
+    "Java",
+    "Python",
+    "MATLAB",
+    "Arduino"
+  ],
+
+  "Commerce": [
+    "Excel",
+    "SQL",
+    "Python",
+    "Power BI",
+    "Tableau",
+    "JavaScript"
+  ]
+
+};
 function Project() {
   const [selectDept, setSelectDept] = useState("");
-  const [selectCourse, setSelectCourse]= useState("");
+  const [selectCourse, setSelectCourse] = useState("");
   const [selectLevel, setSelectLevel] = useState("");
   const [selectTech, setSelectTech] = useState("");
   const [selectSort, setSelectSort] = useState("");
+  const selectedCourses = courses[selectDept] || [];
+  const selectedTech = technologies[selectDept] || [];
+
+
 
   return (
     <>
@@ -86,9 +178,8 @@ function Project() {
             <div className='flex justify-between items-center mt-[30px] gap-2'>
               <div className="relative w-48">
                 <details className="group">
-
-                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm text-black/70  bg-white px-4 py-2 font-semibold">
-                    <span>Select Departments</span>
+                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm text-black/70 bg-white px-4 py-2 font-semibold">
+                    <span>{selectDept || "Select Departments"}</span>
 
                     <svg
                       className="h-4 w-4 transition-transform group-open:rotate-180"
@@ -97,38 +188,77 @@ function Project() {
                     >
                       <path
                         fillRule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 1.04l-4.25-4.5a.75.75 0 01.02-1.06z"
                         clipRule="evenodd"
                       />
                     </svg>
                   </summary>
 
                   <div className="absolute left-0 top-full z-50 mt-1 w-full rounded-md border border-gray-200 bg-white text-start shadow-lg">
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectDept("CS")}>
-                      💻CS
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectDept("Science")}>
-                      🔬Science
+
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectDept("Computer Science");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      💻 Computer Science
                     </a>
 
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectDept("Arts")}>
-                      🎨Arts
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectDept("Science");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      🔬 Science
                     </a>
 
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectDept("Engineering")}>
-                      📐Engineering
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectDept("Arts");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      🎨 Arts
                     </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectDept("Commerce")}>
-                      💼Commerce
+
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectDept("Engineering");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      📐 Engineering
                     </a>
+
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectDept("Commerce");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      💼 Commerce
+                    </a>
+
                   </div>
                 </details>
               </div>
               <div className="relative w-48">
-                <details className="group">
 
-                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm text-black/70  bg-white px-4 py-2 font-semibold">
-                    <span>Select Course</span>
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm text-black/70 bg-white px-4 py-2 font-semibold" onClick={(e) => {
+                    if (selectDept === "") {
+                      e.preventDefault();
+                      alert("Please select a department first");
+                    }
+                  }}>
+                    <span>{selectCourse || "Select Course"}</span>
 
                     <svg
                       className="h-4 w-4 transition-transform group-open:rotate-180"
@@ -137,130 +267,98 @@ function Project() {
                     >
                       <path
                         fillRule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 1.04l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+
+                  </summary>
+
+                  <div className="absolute left-0 top-full z-50 mt-1 w-full rounded-md border border-gray-200 bg-white text-start shadow-lg">
+
+                    {selectedCourses.map((course) => (
+                      <a
+                        key={course}
+                        className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                        onClick={(e) => {
+                          setSelectCourse(course);
+                          e.currentTarget.closest("details").open = false;
+                        }}
+                      >
+                        {course}
+                      </a>
+                    ))}
+
+                  </div>
+                </details>              </div>
+
+              <div className="relative w-48">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm text-black/70 bg-white px-4 py-2 font-semibold" onClick={(e) => {
+                    if (selectDept === "") {
+                      e.preventDefault();
+                      alert("Please select a department first");
+                    }
+                  }}>
+                    <span>{selectLevel || "Select Level"}</span>
+
+                    <svg
+                      className="h-4 w-4 transition-transform group-open:rotate-180"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 1.04l-4.25-4.5a.75.75 0 01.02-1.06z"
                         clipRule="evenodd"
                       />
                     </svg>
                   </summary>
 
                   <div className="absolute left-0 top-full z-50 mt-1 w-full rounded-md border border-gray-200 bg-white text-start shadow-lg">
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("IT")}>
-                      💻IT
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("DS")}>
-                      💻DS
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("AI")}>
-                      💻AI
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("ML")}>
-                      💻ML
-                    </a>
 
-
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("Physics")}>
-                      🔬Physics
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("Chemistry")}>
-                      🔬Chemistry
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("Botony")}>
-                      🔬Botony
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("Zoology")}>
-                      🔬Zoology
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("Maths")}>
-                      🔬Maths
-                    </a>
-
-
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("Tamil")}>
-                      🎨Tamil
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("English")}>
-                      🎨English
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("History")}>
-                      🎨Histroy
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("Economic")}>
-                      🎨Economic
-                    </a>
-
-
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("CSE")}>
-                      📐CSE
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("ECE")}>
-                      📐ECE
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("EEE")}>
-                      📐EEE
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("Civil")}>
-                      📐Civil
-                    </a>
-
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("B.com")}>
-                      💼B.com
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("CA")}>
-                      💼CA
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("A&F")}>
-                      💼Accounting & Finiance
-                    </a>
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectCourse("BBA")}>
-                      💼BBA
-                    </a>
-
-                  </div>
-
-                </details>
-              </div>
-
-              <div className="relative w-48">
-                <details className="group">
-
-                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm   text-black/70 border-gray-300 bg-white px-4 py-2 font-semibold">
-                    <span>Select Level</span>
-
-                    <svg
-                      className="h-4 w-4 transition-transform group-open:rotate-180"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectLevel("Beginner");
+                        e.currentTarget.closest("details").open = false;
+                      }}
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </summary>
-
-                  <div className="absolute left-0 top-full z-50 mt-1 w-full rounded-md border border-gray-200 bg-white shadow-lg">
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectLevel("Basic")}>
                       Basic
                     </a>
 
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectLevel("Intermediate")}>
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectLevel("Intermediate");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
                       Intermediate
                     </a>
 
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectLevel("Advance")}>
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectLevel("Advanced");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
                       Advance
                     </a>
 
                   </div>
-
                 </details>
               </div>
               <div className="relative w-48">
                 <details className="group">
-
-                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm  text-black/70 border-gray-300 bg-white px-4 py-2 font-semibold">
-                    <span>Select Technologies</span>
+                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm text-black/70 bg-white px-4 py-2 font-semibold" onClick={(e) => {
+                    if (selectDept === "") {
+                      e.preventDefault();
+                      alert("Please select a department first");
+                    }
+                  }}>
+                    <span>{selectTech || "Select Technologies"}</span>
 
                     <svg
                       className="h-4 w-4 transition-transform group-open:rotate-180"
@@ -269,37 +367,35 @@ function Project() {
                     >
                       <path
                         fillRule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 1.04l-4.25-4.5a.75.75 0 01.02-1.06z"
                         clipRule="evenodd"
                       />
                     </svg>
+
                   </summary>
 
-                  <div className="absolute left-0 top-full z-50 mt-1 w-full rounded-md border border-gray-200 bg-white shadow-lg">
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectTech("HTML")}>
-                      HTML
-                    </a>
+                  <div className="absolute left-0 top-full z-50 mt-1 w-full rounded-md border border-gray-200 bg-white text-start shadow-lg">
 
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectTech("CSS")}>
-                      CSS
-                    </a>
+                    {selectedTech.map((technologies) => (
+                      <a
+                        key={technologies}
+                        className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                        onClick={(e) => {
+                          setSelectTech(technologies);
+                          e.currentTarget.closest("details").open = false;
+                        }}
+                      >
+                        {technologies}
+                      </a>
+                    ))}
 
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectTech("JavaScript")}>
-                      JavaScript
-                    </a>
-
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectTech("React")}>
-                      React
-                    </a>
                   </div>
-
                 </details>
               </div>
               <div className="relative w-48">
                 <details className="group">
-
-                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm  text-black/70 bg-white px-4 py-2 font-semibold">
-                    <span>Short by Popular</span>
+                  <summary className="flex cursor-pointer list-none items-center justify-between rounded-md text-sm text-black/70 bg-white px-4 py-2 font-semibold">
+                    <span>{selectSort || "Sort by Popular"}</span>
 
                     <svg
                       className="h-4 w-4 transition-transform group-open:rotate-180"
@@ -308,30 +404,65 @@ function Project() {
                     >
                       <path
                         fillRule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 1.04l-4.25-4.5a.75.75 0 01.02-1.06z"
                         clipRule="evenodd"
                       />
                     </svg>
                   </summary>
 
-                  <div className="absolute left-0 top-full z-50 mt-1 w-full rounded-md border border-gray-200 bg-white shadow-lg">
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectSort("Development")}>
-                      Development
+                  <div className="absolute left-0 top-full z-50 mt-1 w-full rounded-md border border-gray-200 bg-white text-start shadow-lg">
+
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectSort("Most Popular");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      Most Popular
                     </a>
 
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectSort("Design")}>
-                      Design
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectSort("Highest Rated");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      Highest Rated
                     </a>
 
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectSort("Marketting")}>
-                      Marketing
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectSort("Newest");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      Newest
                     </a>
 
-                    <a className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:bg-blue-500 hover:text-white" onClick={() => setSelectSort("SEO")}>
-                      SEO
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectSort("Shortest Duration");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      Shortest Duration
                     </a>
+
+                    <a
+                      className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
+                      onClick={(e) => {
+                        setSelectSort("Longest Duration");
+                        e.currentTarget.closest("details").open = false;
+                      }}
+                    >
+                      Longest Duration
+                    </a>
+
                   </div>
-
                 </details>
               </div>
               <div>
@@ -348,12 +479,7 @@ function Project() {
         </section>
         <section>
           <div className='container mx-auto py-2 px-4 mt-[30px]'>
-            <div className='grid grid-cols-4 gap-4'>
-              <Product_card image={e_commerce} name="E-commerce" paragraph="A full-Stack e-commerce web app with card,orders and payments" Tech_1="HTML" Tech_2="CSS" Tech_3="JavaScript" Days="10 Days" level="Beginner" rating="4.6 (120)" bg1="bg-red-200" text1="text-red-600" bg2="bg-purple-200" text2="text-purple-600" bg3="bg-fuchsia-200" text3="text-fuchsia-600" />
-              <Product_card image={task} name="Task Management App" paragraph="A full-Stack e-commerce web app with card,orders and payments" Tech_1="React" Tech_2="Tailwind" Tech_3="JavaScript" Days="7 Days" level="Intermediate" rating="4.7 (98)" bg1="bg-orange-200" text1="text-orange-600" bg2="bg-yellow-200" text2="text-yellow-600" bg3="bg-red-200" text3="text-red-600" />
-              <Product_card image={analytics} name="Analytics Dashboard" paragraph="A full-Stack e-commerce web app with card,orders and payments" Tech_1="Next.js" Tech_2="TypeScript" Tech_3="Chart.js" Days="14 Days" level="Advanced" rating="4.6 (78)" bg1="bg-pink-200" text1="text-pink-600" bg2="bg-blue-200" text2="text-blue-600" bg3="bg-neutral-200" text3="text-neutral-600" />
-              <Product_card image={blog} name="Blog Website" paragraph="A full-Stack e-commerce web app with card,orders and payments" Tech_1="HTML" Tech_2="Tailwind" Tech_3="JavaScript" Days="5 Days" level="Beginner" rating="4.5 (64)" bg1="bg-green-200" text1="text-green-800" bg2="bg-rose-200" text2="text-rose-600" bg3="bg-orange-200" text3="text-orange-600" />
-            </div>
+            <Projects selectDept={selectDept} selectCourse={selectCourse} selectLevel={selectLevel} selectTech={selectTech} selectSort={selectSort} />
             <div className='flex justify-center items-center mt-6'>
               <button className='flex gap-2 bg-blue-800 px-6 py-2 rounded-lg text-[16px] text-white font-semibold '>View All Project
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mt-1">
@@ -574,7 +700,7 @@ function Project() {
             </div>
           </div>
         </section>
-      </main>
+      </main >
       <footer className="bg-[#0B0750] mt-10 text-white">
         <div className="container mx-auto px-6 py-12">
 
@@ -708,7 +834,8 @@ function Project() {
           </div>
 
         </div>
-      </footer>    </>
+      </footer>
+    </>
   )
 }
 export default Project
