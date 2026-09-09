@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import Product_card from "../components/Product-card";
 import e_commerce from "../assets/e-commerce.png";
 import task from "../assets/Task - Manager.png";
@@ -19,7 +20,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "10 Days",
         rating: "4.6",
-        views: "(120)",
+        views: "120",
         bg1: "bg-red-200",
         text1: "text-red-600",
         bg2: "bg-purple-200",
@@ -40,7 +41,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "7 Days",
         rating: "4.7",
-        views: "(98)",
+        views: "98",
         bg1: "bg-orange-200",
         text1: "text-orange-600",
         bg2: "bg-yellow-200",
@@ -61,7 +62,7 @@ const projects = [
         Tech_3: "Chart.js",
         Days: "7 Days",
         rating: "4.7",
-        views: "(98)",
+        views: "98",
         bg1: "bg-orange-200",
         text1: "text-orange-600",
         bg2: "bg-yellow-200",
@@ -82,7 +83,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "7 Days",
         rating: "4.7",
-        views: "(98)",
+        views: "98",
         bg1: "bg-orange-200",
         text1: "text-orange-600",
         bg2: "bg-yellow-200",
@@ -103,7 +104,7 @@ const projects = [
         Tech_3: "FastAPI",
         Days: "12 Days",
         rating: "4.8",
-        views: "(150)",
+        views: "150",
         bg1: "bg-green-200",
         text1: "text-green-600",
         bg2: "bg-blue-200",
@@ -124,7 +125,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "5 Days",
         rating: "4.6",
-        views: "(85)",
+        views: "85",
         bg1: "bg-cyan-200",
         text1: "text-cyan-600",
         bg2: "bg-indigo-200",
@@ -146,7 +147,7 @@ const projects = [
         Tech_3: "Tailwind",
         Days: "8 Days",
         rating: "4.7",
-        views: "(92)",
+        views: "92",
         bg1: "bg-emerald-200",
         text1: "text-emerald-600",
         bg2: "bg-yellow-200",
@@ -168,7 +169,7 @@ const projects = [
         Tech_3: "FastAPI",
         Days: "10 Days",
         rating: "4.8",
-        views: "(110)",
+        views: "110",
         bg1: "bg-sky-200",
         text1: "text-sky-600",
         bg2: "bg-orange-200",
@@ -190,7 +191,7 @@ const projects = [
         Tech_3: "Pandas",
         Days: "15 Days",
         rating: "4.9",
-        views: "(134)",
+        views: "134",
         bg1: "bg-rose-200",
         text1: "text-rose-600",
         bg2: "bg-teal-200",
@@ -211,7 +212,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "7 Days",
         rating: "4.6",
-        views: "(85)",
+        views: "85",
         bg1: "bg-blue-200",
         text1: "text-blue-600",
         bg2: "bg-purple-200",
@@ -233,7 +234,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "10 Days",
         rating: "4.7",
-        views: "(102)",
+        views: "102",
         bg1: "bg-green-200",
         text1: "text-green-600",
         bg2: "bg-blue-200",
@@ -255,7 +256,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "8 Days",
         rating: "4.5",
-        views: "(76)",
+        views: "76",
         bg1: "bg-green-200",
         text1: "text-green-600",
         bg2: "bg-pink-200",
@@ -277,7 +278,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "5 Days",
         rating: "4.8",
-        views: "(135)",
+        views: "135",
         bg1: "bg-orange-200",
         text1: "text-orange-600",
         bg2: "bg-blue-200",
@@ -299,7 +300,7 @@ const projects = [
         Tech_3: "Chart.js",
         Days: "12 Days",
         rating: "4.9",
-        views: "(160)",
+        views: "160",
         bg1: "bg-indigo-200",
         text1: "text-indigo-600",
         bg2: "bg-green-200",
@@ -320,7 +321,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "8 Days",
         rating: "4.7",
-        views: "(90)",
+        views: "90",
         bg1: "bg-sky-200",
         text1: "text-sky-600",
         bg2: "bg-indigo-200",
@@ -342,7 +343,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "6 Days",
         rating: "4.6",
-        views: "(82)",
+        views: "82",
         bg1: "bg-green-200",
         text1: "text-green-600",
         bg2: "bg-yellow-200",
@@ -364,7 +365,7 @@ const projects = [
         Tech_3: "Chart.js",
         Days: "10 Days",
         rating: "4.8",
-        views: "(115)",
+        views: "115",
         bg1: "bg-emerald-200",
         text1: "text-emerald-600",
         bg2: "bg-lime-200",
@@ -386,7 +387,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "7 Days",
         rating: "4.7",
-        views: "(105)",
+        views: "105",
         bg1: "bg-violet-200",
         text1: "text-violet-600",
         bg2: "bg-blue-200",
@@ -407,7 +408,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "6 Days",
         rating: "4.6",
-        views: "(82)",
+        views: "82",
         bg1: "bg-orange-200",
         text1: "text-orange-600",
         bg2: "bg-red-200",
@@ -429,7 +430,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "7 Days",
         rating: "4.7",
-        views: "(96)",
+        views: "96",
         bg1: "bg-rose-200",
         text1: "text-rose-600",
         bg2: "bg-orange-200",
@@ -451,7 +452,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "8 Days",
         rating: "4.8",
-        views: "(120)",
+        views: "120",
         bg1: "bg-blue-200",
         text1: "text-blue-600",
         bg2: "bg-indigo-200",
@@ -473,7 +474,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "6 Days",
         rating: "4.6",
-        views: "(88)",
+        views: "88",
         bg1: "bg-cyan-200",
         text1: "text-cyan-600",
         bg2: "bg-blue-200",
@@ -495,7 +496,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "7 Days",
         rating: "4.7",
-        views: "(91)",
+        views: "91",
         bg1: "bg-amber-200",
         text1: "text-amber-600",
         bg2: "bg-yellow-200",
@@ -517,7 +518,7 @@ const projects = [
         Tech_3: "Leaflet",
         Days: "10 Days",
         rating: "4.8",
-        views: "(105)",
+        views: "105",
         bg1: "bg-stone-200",
         text1: "text-stone-600",
         bg2: "bg-orange-200",
@@ -539,7 +540,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "8 Days",
         rating: "4.7",
-        views: "(98)",
+        views: "98",
         bg1: "bg-green-200",
         text1: "text-green-600",
         bg2: "bg-emerald-200",
@@ -561,7 +562,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "12 Days",
         rating: "4.9",
-        views: "(132)",
+        views: "132",
         bg1: "bg-blue-200",
         text1: "text-blue-600",
         bg2: "bg-green-200",
@@ -583,7 +584,7 @@ const projects = [
         Tech_3: "API",
         Days: "10 Days",
         rating: "4.8",
-        views: "(115)",
+        views: "115",
         bg1: "bg-purple-200",
         text1: "text-purple-600",
         bg2: "bg-pink-200",
@@ -604,7 +605,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "8 Days",
         rating: "4.6",
-        views: "(92)",
+        views: "92",
         bg1: "bg-blue-200",
         text1: "text-blue-600",
         bg2: "bg-purple-200",
@@ -626,7 +627,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "10 Days",
         rating: "4.8",
-        views: "(125)",
+        views: "125",
         bg1: "bg-indigo-200",
         text1: "text-indigo-600",
         bg2: "bg-blue-200",
@@ -648,7 +649,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "7 Days",
         rating: "4.7",
-        views: "(88)",
+        views: "88",
         bg1: "bg-green-200",
         text1: "text-green-600",
         bg2: "bg-cyan-200",
@@ -670,7 +671,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "12 Days",
         rating: "4.9",
-        views: "(110)",
+        views: "110",
         bg1: "bg-purple-200",
         text1: "text-purple-600",
         bg2: "bg-pink-200",
@@ -692,7 +693,7 @@ const projects = [
         Tech_3: "Chart.js",
         Days: "9 Days",
         rating: "4.7",
-        views: "(95)",
+        views: "95",
         bg1: "bg-yellow-200",
         text1: "text-yellow-600",
         bg2: "bg-orange-200",
@@ -714,7 +715,7 @@ const projects = [
         Tech_3: "Chart.js",
         Days: "12 Days",
         rating: "4.8",
-        views: "(108)",
+        views: "108",
         bg1: "bg-amber-200",
         text1: "text-amber-600",
         bg2: "bg-green-200",
@@ -736,7 +737,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "6 Days",
         rating: "4.6",
-        views: "(78)",
+        views: "78",
         bg1: "bg-orange-200",
         text1: "text-orange-600",
         bg2: "bg-yellow-200",
@@ -758,7 +759,7 @@ const projects = [
         Tech_3: "JavaScript",
         Days: "10 Days",
         rating: "4.7",
-        views: "(86)",
+        views: "86",
         bg1: "bg-stone-200",
         text1: "text-stone-600",
         bg2: "bg-orange-200",
@@ -780,7 +781,7 @@ const projects = [
         Tech_3: "Chart.js",
         Days: "14 Days",
         rating: "4.9",
-        views: "(140)",
+        views: "140",
         bg1: "bg-violet-200",
         text1: "text-violet-600",
         bg2: "bg-blue-200",
@@ -801,7 +802,7 @@ const projects = [
         Tech_3: "Power BI",
         Days: "7 Days",
         rating: "4.6",
-        views: "(84)",
+        views: "84",
         bg1: "bg-blue-200",
         text1: "text-blue-600",
         bg2: "bg-green-200",
@@ -823,7 +824,7 @@ const projects = [
         Tech_3: "Power BI",
         Days: "10 Days",
         rating: "4.8",
-        views: "(112)",
+        views: "112",
         bg1: "bg-orange-200",
         text1: "text-orange-600",
         bg2: "bg-yellow-200",
@@ -845,7 +846,7 @@ const projects = [
         Tech_3: "SQL",
         Days: "12 Days",
         rating: "4.9",
-        views: "(128)",
+        views: "128",
         bg1: "bg-indigo-200",
         text1: "text-indigo-600",
         bg2: "bg-blue-200",
@@ -866,7 +867,8 @@ const projects = [
         Tech_2: "Python",
         Tech_3: "SQL",
         Days: "8 Days",
-        rating: "4.7 (96)",
+        rating: "4.7 ",
+        views: "96",
         bg1: "bg-red-200",
         text1: "text-red-600",
         bg2: "bg-orange-200",
@@ -888,7 +890,7 @@ const projects = [
         Tech_3: "Power BI",
         Days: "6 Days",
         rating: "4.6",
-        views: "(105)",
+        views: "105",
         bg1: "bg-green-200",
         text1: "text-green-600",
         bg2: "bg-emerald-200",
@@ -910,7 +912,7 @@ const projects = [
         Tech_3: "Tableau",
         Days: "12 Days",
         rating: "4.8",
-        views: "(118)",
+        views: "118",
         bg1: "bg-cyan-200",
         text1: "text-cyan-600",
         bg2: "bg-blue-200",
@@ -932,7 +934,7 @@ const projects = [
         Tech_3: "SQL",
         Days: "7 Days",
         rating: "4.7",
-        views: "(90)",
+        views: "90",
         bg1: "bg-purple-200",
         text1: "text-purple-600",
         bg2: "bg-pink-200",
@@ -954,7 +956,7 @@ const projects = [
         Tech_3: "Excel",
         Days: "10 Days",
         rating: "4.8",
-        views: "(134)",
+        views: "134",
         bg1: "bg-blue-200",
         text1: "text-blue-600",
         bg2: "bg-green-200",
@@ -976,7 +978,7 @@ const projects = [
         Tech_3: "Tableau",
         Days: "14 Days",
         rating: "4.9",
-        views: "(145)",
+        views: "145",
         bg1: "bg-emerald-200",
         text1: "text-emerald-600",
         bg2: "bg-blue-200",
@@ -987,8 +989,9 @@ const projects = [
 
 ];
 
+const Projects = ({ selectDept, selectCourse, selectLevel, selectTech, selectSort, showAll, setShowAll, setFilteredProjects, setShowStartProject, setSelectedProject
 
-const Projects = ({ selectDept, selectCourse, selectLevel, selectTech, selectSort }) => {
+}) => {
 
     const filterProjects = projects
         .filter((card) => {
@@ -1005,16 +1008,39 @@ const Projects = ({ selectDept, selectCourse, selectLevel, selectTech, selectSor
             );
         })
         .sort((a, b) => {
-
             if (selectSort === "Highest Rated") {
                 return Number(b.rating) - Number(a.rating);
+            }
+            if (selectSort === "Most Popular") {
+                return Number(b.views) - Number(a.views);
+            }
+
+            if (selectSort === "Newest") {
+                return b.id - a.id;
+            }
+            if (selectSort === "Shortest Duration") {
+                return parseInt(a.Days) - parseInt(b.Days);
+            }
+
+            if (selectSort === "Longest Duration") {
+                return parseInt(b.Days) - parseInt(a.Days);
             }
 
             return 0;
         });
+    const showProject = showAll ? filterProjects : filterProjects.slice(0, 4);
+    useEffect(() => {
+        setFilteredProjects(filterProjects);
+    }, [
+        selectDept,
+        selectCourse,
+        selectLevel,
+        selectTech,
+        selectSort
+    ]);
     return (
         <div className="grid grid-cols-4 gap-4 w-full">
-            {filterProjects.map((card) => (
+            {showProject.map((card) => (
                 <Product_card
                     key={card.id}
                     image={card.image}
@@ -1033,9 +1059,24 @@ const Projects = ({ selectDept, selectCourse, selectLevel, selectTech, selectSor
                     text2={card.text2}
                     bg3={card.bg3}
                     text3={card.text3}
+                    setShowStartProject={setShowStartProject}
+                    setSelectedProject={setSelectedProject}
+                    project={card}
+
                 />
 
             ))};
+            <div className='col-span-4 w-full flex justify-center items-center mt-6'>
+                {filterProjects.length > 4 && !showAll && (
+                    <button className='flex gap-2 bg-blue-800 px-6 py-2 rounded-lg text-[16px] text-white font-semibold' onClick={() => setShowAll(true)}>View All Project
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mt-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+
+                    </button>
+                )}
+            </div>
+
 
 
 

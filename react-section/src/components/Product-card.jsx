@@ -4,7 +4,8 @@ import e_commerce from "../assets/e-commerce.png"
 
 
 
-export default function Product_card({ image, name, paragraph, Tech_1, Tech_2, Tech_3, Days, level, rating,views, bg1, bg2, bg3, text1, text2, text3 }) {
+export default function Product_card({ image, name, paragraph, Tech_1, Tech_2, Tech_3, Days, level, rating, views, bg1, bg2, bg3, text1, text2, text3, setShowModal, setShowStartProject,project, setSelectedProject
+}) {
     return (
         <>
             <div className='card border border-white rounded-2xl bg-white'>
@@ -47,8 +48,11 @@ export default function Product_card({ image, name, paragraph, Tech_1, Tech_2, T
 
                     </div>
                     <div className='flex gap-2 mt-3'>
-                        <Button name="View Detail" padding="px-4 py-2" text_size="text-[16px]" bg="bg-blue-200" text="text-[#351A9E]" />
-                        <Button name="Start Project" padding="px-4 py-2" text_size="text-[16px]" bg="bg-blue-800" />
+                        <Button name="View Detail" padding="px-4 py-2" text_size="text-[16px]" bg="bg-blue-200" text="text-[#351A9E]" onClick={() => setShowModal(true)} />
+                        <Button name="Start Project" padding="px-4 py-2" text_size="text-[16px]" bg="bg-blue-800" onClick={() => {
+                            setSelectedProject(project);
+                            setShowStartProject(true);
+                        }} />
                     </div>
                 </div>
             </div>

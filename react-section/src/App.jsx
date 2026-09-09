@@ -10,6 +10,7 @@ import Product_card from "./components/Product-card";
 import e_commerce from "./assets/e-commerce.png";
 import logo from "./assets/rocket.png";
 import Projects from './pages/Project';
+import Project_card from "./components/Project-card";
 
 
 
@@ -107,11 +108,14 @@ function Project() {
   const [selectLevel, setSelectLevel] = useState("");
   const [selectTech, setSelectTech] = useState("");
   const [selectSort, setSelectSort] = useState("");
+  const [search, setSearch] = useState("");
+  const [filteredProjects, setFilteredProjects] = useState([]);
   const selectedCourses = courses[selectDept] || [];
   const selectedTech = technologies[selectDept] || [];
 
-
-
+  const [showAll, setShowAll] = useState(false)
+  const [showStartProject, setShowStartProject] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
   return (
     <>
       <header>
@@ -171,8 +175,31 @@ function Project() {
                 <h3 className='text-3xl text-black font-bold text-start leading-tight'>Explore Projects</h3>
                 <p className='text-black font-[450]'>Choose a department, find the right project and start building</p>
               </div>
-              <div className='right'>
-                <input type='text' placeholder='Search Projects..' className='bg-white border border-gray-400 rounded p-2 placeholder:text-[16px] placeholder:text-gray-600' />
+              <div className="right relative">
+                <input
+                  type="text"
+                  placeholder="Search Projects.."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="bg-white border border-gray-400 rounded p-2 placeholder:text-[16px] placeholder:text-gray-700"
+                />
+
+                {search && (
+                  <div className="absolute top-full left-0 w-full bg-white border rounded-lg shadow-lg z-50">
+                    {filteredProjects
+                      .filter((project) =>
+                        project.name.toLowerCase().includes(search.toLowerCase())
+                      )
+                      .map((project) => (
+                        <div
+                          key={project.id}
+                          className="px-4 py-2 hover:bg-blue-500 hover:text-white cursor-pointer text-black text-start"
+                        >
+                          {project.name}
+                        </div>
+                      ))}
+                  </div>
+                )}
               </div>
             </div>
             <div className='flex justify-between items-center mt-[30px] gap-2'>
@@ -200,6 +227,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectDept("Computer Science");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -210,6 +239,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectDept("Science");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -220,6 +251,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectDept("Arts");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -230,6 +263,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectDept("Engineering");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -240,6 +275,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectDept("Commerce");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -282,6 +319,8 @@ function Project() {
                         className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                         onClick={(e) => {
                           setSelectCourse(course);
+                          setShowAll(false);
+
                           e.currentTarget.closest("details").open = false;
                         }}
                       >
@@ -321,6 +360,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectLevel("Beginner");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -331,6 +372,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectLevel("Intermediate");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -341,6 +384,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectLevel("Advanced");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -382,6 +427,8 @@ function Project() {
                         className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                         onClick={(e) => {
                           setSelectTech(technologies);
+                          setShowAll(false);
+
                           e.currentTarget.closest("details").open = false;
                         }}
                       >
@@ -416,6 +463,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectSort("Most Popular");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -426,6 +475,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectSort("Highest Rated");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -436,6 +487,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectSort("Newest");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -446,6 +499,8 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectSort("Shortest Duration");
+                        setShowAll(false);
+
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -456,6 +511,7 @@ function Project() {
                       className="block px-4 py-2 hover:bg-blue-500 text-black/80 hover:text-white"
                       onClick={(e) => {
                         setSelectSort("Longest Duration");
+                        setShowAll(false);
                         e.currentTarget.closest("details").open = false;
                       }}
                     >
@@ -466,11 +522,11 @@ function Project() {
                 </details>
               </div>
               <div>
-                <button className='flex items-center gap-2 bg-white py-2 px-4 rounded-lg text-black/70 font-semibold text-sm '>
+                <button className='flex items-center gap-2 bg-white py-2 px-4 rounded-lg text-black/70 font-semibold text-sm' onClick={() => { setSelectDept(""); setSelectCourse(""); setSelectLevel(""); setSelectTech(""); setSelectSort(""); }}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-[#3F20B9]">
                     <path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z" clip-rule="evenodd" />
                   </svg>
-                  <p>Restart</p>
+                  <p>Reset</p>
 
                 </button>
               </div>
@@ -479,17 +535,26 @@ function Project() {
         </section>
         <section>
           <div className='container mx-auto py-2 px-4 mt-[30px]'>
-            <Projects selectDept={selectDept} selectCourse={selectCourse} selectLevel={selectLevel} selectTech={selectTech} selectSort={selectSort} />
-            <div className='flex justify-center items-center mt-6'>
-              <button className='flex gap-2 bg-blue-800 px-6 py-2 rounded-lg text-[16px] text-white font-semibold '>View All Project
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mt-1">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                </svg>
+            <Projects
+              selectDept={selectDept}
+              selectCourse={selectCourse}
+              selectLevel={selectLevel}
+              selectTech={selectTech}
+              selectSort={selectSort}
+              showAll={showAll}
+              setShowAll={setShowAll}
+              setFilteredProjects={setFilteredProjects}
+              setShowStartProject={setShowStartProject}
+              setSelectedProject={setSelectedProject}
+            />
 
-              </button>
-
-            </div>
-          </div>
+            {showStartProject && (
+              <Project_card
+                setShowStartProject={setShowStartProject}
+                selectedProject={selectedProject}
+                setSelectedProject={setSelectedProject}
+              />
+            )}          </div>
         </section>
         <section>
           <div className='container mx-auto px-4 py-2 mt-[150px]'>
