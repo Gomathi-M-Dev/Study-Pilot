@@ -126,169 +126,6 @@ const question = {
             ]
         }
     },
-    science: {
-        physics: {
-            Easy: [
-                { q: "What is the formula for speed?", a: "Speed = Distance / Time." },
-                { q: "What is the SI unit of force?", a: "Newton (N)." },
-                { q: "What is the value of gravity on Earth?", a: "9.8 m/s²." }
-            ],
-            Medium: [
-                { q: "Define work and write its formula.", a: "Work = Force × Distance." },
-                { q: "Explain Newton’s Second Law.", a: "Force equals mass times acceleration (F = ma)." },
-                { q: "Kinetic vs Potential energy?", a: "Kinetic is motion energy, potential is stored energy." }
-            ],
-            Hard: [
-                { q: "Projectile motion?", a: "Object motion under gravity in a curved path." },
-                { q: "Maxwell’s equations?", a: "Set of equations describing electromagnetism." },
-                { q: "Relativity?", a: "Time and space depend on speed and observer." }
-            ]
-        },
-
-        chemistry: {
-            Easy: [
-                { q: "What is an atom?", a: "Smallest unit of matter." },
-                { q: "What is pH range?", a: "0 to 14." },
-                { q: "Formula of water?", a: "H₂O." }
-            ],
-            Medium: [
-                { q: "Ionic vs Covalent bond?", a: "Ionic = electron transfer, covalent = sharing." },
-                { q: "Periodic trends?", a: "Patterns in elements like size and reactivity." },
-                { q: "Oxidation & Reduction?", a: "Loss and gain of electrons." }
-            ],
-            Hard: [
-                { q: "Hybridization?", a: "Mixing of atomic orbitals." },
-                { q: "Le Chatelier’s principle?", a: "System shifts to maintain equilibrium." },
-                { q: "Reaction kinetics?", a: "Study of reaction rates." }
-            ]
-        },
-
-        biology: {
-            Easy: [
-                { q: "What is a cell?", a: "Basic unit of life." },
-                { q: "Full form of DNA?", a: "Deoxyribonucleic Acid." },
-                { q: "Photosynthesis?", a: "Plants making food using sunlight." }
-            ],
-            Medium: [
-                { q: "Mitosis vs Meiosis?", a: "Mitosis = same cells, meiosis = reproductive cells." },
-                { q: "Digestive system?", a: "Breaks food into nutrients." },
-                { q: "Enzymes?", a: "Proteins that speed up reactions." }
-            ],
-            Hard: [
-                { q: "Gene expression?", a: "DNA → RNA → Protein process." },
-                { q: "Immune system?", a: "Defends body from pathogens." },
-                { q: "Darwin theory?", a: "Evolution by natural selection." }
-            ]
-        },
-
-        evs: {
-            Easy: [
-                { q: "What is pollution?", a: "Contamination of environment." },
-                { q: "Renewable energy?", a: "Energy from natural sources like sun." },
-                { q: "Ecosystem?", a: "Living + non-living interaction." }
-            ],
-            Medium: [
-                { q: "Global warming?", a: "Increase in Earth temperature." },
-                { q: "Food chain?", a: "Flow of energy between organisms." },
-                { q: "Carbon cycle?", a: "Movement of carbon in nature." }
-            ],
-            Hard: [
-                { q: "Climate change impacts?", a: "Rising sea levels, weather changes." },
-                { q: "Biodiversity importance?", a: "Maintains ecosystem balance." },
-                { q: "Sustainable development?", a: "Using resources without harming future." }
-            ]
-        },
-
-        astronomy: {
-            Easy: [
-                { q: "Is Sun a star?", a: "Yes." },
-                { q: "Earth’s satellite?", a: "Moon." },
-                { q: "Galaxy?", a: "Collection of stars." }
-            ],
-            Medium: [
-                { q: "Solar system?", a: "Sun and planets." },
-                { q: "Black hole?", a: "Strong gravity region." },
-                { q: "Light-year?", a: "Distance light travels in a year." }
-            ],
-            Hard: [
-                { q: "Big Bang?", a: "Origin of universe." },
-                { q: "Dark matter?", a: "Invisible matter." },
-                { q: "Exoplanets?", a: "Planets outside solar system." }
-            ]
-        },
-
-        biotechnology: {
-            Easy: [
-                { q: "Biotechnology?", a: "Using biology for technology." },
-                { q: "DNA use?", a: "Stores genetic info." },
-                { q: "GMO?", a: "Genetically modified organism." }
-            ],
-            Medium: [
-                { q: "PCR?", a: "DNA amplification technique." },
-                { q: "Genetic engineering?", a: "Modifying genes." },
-                { q: "Cloning?", a: "Creating identical copy." }
-            ],
-            Hard: [
-                { q: "CRISPR?", a: "Gene editing tool." },
-                { q: "Recombinant DNA?", a: "Combining DNA from sources." },
-                { q: "Stem cells?", a: "Cells that can become any type." }
-            ]
-        },
-
-        neuroscience: {
-            Easy: [
-                { q: "Brain function?", a: "Controls body activities." },
-                { q: "Neuron?", a: "Nerve cell." },
-                { q: "CNS?", a: "Brain and spinal cord." }
-            ],
-            Medium: [
-                { q: "Synapse?", a: "Connection between neurons." },
-                { q: "Brain parts?", a: "Control different functions." },
-                { q: "Reflex action?", a: "Quick automatic response." }
-            ],
-            Hard: [
-                { q: "Neurotransmitters?", a: "Chemical signals." },
-                { q: "Brain plasticity?", a: "Brain adapting ability." },
-                { q: "Memory formation?", a: "Storage of information." }
-            ]
-        },
-
-        microbiology: {
-            Easy: [
-                { q: "Microorganisms?", a: "Tiny living organisms." },
-                { q: "Example bacteria?", a: "E.coli." },
-                { q: "Virus?", a: "Infectious particle." }
-            ],
-            Medium: [
-                { q: "Bacteria vs virus?", a: "Bacteria are living, viruses need host." },
-                { q: "Sterilization?", a: "Removing microbes." },
-                { q: "Antibiotics?", a: "Kill bacteria." }
-            ],
-            Hard: [
-                { q: "Pathogenesis?", a: "Disease development." },
-                { q: "Growth curve?", a: "Phases of microbial growth." },
-                { q: "Immunology?", a: "Study of immune system." }
-            ]
-        },
-
-        geology: {
-            Easy: [
-                { q: "Rock?", a: "Solid Earth material." },
-                { q: "Types of rocks?", a: "Igneous, sedimentary, metamorphic." },
-                { q: "Earth layers?", a: "Crust, mantle, core." }
-            ],
-            Medium: [
-                { q: "Plate tectonics?", a: "Movement of Earth plates." },
-                { q: "Volcano formation?", a: "Magma eruption." },
-                { q: "Earthquakes?", a: "Plate movement shaking." }
-            ],
-            Hard: [
-                { q: "Rock cycle?", a: "Transformation of rocks." },
-                { q: "Geological time scale?", a: "History of Earth timeline." },
-                { q: "Minerals?", a: "Natural solid substances." }
-            ]
-        }
-    },
     arts: {
         literature: {
             Easy: [
@@ -1557,6 +1394,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 this.classList.add('active');
 
                 const filter = this.dataset.filter.toLowerCase();
+
                 let filteredQ;
 
                 if (filter === 'all') {
@@ -1564,6 +1402,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else {
                     filteredQ = allQ.filter(q => q.diff.toLowerCase() === filter);
                 }
+
                 renderQuestions(filteredQ);
             });
         });
@@ -1573,6 +1412,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==========================
 // RENDER FUNCTION
 // ==========================
+function escapeHTML(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
 function renderQuestions(questions) {
     const container = document.getElementById('questions-container');
     if (!container) return; // Guard clause fallback
@@ -1589,24 +1433,79 @@ function renderQuestions(questions) {
     questions.forEach((q, index) => {
         const correctIndex = q.options.indexOf(q.a);
 
-        const optionsHTML = q.options.map((opt, i) => `
-          <div class="option" data-correct="${i === correctIndex}">
-            <span class="option-label">${labels[i]}</span> ${opt}
-          </div>
-        `).join('');
+        const optionsHTML = q.options.map((opt, i) => {
+            const safeOption = escapeHTML(opt);
 
+            return `
+        <div class="option" data-correct="${i === correctIndex}">
+            <span class="option-label">${labels[i]}</span>
+            <span class="option-text">${safeOption}</span>
+        </div>
+    `;
+        }).join('');
         const card = document.createElement('div');
         card.className = `question-card ${q.diff.toLowerCase()}`;
 
         card.innerHTML = `
-          <div class="question-top">
-            <span class="question-number">Q${index + 1}</span>
-            <span class="question-text">${q.q}</span>
-            <span class="diff-badge">${q.diff}</span>
-          </div>
+        <div class="question-top flex items-center gap-3 mb-5">
+
+        <span class="question-number
+        inline-flex items-center justify-center
+        min-w-9 h-9 px-2
+        rounded-lg
+        bg-[#eeedff]
+        text-[#4035d4]
+        text-xs font-bold
+        border border-[#ddd9ff]">
+        Q${index + 1}
+       </span>
+
+       <span class="question-text
+        flex-1
+        text-base
+        font-semibold
+        text-[#15175e]
+        leading-relaxed">
+        ${q.q}
+       </span>
+
+       <span class="diff-badge
+        px-3 py-1.5
+        rounded-full
+        text-xs font-semibold
+        whitespace-nowrap
+        ${q.diff === 'Easy'
+                ? 'bg-[#ecfdf3] text-[#16a34a] border border-[#bbf7d0]'
+                : q.diff === 'Medium'
+                    ? 'bg-[#fff8e6] text-[#d97706] border border-[#fde68a]'
+                    : 'bg-[#fff0f3] text-[#e11d48] border border-[#fecdd3]'
+            }">
+        ${q.diff}
+        </span>
+
+        </div>
           <div class="options-grid">${optionsHTML}</div>
-          <div class="answer-reveal" id="reveal-${index}">✅ Answer: ${q.a}</div>
-        `;
+<div
+    class="answer-reveal
+    hidden
+    mt-3
+    px-4 py-3
+    rounded-xl
+    bg-[#f0fdf4]
+    border border-[#bbf7d0]
+    text-sm
+    font-medium
+    text-[#15803d]
+    flex items-center gap-2"
+    id="reveal-${index}"
+>
+    <span class="text-[#22c55e] text-base">✓</span>
+
+    <span>
+        <span class="font-semibold text-[#166534]">Answer:</span>
+        ${escapeHTML(q.a)}
+    </span>
+</div>    `;
 
         container.appendChild(card);
 

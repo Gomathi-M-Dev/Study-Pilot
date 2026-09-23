@@ -10,7 +10,8 @@ import Product_card from "./components/Product-card";
 import e_commerce from "./assets/e-commerce.png";
 import logo from "./assets/rocket.png";
 import Projects from './pages/Project';
-import Project_card from "./components/Project-card";
+import Project_card from "./components/View-card";
+import Start_Project from "./components/Start-Project";
 
 
 
@@ -115,6 +116,7 @@ function Project() {
 
   const [showAll, setShowAll] = useState(false)
   const [showStartProject, setShowStartProject] = useState(false);
+  const [showViewDetails, setShowViewDetails] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   return (
     <>
@@ -544,15 +546,22 @@ function Project() {
               showAll={showAll}
               setShowAll={setShowAll}
               setFilteredProjects={setFilteredProjects}
+              setShowViewDetails={setShowViewDetails}
               setShowStartProject={setShowStartProject}
               setSelectedProject={setSelectedProject}
             />
 
-            {showStartProject && (
+            {showViewDetails && selectedProject && (
               <Project_card
+                setShowViewDetails={setShowViewDetails}
+                selectedProject={selectedProject}
+              />
+            )}
+
+            {showStartProject && selectedProject && (
+              <Start_Project
                 setShowStartProject={setShowStartProject}
                 selectedProject={selectedProject}
-                setSelectedProject={setSelectedProject}
               />
             )}          </div>
         </section>

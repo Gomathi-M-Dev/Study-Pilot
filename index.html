@@ -7,7 +7,9 @@
     <title>Learning</title>
 
     <link rel="icon" href="./img/Rocket .jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,67 +19,464 @@
 
 </head>
 
-<body>
+<body class="bg-gray-50">
+    <header class="bg-white">
+        <nav class="container mx-auto flex justify-between items-center py-3 px-4">
 
-    <div class="hero">
+            <div class='flex items-center'>
+                <img src="./assets/img/rocket.png" alt="brand-logo" class='w-[90px] mt-1' />
+                <h1 class="text-[27px]
+                           font-extrabold
+                           tracking-[-1px]
+                           text-[#172071] -ml-[17px] mt-2">
 
-        <img class="img" src="./assets/img/Background2.jpeg">
+                    Study<span class="text-[#3d31d8]">Pilot</span>
 
-        <div class="navbar">
-            <div class="categories">
-                <img class="logo" src="./assets/img/Rocket icon.png">
-                <h1 class="web-name">StudyPilot</h1>
+                </h1>
             </div>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="study.html">Study</a></li>
-                <li><a href="Practice.html">Practice</a></li>
-                <li><a href="http://localhost:5173/SkillPilot-React/">Project</a></li>
-                <li><a href="interview.html">Interview</a></li>
-            </ul>
-        </div>
+            <!-- Navigation -->
+            <div class='nav-link'>
+                <ul class='flex gap-8 text-[#3d31d8]'>
+                    <li><a href="index.html"
+                            class='px-5 py-2.5 rounded-full bg-[#eeedff] text-[#4035d4] text-sm font-semibold'>Home</a>
+                    </li>
+                    <li><a href="study-content.html"
+                            class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Study</a>
+                    </li>
+                    <li><a href="Questions.html"
+                            class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Practice</a>
+                    </li>
+                    <li><a href="#"
+                            class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Project</a>
+                    </li>
+                    <li><a href="coming_page.html"
+                            class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Interview</a>
+                    </li>
+                </ul>
+            </div>
 
-        <!-- Content -->
-        <div class="content">
-            <h1 class="content1">KickStart Your Career Journey !</h1>
+            <div>
+                <button class="login bg-[#2724ce] text-white font-bold text-lg px-5 py-2" onclick="window.location.href='Login.html'"
+">
+                    Login
+                    <div class="arrow-wrapper">
+                        <div class="arrow"></div>
+
+                    </div>
+                </button>
+
+            </div>
+
+        </nav>
 
 
 
-        </div>
-        <div class="input-wrapper">
-            <!-- From Uiverse.io by satyamchaudharydev -->
-            <button class="login">
-                Login
-                <div class="arrow-wrapper">
-                    <div class="arrow"></div>
+    </header>
+    <main>
+        <section>
+            <div class="relative">
+                <img src="./assets/img/study-page-banner.png" class="h-[500px]">
+                <div class="absolute top-[20%] left-[5%] z-10">
+                    <p class="text-white text-md bg-[#2724ce] rounded-2xl font-semibold px-5 py-1 w-fit">
+                        Start Now</p>
+                    <h1 class="text-6xl text-black font-bold pt-3">Learn. <span
+                            class="text-violet-500">Practice.</span></br><span class="text-blue-500">Build.</span> <span
+                            class="text-yellow-500">Succeed.</span></h1>
+                    <p class="text-[#2724ce]  pt-1 leading-7">StudyPilot helps students and Fresher learn
+                        better,</br>practice more,
+                        build real projects and crack</br> interviews with confident </p>
+                    <button class="cssbuttons-io-button mt-5" onclick="window.location.href='Login.html'">
+                        Get started
+                        <div class="icon">
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                    </button>
+
+
+
+
+
 
                 </div>
-            </button>
-            <!-- From Uiverse.io by adamgiebl -->
-            <button class="cssbuttons-io-button">
-                Get started
-                <div class="icon">
-                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                            fill="currentColor"></path>
-                    </svg>
+
+            </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50 text-gray-900">
+            <div class="max-w-[1400px] mx-auto px-6 text-center">
+                <p class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-2">WHO IS IT FOR?</p>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-[#2724ce]  mb-14">Built for Every Department & Learner
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                    <div
+                        class="bg-white border border-gray-150 rounded-3xl p-6 text-center shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-indigo-50 flex items-center justify-center text-3xl shadow-inner">
+                                💻
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Computer Science</h4>
+                            <p class="text-xs text-gray-600 mb-6 leading-relaxed">Master coding, algorithms, and
+                                software development concepts.</p>
+                        </div>
+                        <a href="cs.html"
+                            class="inline-flex items-center justify-center w-9 h-9 mx-auto rounded-full bg-indigo-100 text-indigo-600 hover:bg-indigo-600 hover:text-white transition">→</a>
+                    </div>
+
+                    <!-- Engineering -->
+                    <div
+                        class="bg-white border border-gray-150 rounded-3xl p-6 text-center shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-blue-50 flex items-center justify-center text-3xl shadow-inner">
+                                ⚙️
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Engineering</h4>
+                            <p class="text-xs text-gray-600 mb-6 leading-relaxed">Strengthen core technical skills and
+                                practical problem-solving.</p>
+                        </div>
+                        <a href="Engineer.html"
+                            class="inline-flex items-center justify-center w-9 h-9 mx-auto rounded-full bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition">→</a>
+                    </div>
+
+                    <!-- Commerce -->
+                    <div
+                        class="bg-white border border-gray-150 rounded-3xl p-6 text-center shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-green-50 flex items-center justify-center text-3xl shadow-inner">
+                                📊
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Commerce</h4>
+                            <p class="text-xs text-gray-600 mb-6 leading-relaxed">Explore business analytics, finance,
+                                and market trends.</p>
+                        </div>
+                        <a href="commerce.html"
+                            class="inline-flex items-center justify-center w-9 h-9 mx-auto rounded-full bg-green-100 text-green-600 hover:bg-green-600 hover:text-white transition">→</a>
+                    </div>
+
+                    <!-- MBA -->
+                    <div
+                        class="bg-white border border-gray-150 rounded-3xl p-6 text-center shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-purple-50 flex items-center justify-center text-3xl shadow-inner">
+                                📈
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">MBA & Management</h4>
+                            <p class="text-xs text-gray-600 mb-6 leading-relaxed">Enhance leadership, strategy, and
+                                corporate interview prep.</p>
+                        </div>
+                        <a href="MBA.html"
+                            class="inline-flex items-center justify-center w-9 h-9 mx-auto rounded-full bg-purple-100 text-purple-600 hover:bg-purple-600 hover:text-white transition">→</a>
+                    </div>
+
+                    <!-- Science -->
+                    <div
+                        class="bg-white border border-gray-150 rounded-3xl p-6 text-center shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-teal-50 flex items-center justify-center text-3xl shadow-inner">
+                                🔬
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Science</h4>
+                            <p class="text-xs text-gray-600 mb-6 leading-relaxed">Access structured study materials,
+                                research guides, and facts.</p>
+                        </div>
+                        <a href="science.html"
+                            class="inline-flex items-center justify-center w-9 h-9 mx-auto rounded-full bg-teal-100 text-teal-600 hover:bg-teal-600 hover:text-white transition">→</a>
+                    </div>
+
+                    <!-- Arts -->
+                    <div
+                        class="bg-white border border-gray-150 rounded-3xl p-6 text-center shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-pink-50 flex items-center justify-center text-3xl shadow-inner">
+                                🎨
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Arts</h4>
+                            <p class="text-xs text-gray-600 mb-6 leading-relaxed">Build creative portfolios,
+                                communication, and design skills.</p>
+                        </div>
+                        <a href="Arts.html"
+                            class="inline-flex items-center justify-center w-9 h-9 mx-auto rounded-full bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white transition">→</a>
+                    </div>
+
+                    <!-- Law -->
+                    <div
+                        class="bg-white border border-gray-150 rounded-3xl p-6 text-center shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-amber-50 flex items-center justify-center text-3xl shadow-inner">
+                                ⚖️
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Law</h4>
+                            <p class="text-xs text-gray-600 mb-6 leading-relaxed">Explore legal frameworks, case study
+                                structures, and practice notes.</p>
+                        </div>
+                        <a href="law.html"
+                            class="inline-flex items-center justify-center w-9 h-9 mx-auto rounded-full bg-amber-100 text-amber-600 hover:bg-amber-600 hover:text-white transition">→</a>
+                    </div>
+
+                    <!-- Agriculture -->
+                    <div
+                        class="bg-white border border-gray-150 rounded-3xl p-6 text-center shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-lime-50 flex items-center justify-center text-3xl shadow-inner">
+                                🌾
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Agriculture</h4>
+                            <p class="text-xs text-gray-600 mb-6 leading-relaxed">Learn modern farming tech, research
+                                notes, and methodologies.</p>
+                        </div>
+                        <a href="Agri.html"
+                            class="inline-flex items-center justify-center w-9 h-9 mx-auto rounded-full bg-lime-100 text-lime-600 hover:bg-lime-600 hover:text-white transition">→</a>
+                    </div>
+
+                    <!-- Mathematics -->
+                    <div
+                        class="bg-white border border-gray-150 rounded-3xl p-6 text-center shadow-xl hover:-translate-y-1.5 transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-rose-50 flex items-center justify-center text-3xl shadow-inner">
+                                📐
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-2">Maths</h4>
+                            <p class="text-xs text-gray-600 mb-6 leading-relaxed">Solve complex quantitative problems
+                                and logical aptitude tests.</p>
+                        </div>
+                        <a href="Maths.html"
+                            class="inline-flex items-center justify-center w-9 h-9 mx-auto rounded-full bg-rose-100 text-rose-600 hover:bg-rose-600 hover:text-white transition">→</a>
+                    </div>
                 </div>
-            </button>
+            </div>
+            <!-- WHAT YOU CAN DO SECTION -->
+            <section class="py-20 max-w-[1300px] mx-auto px-6 text-center">
+                <p class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">WHAT YOU CAN DO?</p>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-[#2724ce]  mb-14">Everything You Need to Grow</h3>
 
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
 
+                    <!-- Study Page Card -->
+                    <div
+                        class="bg-white border border-white/10 rounded-3xl p-8 hover:border-indigo-500/50 transition duration-300 flex flex-col justify-between shadow-xl">
+                        <div>
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-indigo-600/20 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                📖</div>
+                            <h4 class="text-xl font-bold text-[#2724ce]  mb-3">Study & Notes Hub</h4>
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                                Access required study questions, set a built-in study timer for focused sessions, write
+                                notes, and download them instantly as a <strong class="text-indigo-300">PDF</strong>.
+                            </p>
+                        </div>
+                        <a href="study-content.html"
+                            class="inline-flex items-center gap-2 text-indigo-400 font-semibold text-sm hover:text-indigo-300 transition">
+                            Explore Study Page →
+                        </a>
+                    </div>
 
+                    <!-- Practice Page Card -->
+                    <div
+                        class="bg-white border border-white/10 rounded-3xl p-8 hover:border-purple-500/50 transition duration-300 flex flex-col justify-between shadow-xl">
+                        <div>
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-purple-600/20 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                📝</div>
+                            <h4 class="text-xl font-bold text-[#2724ce]  mb-3">Interactive Practice</h4>
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                                Practice with curated questions and multiple-choice options. Test your knowledge, check
+                                instant results, and improve your skills.
+                            </p>
+                        </div>
+                        <a href="Questions.html"
+                            class="inline-flex items-center gap-2 text-purple-400 font-semibold text-sm hover:text-purple-300 transition">
+                            Start Practice →
+                        </a>
+                    </div>
 
+                    <!-- Projects Page Card -->
+                    <div
+                        class="bg-white border border-white/10 rounded-3xl p-8 hover:border-blue-500/50 transition duration-300 flex flex-col justify-between shadow-xl">
+                        <div>
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-blue-600/20 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                                💻</div>
+                            <h4 class="text-xl font-bold text-[#2724ce]  mb-3">All-Dept Projects & Progress</h4>
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                                Explore real-world projects for all departments equipped with full resources, UI
+                                designs, source codes, and live progress tracking.
+                            </p>
+                        </div>
+                        <a href="coming_page.html"
+                            class="inline-flex items-center gap-2 text-blue-400 font-semibold text-sm hover:text-blue-300 transition">
+                            View All Projects →
+                        </a>
+                    </div>
 
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="bg-[#2724cede] mt-10 text-white">
+        <div class="container mx-auto px-6 py-12">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-10">
+
+                <div class='col-span-2'>
+                    <div class="flex items-center mb-4">
+                        <div class="w-[48px] h-[48px]
+                           rounded-[14px]
+                           bg-[#eef0ff]
+                           flex items-center justify-center
+                           text-[#3429d9]
+                           text-[24px]">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-send preview-icon">
+                                <path
+                                    d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                                <path d="m21.854 2.147-10.94 10.939" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-semibold ml-2">StudyPilot</h2>
+                    </div>
+
+                    <p class="text-white text-sm leading-6 max-w-[260px] text-start">
+                        Your all-in-one platform to learn, practice, build and grow.
+                        Let's build the future together.
+                    </p>
+
+                    <div class="flex items-center gap-3 mt-5 text-[#2724ce] ">
+                        <a
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white transition">
+                            f
+                        </a>
+
+                        <a
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white  transition">
+                            𝕏
+                        </a>
+
+                        <a
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white  transition">
+                            in
+                        </a>
+
+                        <a
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white  transition">
+                            ◎
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="uppercase text-white font-semibold text-sm tracking-wider mb-4 text-start">
+                        Pages
+                    </h4>
+
+                    <ul class="space-y-3 text-sm text-white/70 text-start">
+                        <li>
+                            <a class="hover:text-white transition text-white">Home</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Study</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Practice</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Projects</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Interview</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="uppercase text-white font-semibold text-sm tracking-wider mb-4 text-start">
+                        Resources
+                    </h4>
+
+                    <ul class="space-y-3 text-sm text-white/70 text-start">
+                        <li>
+                            <a class="hover:text-white transition text-white">Tutorials</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Practice Questions</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Project Guides</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Career Tips</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="uppercase text-white font-semibold text-sm tracking-wider mb-4 text-start">
+                        Get in Touch
+                    </h4>
+
+                    <p class="text-white text-sm leading-6 mb-4 text-start">
+                        Have questions or need help?
+                        We're here for you.
+                    </p>
+
+                    <div class="space-y-3 text-sm text-white">
+                        <p class="flex items-center gap-2">
+                            ✉
+                            support@studypilot.com
+                        </p>
+
+                        <p class="flex items-center gap-2">
+                            ☎
+                            +91 12345 67890
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10"></div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-5 text-sm text-white">
+
+                <p>
+                    © 2026 StudyPilot. All rights reserved.
+                </p>
+
+                <div class="flex gap-5">
+                    <a class="hover:text-white transition">
+                        Privacy Policy
+                    </a>
+
+                    <a class="hover:text-white transition">
+                        Terms and Conditions
+                    </a>
+                </div>
+
+            </div>
 
         </div>
-        <script>
-            const login = document.querySelector(".input-wrapper");
-            login.addEventListener("click",function(){
-                window.location.href="Login.html"
-            })
-        </script>                                                                                 
+    </footer>
+
+
 
 </body>
 

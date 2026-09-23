@@ -4,185 +4,710 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Learning</title>
 
     <link rel="icon" href="./img/Rocket .jpeg">
-    <link rel="stylesheet" href="./css/topics.css">
 
-    <!-- Fonts -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Anton+SC&family=DM+Serif+Text:ital@0;1&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
-<body>
-    <div class="section-title">
-        <h2>Management / <span class="highlight">MBA</span> Topics</h2>
-        <p>Lead, manage and grow businesses with confidence 📊</p>
-    </div>
+<body class="min-h-screen bg-white font-['Poppins'] text-[#11145c]">
+    <header>
+        <nav
+            class="navbar flex items-center justify-between px-6 md:px-10 lg:px-14 py-4 bg-white/90 backdrop-blur-md border-b border-[#eeeefe] sticky top-0 z-50">
 
-    <div class="cards-grid">
+            <div class="flex items-center gap-[10px] mr-[25px]">
 
-        <!-- Business Strategy -->
-        <div class="card card-strategy" data-aos="fade-up" data-aos-delay="0">
-            <div class="card-icon">♟️</div>
-            <h3>Business Strategy</h3>
-            <p>Learn strategic planning, competitive analysis and how to grow businesses effectively.</p>
-            <div class="tags">
-                <span class="tag">SWOT Analysis</span>
-                <span class="tag">Porter's 5 Forces</span>
-                <span class="tag">Planning</span>
-                <span class="tag">Competitive Edge</span>
+                <div class="w-[48px] h-[48px]
+                           rounded-[14px]
+                           bg-[#eef0ff]
+                           flex items-center justify-center
+                           text-[#3429d9]
+                           text-[24px]">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-send preview-icon">
+                        <path
+                            d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                        <path d="m21.854 2.147-10.94 10.939" />
+                    </svg>
+                </div>
+
+                <h1 class="text-[27px]
+                           font-extrabold
+                           tracking-[-1px]
+                           text-[#172071]">
+
+                    Study<span class="text-[#3d31d8]">Pilot</span>
+
+                </h1>
+
             </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Subject ⭐</span>
-                <div class="card-arrow">→</div>
+
+            <!-- Navigation -->
+            <ul class="nav-links hidden md:flex items-center gap-7 list-none">
+
+                <li>
+                    <a href="index.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="study-content.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Study
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Questions.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Practice
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Project
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Interview
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto">
+
+        <!-- Section Title -->
+        <section class="text-center px-5 pt-12 pb-10">
+
+            <div class="inline-flex items-center justify-center
+                    w-20 h-11 rounded-full
+                    bg-[#e4ebff]
+                    shadow-sm mb-4">
+                <span class="text-2xl">📊</span>
             </div>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-[#11145c]">
+                
+                <span class="bg-gradient-to-r from-[#3927e8] to-[#7027e8] bg-clip-text text-transparent">
+                    MBA
+                </span>
+                Topics
+            </h2>
+            <p class="mt-4 text-base md:text-lg font-medium text-[#5270b8]">Lead, manage and grow businesses with
+                confidence 📊</p>
+        </section>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+                gap-5 md:gap-6
+                max-w-[1380px]
+                mx-auto
+                px-6 pb-16">
+
+            <!-- Business Strategy -->
+            <div data-aos="fade-up" data-aos-delay="0" class="group">
+                <a href="#" class="page-link block h-full" data-dept="mba" data-topic="strategy"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c9fff0] to-[#b9f5dd]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            ♟️
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Business Strategy
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Learn strategic planning, competitive analysis and how to grow businesses effectively.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">SWOT
+                                    Analysis</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Porter's
+                                    5 Forces</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Planning</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Competitive
+                                    Edge</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Marketing Management -->
+            <div data-aos="fade-up" data-aos-delay="100" class="group">
+                <a href="#" class="page-link block h-full" data-dept="mba" data-topic="marketing"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#eadbff] to-[#d8c5ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            📣
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Marketing Management
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Master branding, consumer behavior, digital marketing and market research.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Branding</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Digital
+                                    Marketing</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Consumer
+                                    Behavior</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">4Ps</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Financial Management -->
+            <div data-aos="fade-up" data-aos-delay="200" class="group">
+                <a href="#" class="page-link block h-full" data-dept="mba" data-topic="finance"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#ffdfe3] to-[#ffcbd2]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            📈
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Financial Management
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Understand budgeting, investment decisions, capital structure and financial planning.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Budgeting</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Investment</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Capital
+                                    Structure</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Risk
+                                    Management</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Human Resource Management -->
+            <div data-aos="fade-up" data-aos-delay="300" class="group">
+                <a href="#" class="page-link block h-full" data-dept="mba" data-topic="hr"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#dff9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            👥
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Human Resource Management
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Learn recruitment, training, performance management and employee relations.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Recruitment</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Training</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Performance</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Labour
+                                    Law</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Important 💡
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Operations Management -->
+            <div data-aos="fade-up" data-aos-delay="400" class="group">
+                <a href="#" class="page-link block h-full" data-dept="mba" data-topic="operations"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e3e9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            ⚙️
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Operations Management
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study supply chain, production planning, quality control and process optimization.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Supply
+                                    Chain</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Quality
+                                    Control</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Lean
+                                    Management</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Six
+                                    Sigma</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                High Demand 🔥
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Entrepreneurship -->
+            <div data-aos="fade-up" data-aos-delay="500" class="group">
+                <a href="#" class="page-link block h-full" data-dept="mba" data-topic="entrepreneurship"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c8fff1] to-[#b9f3df]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🚀
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Entrepreneurship
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Build startups, pitch ideas, raise funding and turn your vision into a business.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Startup</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Business
+                                    Plan</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Funding</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Innovation</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Trending 🚀
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Business Analytics -->
+            <div data-aos="fade-up" data-aos-delay="600" class="group">
+                <a href="#" class="page-link block h-full" data-dept="mba" data-topic="analytics"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#fff0cf] to-[#ffe2ad]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            📊
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Business Analytics
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Use data to make smart business decisions using tools like Excel, SQL and Tableau.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Data
+                                    Analysis</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Excel</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">SQL</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Tableau</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Future 🌐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Leadership & OB -->
+            <div data-aos="fade-up" data-aos-delay="700" class="group">
+                <a href="#" class="page-link block h-full" data-dept="mba" data-topic="leadership"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e5eaff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            👑
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Leadership & OB
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Develop leadership skills, understand team dynamics and organizational behavior.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Leadership
+                                    Styles</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Team
+                                    Building</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Motivation</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Conflict
+                                    Resolution</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Must Learn 💪
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- International Business -->
+            <div data-aos="fade-up" data-aos-delay="800" class="group">
+                <a href="#" class="page-link block h-full" data-dept="mba" data-topic="international-business"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e4ebff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🌍
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                International Business
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Explore global trade, foreign markets, export-import and multinational strategies.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Global
+                                    Trade</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Export-Import</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Forex</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">MNC
+                                    Strategy</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Global 🌐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
+    </main>
 
-        <!-- Marketing Management -->
-        <div class="card card-marketing" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-icon">📣</div>
-            <h3>Marketing Management</h3>
-            <p>Master branding, consumer behavior, digital marketing and market research.</p>
-            <div class="tags">
-                <span class="tag">Branding</span>
-                <span class="tag">Digital Marketing</span>
-                <span class="tag">Consumer Behavior</span>
-                <span class="tag">4Ps</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Subject ⭐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Financial Management -->
-        <div class="card card-finance" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-icon">📈</div>
-            <h3>Financial Management</h3>
-            <p>Understand budgeting, investment decisions, capital structure and financial planning.</p>
-            <div class="tags">
-                <span class="tag">Budgeting</span>
-                <span class="tag">Investment</span>
-                <span class="tag">Capital Structure</span>
-                <span class="tag">Risk Management</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Subject ⭐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Human Resource -->
-        <div class="card card-hr" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-icon">👥</div>
-            <h3>Human Resource Management</h3>
-            <p>Learn recruitment, training, performance management and employee relations.</p>
-            <div class="tags">
-                <span class="tag">Recruitment</span>
-                <span class="tag">Training</span>
-                <span class="tag">Performance</span>
-                <span class="tag">Labour Law</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Important 💡</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Operations Management -->
-        <div class="card card-operations" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-icon">⚙️</div>
-            <h3>Operations Management</h3>
-            <p>Study supply chain, production planning, quality control and process optimization.</p>
-            <div class="tags">
-                <span class="tag">Supply Chain</span>
-                <span class="tag">Quality Control</span>
-                <span class="tag">Lean Management</span>
-                <span class="tag">Six Sigma</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">High Demand 🔥</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Entrepreneurship -->
-        <div class="card card-entrepreneur" data-aos="fade-up" data-aos-delay="500">
-            <div class="card-icon">🚀</div>
-            <h3>Entrepreneurship</h3>
-            <p>Build startups, pitch ideas, raise funding and turn your vision into a business.</p>
-            <div class="tags">
-                <span class="tag">Startup</span>
-                <span class="tag">Business Plan</span>
-                <span class="tag">Funding</span>
-                <span class="tag">Innovation</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Trending 🚀</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Business Analytics -->
-        <div class="card card-analytics" data-aos="fade-up" data-aos-delay="600">
-            <div class="card-icon">📊</div>
-            <h3>Business Analytics</h3>
-            <p>Use data to make smart business decisions using tools like Excel, SQL and Tableau.</p>
-            <div class="tags">
-                <span class="tag">Data Analysis</span>
-                <span class="tag">Excel</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Tableau</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Future 🌐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Leadership -->
-        <div class="card card-leadership" data-aos="fade-up" data-aos-delay="700">
-            <div class="card-icon">👑</div>
-            <h3>Leadership & OB</h3>
-            <p>Develop leadership skills, understand team dynamics and organizational behavior.</p>
-            <div class="tags">
-                <span class="tag">Leadership Styles</span>
-                <span class="tag">Team Building</span>
-                <span class="tag">Motivation</span>
-                <span class="tag">Conflict Resolution</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Must Learn 💪</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- International Business -->
-        <div class="card card-international" data-aos="fade-up" data-aos-delay="800">
-            <div class="card-icon">🌍</div>
-            <h3>International Business</h3>
-            <p>Explore global trade, foreign markets, export-import and multinational strategies.</p>
-            <div class="tags">
-                <span class="tag">Global Trade</span>
-                <span class="tag">Export-Import</span>
-                <span class="tag">Forex</span>
-                <span class="tag">MNC Strategy</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Global 🌐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-    </div>
-
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        AOS.init({ duration: 800, once: true, offset: 80 });
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 80
+        });
     </script>
+
 </body>
+
+</html>

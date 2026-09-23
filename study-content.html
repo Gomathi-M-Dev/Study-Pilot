@@ -4,131 +4,1025 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/study-content.css">
+
+    <title>StudyPilot - Study</title>
+    <link rel="stylesheet" href="./assets/css/study-content.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Anton+SC&family=DM+Serif+Text:ital@0;1&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
-<body>
-    <div class="hero">
-        <div class="nav">
-            <div class="background" id="background">
-                <button class="menu__icon" id="menu_icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+
+<body class="min-h-screen bg-[#f5f7ff] text-[#10144f] font-['Poppins',sans-serif]">
+
+
+    <div class="hero min-h-screen bg-[#f5f7ff] transition-transform duration-300">
+
+        <header>
+            <div
+                class="nav h-[85px] w-ful bg-white border-b border-[#e7e9f7] px-6 md:px-10 lg:px-14 py-4 grid grid-cols-3 items-center shadow-[0_3px_15px_rgba(35,35,100,0.06)]">
+
+
+                <div class='flex items-center'>
+                    <img src="./assets/img/rocket.png" alt="brand-logo" class='w-[90px] mt-1' />
+                    <h1 class="text-[27px]
+                           font-extrabold
+                           tracking-[-1px]
+                           text-[#172071] -ml-[17px] mt-2">
+
+                        Study<span class="text-[#3d31d8]">Pilot</span>
+
+                    </h1>
+                </div>
+                <div class='nav-link'>
+                    <ul class='flex gap-8 text-[#3d31d8]'>
+                        <li><a href="index.html"
+                                class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Home</a>
+                        </li>
+                        <li><a href="study-content.html"
+                                class='px-5 py-2.5 rounded-full bg-[#eeedff] text-[#4035d4] text-sm font-semibold'>Study</a>
+                        </li>
+                        <li><a href="Questions.html"
+                                class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Practice</a>
+                        </li>
+                        <li><a href="#"
+                                class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Project</a>
+                        </li>
+                        <li><a href="coming_page.html"
+                                class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Interview</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="header-details
+                       ml-auto
+                       flex items-center
+                       gap-[12px]">
+
+
+                    <span id="display-dept" class="label-box
+                           h-[48px]
+                           px-[18px]
+                           rounded-[16px]
+                           bg-[#f0f0ff]
+                           border border-[#e4e3ff]
+                           flex items-center
+                           gap-[8px]
+                           text-[#352bd1]
+                           font-semibold
+                           text-[14px]">
+
+                        <i class="fa-solid fa-book-open"></i>
+                        Dept: --
+
+                    </span>
+
+
+                    <span id="display-topic" class="label-box
+                           h-[48px]
+                           px-[18px]
+                           rounded-[16px]
+                           bg-[#f0f0ff]
+                           border border-[#e4e3ff]
+                           flex items-center
+                           gap-[8px]
+                           text-[#352bd1]
+                           font-semibold
+                           text-[14px]">
+
+                        <i class="fa-regular fa-user"></i>
+                        Subject: --
+
+                    </span>
+
+
+
+
+                </div>
+
             </div>
-            <div class="h1">
-                <h2 id="menuText">Menu</h2>
-            </div>
-            <div id="menu" class="menu">
-                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-                <a href="study.html"><i class="fa-solid fa-book"></i> Study</a>
-                <a href="practice.html"><i class="fa-solid fa-pen"></i> Practice</a>
-                <a href="project.html"><i class="fa-solid fa-laptop"></i> Project</a>
-                <a href="interview.html"><i class="fa-solid fa-microphone"></i> Interview</a>
-            </div>
-
-
-            <div class="header-details" style="margin-left: auto; display: flex; gap: 15px; padding-right: 20px;">
-                <span id="display-dept" class="label-box">Dept: --</span>
-                <span id="display-topic" class="label-box">Subject: --</span>
-            </div>
-        </div>
-        <hr>
-        <div class="main-container">
-
-            <aside class="sidebar">
-                <div class="sidebar-header">
-                    <h3>TOPICS</h3>
-                </div>
-                <div class="topic-list" id="topic-list">
-                </div>
-                <div class="practice-section" style="margin-top: 30px; padding: 0 5px;">
-                    <button id="btn-practice-go" class="practice-btn">
-                        Practice Page
-                    </button>
-                </div>
-
-            </aside>
-            <hr class="vertical">
-
-            <!-- SECTION 2: Topic Content (Middle) -->
-            <main class="content-display">
-                <!-- Default View: Start-la idhu mattum theriyum -->
-                <div class="empty-state" id="empty-view">
-                    <h3>Select a topic</h3>
-                    <p>Click any topic from the left panel to start</p>
-                </div>
-
-                <!-- Questions View: Topic click panna idhu display aagum -->
-                <div id="topic-real-content" style="display:none;">
-                    <h2 id="current-topic-title">Topic Name</h2>
-                    <div class="separator"></div>
-                    <div id="questions-container">
-                        <!-- JS dynamic-ah questions-ah inga inject pannum -->
-                    </div>
-                </div>
-            </main>
-            <hr class="vertical2">
-            <!-- SECTION 3: Tools Sidebar (Right) -->
-            <aside class="tools-sidebar">
-                <!-- Study Timer Card -->
-                <div class="tool-card timer-card">
-                    <h4>STUDY TIMER</h4>
-                    <div class="timer-inputs">
-                        <div class="input-group">
-                            <input type="number" id="hr-input" placeholder="00" min="0" max="99">
-                            <label>Hours</label>
+        </header>
+        <main>
+            <div class="relative">
+                <img src="./assets/img/study-page-banner.png" class="h-[350px]">
+                <div class="input-wrapper absolute top-[15%] z-10 px-6 md:px-10 lg:px-14 py-4">
+                    <span class="text-blue-800 text-md font-bold bg-blue-200 px-4 py-2 rounded-2xl"> <i
+                            class="fa-solid fa-book-open text-blue-800"></i>
+                        Study Mode</span>
+                    <h1 class="pt-4 text-black font-bold text-4xl">Study at Your Own
+                        Space</h1>
+                    <h1 class="text-blue-800 font-bold text-4xl mt-1 ">Build Your Skill </h1>
+                    <p class="text-black pt-2">Choose a department, select a topic and start learning
+                        with</br>structured content, timers and easy
+                        navigation.
+                    </p>
+                    <div class="custom-select flex items-center gap-5 pt-5" id="deptSelect">
+                        <div class="select-selected" id="selectBox">
+                            <span id="selectText" class="placeholder:text-purple-500 font-bold">Select
+                                Department</span>
+                            <span class="arrow ml-2">▼</span>
                         </div>
-                        <span>:</span>
-                        <div class="input-group">
-                            <input type="number" id="min-input" placeholder="00" min="0" max="59">
-                            <label>Minutes</label>
-                        </div>
-                        <span>:</span>
-                        <div class="input-group">
-                            <input type="number" id="sec-input" placeholder="00" min="0" max="59">
-                            <label>Seconds</label>
-                        </div>
-                    </div>
-                    <div class="timer-display" style="font-size: 2rem; text-align: center; margin-bottom: 15px;">
-                        00:00:00</div>
-                    <div class="timer-controls">
-                        <button class="btn-start">Start</button>
-                        <button class="btn-pause">Pause</button>
-                        <button class="btn-reset">Reset</button>
-                    </div>
-                </div> <!-- Notes Card -->
-                <div class="tool-card notes-card">
-                    <h4>NOTES</h4>
-                    <textarea id="topic-notes" placeholder="Write your notes here..."></textarea>
-                    <div class="note-tools" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-                        <!-- Navigation Buttons -->
-                        <button onclick="goBack()" id="btn-back"><i class="fa-solid fa-arrow-left"></i> Back</button>
-                        <button onclick="goNext()" id="btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
 
-                        <!-- Action Buttons -->
-                        <button onclick="saveCurrentTopic()">Save Topic</button>
-                        <button onclick="downloadFullNotes()">Download All</button>
-                        <button onclick="newTopic()">New Topic</button>
-                        <button onclick="clearCurrentNotes()">Clear</button>
+                        <div class="select-options" id="optionsList">
+                            <div class="select-option" data-value="cs"><span class="opt-icon">💻</span> CS/IT</div>
+                            <div class="select-option" data-value="science"><span class="opt-icon">🔬</span>Science
+                            </div>
+                            <div class="select-option" data-value="arts"><span class="opt-icon">🎨</span>Arts</div>
+                            <div class="select-option" data-value="maths"><span class="opt-icon">📐</span>Maths
+                            </div>
+                            <div class="select-option" data-value="engineer"><span class="opt-icon">📐</span>Engineer
+                            </div>
+                            <div class="select-option" data-value="commerce"><span class="opt-icon">💼</span>Commerce
+                            </div>
+                            <div class="select-option" data-value="law"><span class="opt-icon">📖</span>Law</div>
+                            <div class="select-option" data-value="MBA"><span class="opt-icon">🗣️</span>MBA</div>
+                            <div class="select-option" data-value="agri"><span class="opt-icon">📐</span>Agriculture
+                            </div>
+
+                        </div>
+                        <div class="btn">
+                            <button class="cssbuttons-io-button">
+                                Get started
+                                <div class="icon">
+                                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                        <path
+                                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+
+
+
                     </div>
+
                 </div>
-            </aside>
+            </div>
 
-        </div>
-        <script src="JS/Question.js"></script>
+            <div class="main-container mt-[50px]
+                   w-full
+                   min-h-[calc(100vh-85px)]
+                   px-[30px]
+                   py-[20px]
+                   flex gap-[22px]
+                   box-border px-6 md:px-10 lg:px-14 py-4">
 
-        <script src="JS/database-json.js"></script>
 
-        <script src="JS/study-content.js"></script>
 
+                <aside class="sidebar
+                       w-[245px]
+                       shrink-0
+                       bg-transparent
+                       flex flex-col">
+
+
+                    <!-- TOPICS -->
+                    <div class="sidebar-header mb-[12px]">
+
+                        <h3 class="text-[17px]
+                               font-bold
+                               tracking-[1px]
+                               text-[#161b61]">
+
+                            TOPICS
+
+                        </h3>
+
+                    </div>
+
+
+                    <div id="topic-list" class="topic-list
+                           flex flex-col gap-[5px]">
+                    </div>
+
+
+                    <div class="practice-section
+                           mt-auto
+                           pt-[25px]">
+
+
+                        <button id="btn-practice-go" class="practice-btn w-full font-sans flex justify-center gap-2 items-center mx-auto
+           text-lg text-gray-50
+           bg-gradient-to-br from-[#6558ed] to-[#3d35d3]
+           px-[15px] py-[10px]
+           relative z-10 overflow-hidden
+           border-2 rounded-full group
+           before:absolute before:content-['']
+           before:w-full before:h-full
+           before:left-[-100%] before:top-0
+           before:bg-emerald-500
+           before:transition-all before:duration-700
+           before:z-[-1]
+           hover:before:left-0 font-bold" type="submit">
+                            Practice Now
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 19" class="w-8 h-8 bg-gray-50
+               group-hover:rotate-90
+               text-gray-50
+               ease-linear duration-300
+               rounded-full
+               border border-gray-700
+               p-2 rotate-45">
+                                <path class="fill-gray-800"
+                                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z" />
+                            </svg>
+                        </button>
+
+                    </div>
+
+                </aside>
+
+
+
+                <main class="content-display
+                       flex-1
+                       min-w-0
+                       bg-white
+                       rounded-[16px]
+                       border border-[#e8eaf5]
+                       shadow-[0_5px_20px_rgba(37,42,110,0.06)]
+                       px-[28px]
+                       py-[20px]
+                       overflow-y-auto">
+
+
+                    <!-- EMPTY VIEW -->
+                    <div id="empty-view" class="empty-state
+                           min-h-[500px]
+                           flex flex-col
+                           items-center
+                           justify-center
+                           text-center">
+
+                        <div class="w-[70px] h-[70px]
+                               rounded-[20px]
+                               bg-[#eeeeff]
+                               flex items-center justify-center
+                               text-[#4237dc]
+                               text-[30px]
+                               mb-[15px]">
+
+                            <i class="fa-solid fa-book-open"></i>
+
+                        </div>
+
+
+                        <h3 class="text-[22px]
+                               font-bold
+                               text-[#151b65]">
+
+                            Select a topic
+
+                        </h3>
+
+
+                        <p class="text-[14px]
+                               text-[#7c82a7]
+                               mt-[5px]">
+
+                            Click any topic from the left panel to start
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- REAL CONTENT -->
+                    <div id="topic-real-content" style="display:none;">
+
+
+                        <!-- TOPIC HEADER -->
+                        <div class="w-full
+                               min-h-[135px]
+                               rounded-[18px]
+                               bg-[#eeefff]
+                               mb-[22px]
+                               px-[28px]
+                               py-[22px]
+                               flex items-center
+                               relative overflow-hidden">
+
+
+                            <div class="w-[58px] h-[58px]
+                                   rounded-[18px]
+                                   bg-[#dedfff]
+                                   flex items-center
+                                   justify-center
+                                   text-[#4035db]
+                                   text-[27px]
+                                   mr-[18px]">
+
+                                <i class="fa-solid fa-book-open"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2 id="current-topic-title" class="text-[28px]
+                                       font-bold
+                                       text-[#12165e]
+                                       mb-[5px]">
+
+                                    Topic Name
+
+                                </h2>
+
+
+                                <p class="text-[13px]
+                                       text-[#68709d]">
+
+                                    Learn the concepts and build your knowledge.
+
+                                </p>
+
+                            </div>
+
+
+                            <!-- DECORATION -->
+                            <div class="absolute
+                                   right-[30px]
+                                   top-[20px]
+                                   text-[65px]
+                                   text-[#dfe0ff]
+                                   opacity-70">
+
+                                <i class="fa-solid fa-code"></i>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SEPARATOR -->
+                        <div class="separator
+                               hidden">
+                        </div>
+
+
+
+                        <!-- JS QUESTIONS -->
+                        <div id="questions-container" class="flex flex-col gap-[14px]">
+
+                        </div>
+
+                    </div>
+
+                </main>
+
+
+
+                <!-- ================================================= -->
+                <!-- RIGHT SIDEBAR -->
+                <!-- ================================================= -->
+
+                <aside class="tools-sidebar
+                       w-[350px]
+                       shrink-0
+                       flex flex-col gap-[22px]">
+
+
+                    <!-- ================================================= -->
+                    <!-- TIMER -->
+                    <!-- ================================================= -->
+
+                    <div class="tool-card timer-card
+                           rounded-[18px]
+                           bg-gradient-to-br
+                           from-[#6558ed]
+                           to-[#3d35d3]
+                           p-[25px]
+                           text-white
+                           shadow-[0_8px_25px_rgba(70,60,220,0.20)]">
+
+
+                        <h4 class="text-[15px]
+                               font-bold
+                               tracking-[0.5px]
+                               flex items-center
+                               gap-[10px]
+                               mb-[20px]">
+
+                            <i class="fa-regular fa-clock text-[22px]"></i>
+
+                            STUDY TIMER
+
+                        </h4>
+
+
+
+                        <!-- TIMER INPUTS -->
+                        <div class="timer-inputs
+                               flex items-center
+                               justify-between
+                               mb-[20px]">
+
+
+                            <!-- HOURS -->
+                            <div class="input-group
+                                   flex flex-col
+                                   items-center">
+
+
+                                <input type="number" id="hr-input" placeholder="00" min="0" max="99" class="w-[88px]
+                                       h-[65px]
+                                       rounded-[15px]
+                                       bg-[rgba(255,255,255,0.13)]
+                                       border border-[rgba(255,255,255,0.14)]
+                                       outline-none
+                                       text-white
+                                       text-[34px]
+                                       font-bold
+                                       text-center
+                                       placeholder:text-white
+                                       placeholder:opacity-100
+                                       focus:border-white">
+
+
+                                <label class="mt-[8px]
+                                       text-[12px]
+                                       font-semibold
+                                       tracking-[0.5px]
+                                       text-[#dcdcff]">
+
+                                    HOURS
+
+                                </label>
+
+                            </div>
+
+
+                            <span class="text-[30px]
+                                   font-bold
+                                   mt-[-20px]">
+
+                                :
+
+                            </span>
+
+
+
+                            <!-- MINUTES -->
+                            <div class="input-group
+                                   flex flex-col
+                                   items-center">
+
+
+                                <input type="number" id="min-input" placeholder="00" min="0" max="59" class="w-[88px]
+                                       h-[65px]
+                                       rounded-[15px]
+                                       bg-[rgba(255,255,255,0.13)]
+                                       border border-[rgba(255,255,255,0.14)]
+                                       outline-none
+                                       text-white
+                                       text-[34px]
+                                       font-bold
+                                       text-center
+                                       placeholder:text-white
+                                       placeholder:opacity-100
+                                       focus:border-white">
+
+
+                                <label class="mt-[8px]
+                                       text-[12px]
+                                       font-semibold
+                                       tracking-[0.5px]
+                                       text-[#dcdcff]">
+
+                                    MINUTES
+
+                                </label>
+
+                            </div>
+
+
+                            <span class="text-[30px]
+                                   font-bold
+                                   mt-[-20px]">
+
+                                :
+
+                            </span>
+
+
+
+                            <!-- SECONDS -->
+                            <div class="input-group
+                                   flex flex-col
+                                   items-center">
+
+
+                                <input type="number" id="sec-input" placeholder="00" min="0" max="59" class="w-[88px]
+                                       h-[65px]
+                                       rounded-[15px]
+                                       bg-[rgba(255,255,255,0.13)]
+                                       border border-[rgba(255,255,255,0.14)]
+                                       outline-none
+                                       text-white
+                                       text-[34px]
+                                       font-bold
+                                       text-center
+                                       placeholder:text-white
+                                       placeholder:opacity-100
+                                       focus:border-white">
+
+
+                                <label class="mt-[8px]
+                                       text-[12px]
+                                       font-semibold
+                                       tracking-[0.5px]
+                                       text-[#dcdcff]">
+
+                                    SECONDS
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- TIMER DISPLAY -->
+                        <div class="timer-display
+                               text-[34px]
+                               font-bold
+                               text-center
+                               tracking-[3px]
+                               mb-[20px]">
+
+                            00:00:00
+
+                        </div>
+
+
+
+                        <div class="timer-controls
+                               grid grid-cols-3
+                               gap-[10px]">
+
+
+                            <button class="btn-start
+                                   h-[50px]
+                                   rounded-[13px]
+                                   border-0
+                                   bg-[#5cf0a2]
+                                   text-[#123c2c]
+                                   font-bold
+                                   cursor-pointer
+                                   hover:-translate-y-[2px]
+                                   transition-all" type="button">
+
+                                <i class="fa-solid fa-play mr-[5px]"></i>
+                                Start
+
+                            </button>
+
+
+                            <button class="btn-pause
+                                   h-[50px]
+                                   rounded-[13px]
+                                   border-0
+                                   bg-white
+                                   text-[#5b58d8]
+                                   font-bold
+                                   cursor-pointer
+                                   hover:-translate-y-[2px]
+                                   transition-all" type="button">
+
+                                <i class="fa-solid fa-pause mr-[5px]"></i>
+                                Pause
+
+                            </button>
+
+
+                            <button class="btn-reset
+                                   h-[50px]
+                                   rounded-[13px]
+                                   border-0
+                                   bg-white
+                                   text-[#5b58d8]
+                                   font-bold
+                                   cursor-pointer
+                                   hover:-translate-y-[2px]
+                                   transition-all" type="button">
+
+                                <i class="fa-solid fa-rotate-left mr-[5px]"></i>
+                                Reset
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================================================= -->
+                    <!-- NOTES -->
+                    <!-- ================================================= -->
+
+                    <div class="tool-card notes-card
+                           bg-white
+                           rounded-[18px]
+                           border border-[#e4e6f2]
+                           p-[18px]
+                           shadow-[0_5px_20px_rgba(37,42,110,0.05)]">
+
+
+                        <h4 class="text-[16px]
+                               font-bold
+                               text-[#161b61]
+                               flex items-center
+                               gap-[10px]
+                               mb-[15px]">
+
+                            <i class="fa-regular fa-rectangle-list
+                                   text-[#4137dc]
+                                   text-[22px]">
+
+                            </i>
+
+                            NOTES
+
+                        </h4>
+
+
+
+                        <!-- TEXTAREA -->
+                        <textarea id="topic-notes" placeholder="Write your notes here..." class="w-full
+                               h-[110px]
+                               resize-none
+                               rounded-[13px]
+                               border border-[#e5e6f0]
+                               bg-[#fafbff]
+                               outline-none
+                               p-[14px]
+                               text-[13px]
+                               text-[#333]
+                               placeholder:text-[#9298b5]
+                               focus:border-[#5c52e4]
+                               focus:ring-2
+                               focus:ring-[#5c52e4]/10
+                               box-border">
+                    </textarea>
+
+
+
+                        <!-- NOTE BUTTONS -->
+                        <div class="note-tools
+                               grid grid-cols-2
+                               gap-[8px]
+                               mt-[15px]">
+
+
+                            <button onclick="goBack()" id="btn-back" class="h-[55px]
+                                   rounded-[13px]
+                                   border-0
+                                   bg-[#e9e8ff]
+                                   text-[#3d34d3]
+                                   font-semibold
+                                   cursor-pointer
+                                   hover:bg-[#dedcff]
+                                   transition-all">
+
+                                <i class="fa-solid fa-arrow-left mr-[5px]"></i>
+
+                                Back
+
+                            </button>
+
+
+
+                            <button onclick="goNext()" id="btn-next" class="h-[55px]
+                                   rounded-[13px]
+                                   border-0
+                                   bg-[#e9e8ff]
+                                   text-[#3d34d3]
+                                   font-semibold
+                                   cursor-pointer
+                                   hover:bg-[#dedcff]
+                                   transition-all">
+
+                                Next
+
+                                <i class="fa-solid fa-arrow-right ml-[5px]"></i>
+
+                            </button>
+
+
+
+                            <button onclick="saveCurrentTopic()" class="h-[55px]
+                                   rounded-[13px]
+                                   border-0
+                                   bg-[#e9e8ff]
+                                   text-[#3d34d3]
+                                   font-semibold
+                                   cursor-pointer
+                                   hover:bg-[#dedcff]
+                                   transition-all">
+
+                                <i class="fa-regular fa-floppy-disk mr-[5px]"></i>
+
+                                Save Topic
+
+                            </button>
+
+
+
+                            <button onclick="downloadFullNotes()" class="h-[55px]
+                                   rounded-[13px]
+                                   border-0
+                                   bg-[#e9e8ff]
+                                   text-[#3d34d3]
+                                   font-semibold
+                                   cursor-pointer
+                                   hover:bg-[#dedcff]
+                                   transition-all">
+
+                                <i class="fa-solid fa-download mr-[5px]"></i>
+
+                                Download All
+
+                            </button>
+
+
+
+                            <button onclick="newTopic()" class="h-[55px]
+                                   rounded-[13px]
+                                   border-0
+                                   bg-[#e9e8ff]
+                                   text-[#3d34d3]
+                                   font-semibold
+                                   cursor-pointer
+                                   hover:bg-[#dedcff]
+                                   transition-all">
+
+                                <i class="fa-solid fa-plus mr-[5px]"></i>
+
+                                New Topic
+
+                            </button>
+
+
+
+                            <button onclick="clearCurrentNotes()" class="h-[55px]
+                                   rounded-[13px]
+                                   border-0
+                                   bg-[#e9e8ff]
+                                   text-[#3d34d3]
+                                   font-semibold
+                                   cursor-pointer
+                                   hover:bg-[#dedcff]
+                                   transition-all">
+
+                                <i class="fa-solid fa-trash-can mr-[5px]"></i>
+
+                                Clear
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </main>
+        <footer class="bg-[#2724cede] mt-10 text-white">
+            <div class="container mx-auto px-6 py-12">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-10">
+
+                    <div class='col-span-2'>
+                        <div class="flex items-center mb-4">
+                            <div class="w-[48px] h-[48px]
+                           rounded-[14px]
+                           bg-[#eef0ff]
+                           flex items-center justify-center
+                           text-[#3429d9]
+                           text-[24px]">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-send preview-icon">
+                                    <path
+                                        d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                                    <path d="m21.854 2.147-10.94 10.939" />
+                                </svg>
+                            </div>
+                            <h2 class="text-2xl font-semibold ml-2">StudyPilot</h2>
+                        </div>
+
+                        <p class="text-white text-sm leading-6 max-w-[260px] text-start">
+                            Your all-in-one platform to learn, practice, build and grow.
+                            Let's build the future together.
+                        </p>
+
+                        <div class="flex items-center gap-3 mt-5 text-[#2724ce] ">
+                            <a
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white transition">
+                                f
+                            </a>
+
+                            <a
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white  transition">
+                                𝕏
+                            </a>
+
+                            <a
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white  transition">
+                                in
+                            </a>
+
+                            <a
+                                class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white  transition">
+                                ◎
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="uppercase text-white font-semibold text-sm tracking-wider mb-4 text-start">
+                            Pages
+                        </h4>
+
+                        <ul class="space-y-3 text-sm text-white/70 text-start">
+                            <li>
+                                <a class="hover:text-white transition text-white">Home</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-white transition text-white">Study</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-white transition text-white">Practice</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-white transition text-white">Projects</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-white transition text-white">Interview</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="uppercase text-white font-semibold text-sm tracking-wider mb-4 text-start">
+                            Resources
+                        </h4>
+
+                        <ul class="space-y-3 text-sm text-white/70 text-start">
+                            <li>
+                                <a class="hover:text-white transition text-white">Tutorials</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-white transition text-white">Practice Questions</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-white transition text-white">Project Guides</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-white transition text-white">Career Tips</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-white transition text-white">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="uppercase text-white font-semibold text-sm tracking-wider mb-4 text-start">
+                            Get in Touch
+                        </h4>
+
+                        <p class="text-white text-sm leading-6 mb-4 text-start">
+                            Have questions or need help?
+                            We're here for you.
+                        </p>
+
+                        <div class="space-y-3 text-sm text-white">
+                            <p class="flex items-center gap-2">
+                                ✉
+                                support@studypilot.com
+                            </p>
+
+                            <p class="flex items-center gap-2">
+                                ☎
+                                +91 12345 67890
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="border-t border-white/10"></div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-5 text-sm text-white">
+
+                    <p>
+                        © 2026 StudyPilot. All rights reserved.
+                    </p>
+
+                    <div class="flex gap-5">
+                        <a class="hover:text-white transition">
+                            Privacy Policy
+                        </a>
+
+                        <a class="hover:text-white transition">
+                            Terms and Conditions
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+
+
+        <script src="./assets/JS/database-json.js"></script>
+
+        <script src="./assets/JS/study-content.js"></script>
+        <script>
+            const selectBox = document.getElementById('selectBox');
+            const selectText = document.getElementById('selectText');
+            const optionsList = document.getElementById('optionsList');
+
+            selectBox.addEventListener('click', () => {
+                selectBox.classList.toggle('active');
+                optionsList.classList.toggle('open');
+            });
+
+            document.querySelectorAll('.select-option').forEach(option => {
+                option.addEventListener('click', function () {
+                    const value = this.dataset.value;
+                    if (!value) return;
+
+                    selectText.textContent = this.textContent.trim();
+                    selectBox.classList.add('has-value');
+
+                    document.querySelectorAll('.select-option').forEach(o => o.classList.remove('selected'));
+                    this.classList.add('selected');
+
+                    selectBox.classList.remove('active');
+                    optionsList.classList.remove('open');
+                });
+            });
+            document.addEventListener('click', (e) => {
+                if (!document.getElementById('deptSelect').contains(e.target)) {
+                    selectBox.classList.remove('active');
+                    optionsList.classList.remove('open');
+                }
+            });
+            let selectedDept = "";
+
+            document.querySelectorAll('.select-option').forEach(option => {
+                option.addEventListener('click', function () {
+                    selectedDept = this.dataset.value;
+                });
+            });
+
+
+            document.addEventListener('click', (e) => {
+                if (!document.getElementById('deptSelect').contains(e.target)) {
+                    selectBox.classList.remove('active');
+                    optionsList.classList.remove('open');
+                }
+            });
+            const deptStartBtn = document.querySelector('.cssbuttons-io-button');
+
+            deptStartBtn.addEventListener('click', () => {
+
+                if (!selectedDept) {
+                    alert("Select any Department");
+                    return;
+                }
+
+                localStorage.setItem("dept", selectedDept);
+                localStorage.setItem("mode", "study");
+
+                window.location.href = `${selectedDept}.html`;
+
+            });
+
+        </script>
 
 </body>
 

@@ -4,169 +4,642 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Learning</title>
 
     <link rel="icon" href="./img/Rocket .jpeg">
-    <link rel="stylesheet" href="./css/topics.css">
 
-    <!-- Fonts -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Anton+SC&family=DM+Serif+Text:ital@0;1&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
-<body>
-    <div class="section-title">
-        <h2>Engineering <span class="highlight">Department</span> Topics</h2>
-        <p>Build the future with engineering skills ⚙️</p>
-    </div>
+<body class="min-h-screen bg-white font-['Poppins'] text-[#11145c]">
+    <header>
+        <nav
+            class="navbar flex items-center justify-between px-6 md:px-10 lg:px-14 py-4 bg-white/90 backdrop-blur-md border-b border-[#eeeefe] sticky top-0 z-50">
 
-    <div class="cards-grid">
+            <div class="flex items-center gap-[10px] mr-[25px]">
 
-        <!-- Mechanical -->
-        <div class="card card-mech" data-aos="fade-up" data-aos-delay="0">
-            <div class="card-icon">⚙️</div>
-            <h3>Mechanical Engineering</h3>
-            <p>Design and build machines, engines and mechanical systems that power the world.</p>
-            <div class="tags">
-                <span class="tag">Thermodynamics</span>
-                <span class="tag">Fluid Mechanics</span>
-                <span class="tag">CAD</span>
-                <span class="tag">Manufacturing</span>
+                <div class="w-[48px] h-[48px]
+                           rounded-[14px]
+                           bg-[#eef0ff]
+                           flex items-center justify-center
+                           text-[#3429d9]
+                           text-[24px]">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-send preview-icon">
+                        <path
+                            d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                        <path d="m21.854 2.147-10.94 10.939" />
+                    </svg>
+                </div>
+
+                <h1 class="text-[27px]
+                           font-extrabold
+                           tracking-[-1px]
+                           text-[#172071]">
+
+                    Study<span class="text-[#3d31d8]">Pilot</span>
+
+                </h1>
+
             </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Branch ⭐</span>
-                <div class="card-arrow">→</div>
+
+            <!-- Navigation -->
+            <ul class="nav-links hidden md:flex items-center gap-7 list-none">
+
+                <li>
+                    <a href="index.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="study-content.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Study
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Questions.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Practice
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Project
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Interview
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto">
+
+        <!-- Section Title -->
+        <section class="text-center px-5 pt-12 pb-10">
+
+            <div class="inline-flex items-center justify-center
+                    w-20 h-11 rounded-full
+                    bg-[#e4ebff]
+                    shadow-sm mb-4">
+                <span class="text-2xl">⚙️</span>
             </div>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-[#11145c]">
+                Engineering
+                <span class="bg-gradient-to-r from-[#3927e8] to-[#7027e8] bg-clip-text text-transparent">
+                    Department
+                </span>
+                Topics
+            </h2>
+            <p class="mt-4 text-base md:text-lg font-medium text-[#5270b8]">Build the future with engineering skills ⚙️
+            </p>
+        </section>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+                gap-5 md:gap-6
+                max-w-[1380px]
+                mx-auto
+                px-6 pb-16">
+
+            <!-- Mechanical -->
+            <div data-aos="fade-up" data-aos-delay="0" class="group">
+                <a href="#" class="page-link block h-full" data-dept="engineering" data-topic="mechanical"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c9fff0] to-[#b9f5dd]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            ⚙️
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Mechanical Engineering
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Design and build machines, engines and mechanical systems that power the world.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Thermodynamics</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Fluid
+                                    Mechanics</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">CAD</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Manufacturing</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Branch ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Civil -->
+            <div data-aos="fade-up" data-aos-delay="100" class="group">
+                <a href="#" class="page-link block h-full" data-dept="engineering" data-topic="civil"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#eadbff] to-[#d8c5ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🏗️
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Civil Engineering
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Design roads, bridges, buildings and infrastructure that shape our cities.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Structural</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Geotechnical</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Transportation</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">AutoCAD</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Branch ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- EEE -->
+            <div data-aos="fade-up" data-aos-delay="200" class="group">
+                <a href="#" class="page-link block h-full" data-dept="engineering" data-topic="eee"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#ffdfe3] to-[#ffcbd2]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            ⚡
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Electrical Engineering
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study power systems, circuits and electrical machines that run modern society.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Circuit
+                                    Theory</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Power
+                                    Systems</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Machines</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Control
+                                    Systems</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Branch ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ECE -->
+            <div data-aos="fade-up" data-aos-delay="300" class="group">
+                <a href="#" class="page-link block h-full" data-dept="engineering" data-topic="ece"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#dff9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            📡
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Electronics & Communication
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Explore electronic circuits, signal processing and communication systems.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">VLSI</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Embedded
+                                    Systems</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Signal
+                                    Processing</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">IoT</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Trending 🔥
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CSE -->
+            <div data-aos="fade-up" data-aos-delay="400" class="group">
+                <a href="#" class="page-link block h-full" data-dept="engineering" data-topic="cse"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e3e9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            💻
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Computer Science Engg
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Learn software development, algorithms and cutting-edge computing technologies.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Programming</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">AI
+                                    / ML</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Data
+                                    Structures</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Cloud</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Most Popular 🚀
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Chemical -->
+            <div data-aos="fade-up" data-aos-delay="500" class="group">
+                <a href="#" class="page-link block h-full" data-dept="engineering" data-topic="chemical"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c8fff1] to-[#b9f3df]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🧪
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Chemical Engineering
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Apply chemistry and physics to design processes for producing chemicals and materials.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Thermodynamics</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Process
+                                    Design</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Reaction
+                                    Engg</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Petroleum</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                High Demand 💼
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Aerospace -->
+            <div data-aos="fade-up" data-aos-delay="600" class="group">
+                <a href="#" class="page-link block h-full" data-dept="engineering" data-topic="aerospace"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#fff0cf] to-[#ffe2ad]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            ✈️
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Aerospace Engineering
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Design aircraft, spacecraft and explore the science of flight and space travel.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Aerodynamics</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Propulsion</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Avionics</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Space
+                                    Tech</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Dream Field ✨
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Biomedical -->
+            <div data-aos="fade-up" data-aos-delay="700" class="group">
+                <a href="#" class="page-link block h-full" data-dept="engineering" data-topic="biomedical"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e5eaff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🏥
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Biomedical Engineering
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Combine engineering and medicine to create devices and solutions for healthcare.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Medical
+                                    Devices</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Biomechanics</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Imaging</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Prosthetics</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Emerging 🌱
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
+    </main>
 
-        <!-- Civil -->
-        <div class="card card-civil" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-icon">🏗️</div>
-            <h3>Civil Engineering</h3>
-            <p>Design roads, bridges, buildings and infrastructure that shape our cities.</p>
-            <div class="tags">
-                <span class="tag">Structural</span>
-                <span class="tag">Geotechnical</span>
-                <span class="tag">Transportation</span>
-                <span class="tag">AutoCAD</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Branch ⭐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- EEE -->
-        <div class="card card-eee" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-icon">⚡</div>
-            <h3>Electrical Engineering</h3>
-            <p>Study power systems, circuits and electrical machines that run modern society.</p>
-            <div class="tags">
-                <span class="tag">Circuit Theory</span>
-                <span class="tag">Power Systems</span>
-                <span class="tag">Machines</span>
-                <span class="tag">Control Systems</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Branch ⭐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- ECE -->
-        <div class="card card-ece" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-icon">📡</div>
-            <h3>Electronics & Communication</h3>
-            <p>Explore electronic circuits, signal processing and communication systems.</p>
-            <div class="tags">
-                <span class="tag">VLSI</span>
-                <span class="tag">Embedded Systems</span>
-                <span class="tag">Signal Processing</span>
-                <span class="tag">IoT</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Trending 🔥</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- CSE -->
-        <div class="card card-cse" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-icon">💻</div>
-            <h3>Computer Science Engg</h3>
-            <p>Learn software development, algorithms and cutting-edge computing technologies.</p>
-            <div class="tags">
-                <span class="tag">Programming</span>
-                <span class="tag">AI / ML</span>
-                <span class="tag">Data Structures</span>
-                <span class="tag">Cloud</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Most Popular 🚀</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Chemical -->
-        <div class="card card-chemical" data-aos="fade-up" data-aos-delay="500">
-            <div class="card-icon">🧪</div>
-            <h3>Chemical Engineering</h3>
-            <p>Apply chemistry and physics to design processes for producing chemicals and materials.</p>
-            <div class="tags">
-                <span class="tag">Thermodynamics</span>
-                <span class="tag">Process Design</span>
-                <span class="tag">Reaction Engg</span>
-                <span class="tag">Petroleum</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">High Demand 💼</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Aerospace -->
-        <div class="card card-aero" data-aos="fade-up" data-aos-delay="600">
-            <div class="card-icon">✈️</div>
-            <h3>Aerospace Engineering</h3>
-            <p>Design aircraft, spacecraft and explore the science of flight and space travel.</p>
-            <div class="tags">
-                <span class="tag">Aerodynamics</span>
-                <span class="tag">Propulsion</span>
-                <span class="tag">Avionics</span>
-                <span class="tag">Space Tech</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Dream Field ✨</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Biomedical -->
-        <div class="card card-bio" data-aos="fade-up" data-aos-delay="700">
-            <div class="card-icon">🏥</div>
-            <h3>Biomedical Engineering</h3>
-            <p>Combine engineering and medicine to create devices and solutions for healthcare.</p>
-            <div class="tags">
-                <span class="tag">Medical Devices</span>
-                <span class="tag">Biomechanics</span>
-                <span class="tag">Imaging</span>
-                <span class="tag">Prosthetics</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Emerging 🌱</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-    </div>
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        AOS.init({ duration: 800, once: true, offset: 80 });
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 80
+        });
     </script>
 
-
 </body>
+
+</html>

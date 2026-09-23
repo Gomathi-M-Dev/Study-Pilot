@@ -4,225 +4,712 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Learning</title>
 
     <link rel="icon" href="./img/Rocket .jpeg">
-    <link rel="stylesheet" href="./css/topics.css">
 
-    <!-- Fonts -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Anton+SC&family=DM+Serif+Text:ital@0;1&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
 
-    <style>
-        .card-constitutional {
-            --accent: #4facfe;
-        }
-
-        .card-criminal {
-            --accent: #ff6584;
-        }
-
-        .card-civil {
-            --accent: #43e97b;
-        }
-
-        .card-corporate {
-            --accent: #6c63ff;
-        }
-
-        .card-family {
-            --accent: #f7971e;
-        }
-
-        .card-cyber {
-            --accent: #38f9d7;
-        }
-
-        .card-ip {
-            --accent: #ffe259;
-        }
-
-        .card-international {
-            --accent: #a370f0;
-        }
-
-        .card-environmental {
-            --accent: #f9a825;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
-<body>
-    <div class="section-title">
-        <h2>Law <span class="highlight">Department</span> Topics</h2>
-        <p>Understand justice, rights and the legal system ⚖️</p>
-    </div>
+<body class="min-h-screen bg-white font-['Poppins'] text-[#11145c]">
+    <header>
+        <nav
+            class="navbar flex items-center justify-between px-6 md:px-10 lg:px-14 py-4 bg-white/90 backdrop-blur-md border-b border-[#eeeefe] sticky top-0 z-50">
 
-    <div class="cards-grid">
+            <div class="flex items-center gap-[10px] mr-[25px]">
 
-        <!-- Constitutional Law -->
-        <div class="card card-constitutional" data-aos="fade-up" data-aos-delay="0">
-            <div class="card-icon">📜</div>
-            <h3>Constitutional Law</h3>
-            <p>Study the Indian Constitution, fundamental rights, duties and government structure.</p>
-            <div class="tags">
-                <span class="tag">Fundamental Rights</span>
-                <span class="tag">Directive Principles</span>
-                <span class="tag">Amendment</span>
-                <span class="tag">Judiciary</span>
+                <div class="w-[48px] h-[48px]
+                           rounded-[14px]
+                           bg-[#eef0ff]
+                           flex items-center justify-center
+                           text-[#3429d9]
+                           text-[24px]">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-send preview-icon">
+                        <path
+                            d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                        <path d="m21.854 2.147-10.94 10.939" />
+                    </svg>
+                </div>
+
+                <h1 class="text-[27px]
+                           font-extrabold
+                           tracking-[-1px]
+                           text-[#172071]">
+
+                    Study<span class="text-[#3d31d8]">Pilot</span>
+
+                </h1>
+
             </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Subject ⭐</span>
-                <div class="card-arrow">→</div>
+
+            <!-- Navigation -->
+            <ul class="nav-links hidden md:flex items-center gap-7 list-none">
+
+                <li>
+                    <a href="index.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="study-content.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Study
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Questions.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Practice
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Project
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Interview
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto">
+
+        <!-- Section Title -->
+        <section class="text-center px-5 pt-12 pb-10">
+
+            <div class="inline-flex items-center justify-center
+                    w-20 h-11 rounded-full
+                    bg-[#e4ebff]
+                    shadow-sm mb-4">
+                <span class="text-2xl">⚖️</span>
             </div>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-[#11145c]">
+                Law
+                <span class="bg-gradient-to-r from-[#3927e8] to-[#7027e8] bg-clip-text text-transparent">
+                    Department
+                </span>
+                Topics
+            </h2>
+            <p class="mt-4 text-base md:text-lg font-medium text-[#5270b8]">Understand justice, rights and the legal
+                system ⚖️</p>
+        </section>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+                gap-5 md:gap-6
+                max-w-[1380px]
+                mx-auto
+                px-6 pb-16">
+
+            <!-- Constitutional Law -->
+            <div data-aos="fade-up" data-aos-delay="0" class="group">
+                <a href="#" class="page-link block h-full" data-dept="law" data-topic="constitutional"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c9fff0] to-[#b9f5dd]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            📜
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Constitutional Law
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study the Indian Constitution, fundamental rights, duties and government structure.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Fundamental
+                                    Rights</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Directive
+                                    Principles</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Amendment</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Judiciary</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Criminal Law -->
+            <div data-aos="fade-up" data-aos-delay="100" class="group">
+                <a href="#" class="page-link block h-full" data-dept="law" data-topic="criminal"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#eadbff] to-[#d8c5ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🔨
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Criminal Law
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Learn about IPC, criminal procedures, offences, punishments and court proceedings.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">IPC</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">CrPC</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Evidence
+                                    Act</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Bail
+                                    & Trial</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Civil Law -->
+            <div data-aos="fade-up" data-aos-delay="200" class="group">
+                <a href="#" class="page-link block h-full" data-dept="law" data-topic="civil"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#ffdfe3] to-[#ffcbd2]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🏛️
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Civil Law
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Understand civil disputes, contracts, property rights and court procedures.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">CPC</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Contract
+                                    Act</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Property
+                                    Law</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Tort
+                                    Law</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Corporate Law -->
+            <div data-aos="fade-up" data-aos-delay="300" class="group">
+                <a href="#" class="page-link block h-full" data-dept="law" data-topic="corporate"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#dff9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            💼
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Corporate Law
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Learn company formation, mergers, acquisitions and business legal regulations.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Companies
+                                    Act</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Mergers</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">SEBI</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Insolvency</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                High Demand 🔥
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Family Law -->
+            <div data-aos="fade-up" data-aos-delay="400" class="group">
+                <a href="#" class="page-link block h-full" data-dept="law" data-topic="family"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e3e9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            👨‍👩‍👧
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Family Law
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study marriage, divorce, adoption, inheritance and personal law matters.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Marriage
+                                    Act</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Divorce</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Adoption</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Inheritance</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Important 💡
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Cyber Law -->
+            <div data-aos="fade-up" data-aos-delay="500" class="group">
+                <a href="#" class="page-link block h-full" data-dept="law" data-topic="cyber"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c8fff1] to-[#b9f3df]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🔐
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Cyber Law
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Understand digital crimes, IT Act, data privacy and online legal regulations.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">IT
+                                    Act</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Data
+                                    Privacy</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Cyber
+                                    Crime</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Digital
+                                    Rights</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Trending 🚀
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Intellectual Property -->
+            <div data-aos="fade-up" data-aos-delay="600" class="group">
+                <a href="#" class="page-link block h-full" data-dept="law" data-topic="ip"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#fff0cf] to-[#ffe2ad]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            💡
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Intellectual Property
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Learn about patents, trademarks, copyrights and protecting creative works.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Patents</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Trademarks</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Copyright</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Trade
+                                    Secrets</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Growing 🌱
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- International Law -->
+            <div data-aos="fade-up" data-aos-delay="700" class="group">
+                <a href="#" class="page-link block h-full" data-dept="law" data-topic="international"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e5eaff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🌍
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                International Law
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study treaties, human rights, global trade laws and international relations.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Treaties</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Human
+                                    Rights</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">UN
+                                    Law</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Trade
+                                    Law</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Global 🌐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Environmental Law -->
+            <div data-aos="fade-up" data-aos-delay="800" class="group">
+                <a href="#" class="page-link block h-full" data-dept="law" data-topic="environmental"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e4ebff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🌿
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Environmental Law
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Understand laws protecting nature, pollution control and environmental rights.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Pollution
+                                    Control</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Wildlife
+                                    Act</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Forest
+                                    Law</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Green
+                                    Tribunal</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Important 🌱
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
+    </main>
 
-        <!-- Criminal Law -->
-        <div class="card card-criminal" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-icon">🔨</div>
-            <h3>Criminal Law</h3>
-            <p>Learn about IPC, criminal procedures, offences, punishments and court proceedings.</p>
-            <div class="tags">
-                <span class="tag">IPC</span>
-                <span class="tag">CrPC</span>
-                <span class="tag">Evidence Act</span>
-                <span class="tag">Bail & Trial</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Subject ⭐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Civil Law -->
-        <div class="card card-civil" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-icon">🏛️</div>
-            <h3>Civil Law</h3>
-            <p>Understand civil disputes, contracts, property rights and court procedures.</p>
-            <div class="tags">
-                <span class="tag">CPC</span>
-                <span class="tag">Contract Act</span>
-                <span class="tag">Property Law</span>
-                <span class="tag">Tort Law</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Subject ⭐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Corporate Law -->
-        <div class="card card-corporate" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-icon">💼</div>
-            <h3>Corporate Law</h3>
-            <p>Learn company formation, mergers, acquisitions and business legal regulations.</p>
-            <div class="tags">
-                <span class="tag">Companies Act</span>
-                <span class="tag">Mergers</span>
-                <span class="tag">SEBI</span>
-                <span class="tag">Insolvency</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">High Demand 🔥</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Family Law -->
-        <div class="card card-family" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-icon">👨‍👩‍👧</div>
-            <h3>Family Law</h3>
-            <p>Study marriage, divorce, adoption, inheritance and personal law matters.</p>
-            <div class="tags">
-                <span class="tag">Marriage Act</span>
-                <span class="tag">Divorce</span>
-                <span class="tag">Adoption</span>
-                <span class="tag">Inheritance</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Important 💡</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Cyber Law -->
-        <div class="card card-cyber" data-aos="fade-up" data-aos-delay="500">
-            <div class="card-icon">🔐</div>
-            <h3>Cyber Law</h3>
-            <p>Understand digital crimes, IT Act, data privacy and online legal regulations.</p>
-            <div class="tags">
-                <span class="tag">IT Act</span>
-                <span class="tag">Data Privacy</span>
-                <span class="tag">Cyber Crime</span>
-                <span class="tag">Digital Rights</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Trending 🚀</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Intellectual Property -->
-        <div class="card card-ip" data-aos="fade-up" data-aos-delay="600">
-            <div class="card-icon">💡</div>
-            <h3>Intellectual Property</h3>
-            <p>Learn about patents, trademarks, copyrights and protecting creative works.</p>
-            <div class="tags">
-                <span class="tag">Patents</span>
-                <span class="tag">Trademarks</span>
-                <span class="tag">Copyright</span>
-                <span class="tag">Trade Secrets</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Growing 🌱</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- International Law -->
-        <div class="card card-international" data-aos="fade-up" data-aos-delay="700">
-            <div class="card-icon">🌍</div>
-            <h3>International Law</h3>
-            <p>Study treaties, human rights, global trade laws and international relations.</p>
-            <div class="tags">
-                <span class="tag">Treaties</span>
-                <span class="tag">Human Rights</span>
-                <span class="tag">UN Law</span>
-                <span class="tag">Trade Law</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Global 🌐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Environmental Law -->
-        <div class="card card-environmental" data-aos="fade-up" data-aos-delay="800">
-            <div class="card-icon">🌿</div>
-            <h3>Environmental Law</h3>
-            <p>Understand laws protecting nature, pollution control and environmental rights.</p>
-            <div class="tags">
-                <span class="tag">Pollution Control</span>
-                <span class="tag">Wildlife Act</span>
-                <span class="tag">Forest Law</span>
-                <span class="tag">Green Tribunal</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Important 🌱</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-    </div>
-
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        AOS.init({ duration: 800, once: true, offset: 80 });
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 80
+        });
     </script>
 
-
 </body>
+
+</html>

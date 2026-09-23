@@ -7,195 +7,669 @@
     <title>Learning</title>
 
     <link rel="icon" href="./img/Rocket .jpeg">
-    <link rel="stylesheet" href="./css/topics.css">
 
-    <!-- Fonts -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Anton+SC&family=DM+Serif+Text:ital@0;1&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="section-title">
-        <h2>Science <span class="highlight">Department</span> Topics</h2>
-        <p>Explore the wonders of science step by step 🔬</p>
-    </div>
+<body class="min-h-screen bg-white font-['Poppins'] text-[#11145c]">
+    <header>
+        <nav
+            class="navbar flex items-center justify-between px-6 md:px-10 lg:px-14 py-4 bg-white/90 backdrop-blur-md border-b border-[#eeeefe] sticky top-0 z-50">
 
-    <!-- Copy indha section-ah mattum unga cards-grid kulla podunga -->
-    <div class="cards-grid">
+            <div class="flex items-center gap-[10px] mr-[25px]">
+                <div class="w-[48px] h-[48px]
+                           rounded-[14px]
+                           bg-[#eef0ff]
+                           flex items-center justify-center
+                           text-[#3429d9]
+                           text-[24px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-send preview-icon">
+                        <path
+                            d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                        <path d="m21.854 2.147-10.94 10.939" />
+                    </svg>
+                </div>
 
-        <!-- Physics -->
-        <div class="card card-physics" data-aos="fade-up" data-aos-delay="0">
-            <a href="Questions.html?dept=science&topic=physics" style="text-decoration: none;">
-                <div class="card-icon">⚛️</div>
-                <h3>Physics</h3>
-                <p>Explore the laws of motion, energy, and the fundamental forces of the universe.</p>
-                <div class="tags">
-                    <span class="tag">Motion</span>
-                    <span class="tag">Energy</span>
-                    <span class="tag">Quantum</span>
-                    <span class="tag">Relativity</span>
-                </div>
-                <div class="card-footer">
-                    <span class="card-badge">Core Subject ⭐</span>
-                    <div class="card-arrow">→</div>
-                </div>
-            </a>
+                <h1 class="text-[27px]
+                           font-extrabold
+                           tracking-[-1px]
+                           text-[#172071]">
+                    Study<span class="text-[#3d31d8]">Pilot</span>
+                </h1>
+            </div>
+
+            <!-- Navigation -->
+            <ul class="nav-links hidden md:flex items-center gap-7 list-none">
+                <li>
+                    <a href="index.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="study-content.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Study
+                    </a>
+                </li>
+                <li>
+                    <a href="Questions.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Practice
+                    </a>
+                </li>
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Project
+                    </a>
+                </li>
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Interview
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto">
+
+        <!-- Section Title -->
+        <section class="text-center px-5 pt-12 pb-10">
+            <div class="inline-flex items-center justify-center
+                    w-20 h-11 rounded-full
+                    bg-[#e4ebff]
+                    shadow-sm mb-4">
+                <span class="text-2xl">🔬</span>
+            </div>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-[#11145c]">
+                Science
+                <span class="bg-gradient-to-r from-[#3927e8] to-[#7027e8] bg-clip-text text-transparent">
+                    Department
+                </span>
+                Topics
+            </h2>
+            <p class="mt-4 text-base md:text-lg font-medium text-[#5270b8]">Explore the wonders of science step by step
+                🔬</p>
+        </section>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+                gap-5 md:gap-6
+                max-w-[1380px]
+                mx-auto
+                px-6 pb-16">
+
+            <!-- Physics -->
+            <div data-aos="fade-up" data-aos-delay="0" class="group">
+                <a href="Questions.html?dept=science&topic=physics" class="block h-full" style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c9fff0] to-[#b9f5dd]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            ⚛️
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Physics
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Explore the laws of motion, energy, and the fundamental forces of the universe.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Motion</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Energy</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Quantum</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Relativity</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Chemistry -->
+            <div data-aos="fade-up" data-aos-delay="100" class="group">
+                <a href="Questions.html?dept=science&topic=chemistry" class="block h-full"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#eadbff] to-[#d8c5ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🧪
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Chemistry
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Understand atoms, molecules, chemical reactions, and the periodic table.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Atoms</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Organic</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Bonding</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Reactions</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Biology -->
+            <div data-aos="fade-up" data-aos-delay="200" class="group">
+                <a href="Questions.html?dept=science&topic=biology" class="block h-full" style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#ffdfe3] to-[#ffcbd2]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🧬
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Biology
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study living organisms, cells, genetics, and the diversity of life on Earth.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Genetics</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Cells</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Evolution</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">DNA</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Environmental Science -->
+            <div data-aos="fade-up" data-aos-delay="300" class="group">
+                <a href="Questions.html?dept=science&topic=environmental" class="block h-full"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#dff9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🌿
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Environmental Science
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Learn about ecosystems, pollution, climate change, and sustainability.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Ecology</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Climate</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Green
+                                    Tech</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Conservation</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Important 📜
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Astronomy -->
+            <div data-aos="fade-up" data-aos-delay="400" class="group">
+                <a href="Questions.html?dept=science&topic=astronomy" class="block h-full"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e3e9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🔭
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Astronomy
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Discover the mysteries of the solar system, stars, galaxies, and black holes.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Space</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Stars</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Galaxies</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Cosmology</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Fascinating ✨
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Biotechnology -->
+            <div data-aos="fade-up" data-aos-delay="500" class="group">
+                <a href="Questions.html?dept=science&topic=biotechnology" class="block h-full"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c8fff1] to-[#b9f3df]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🔬
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Biotechnology
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study the application of biology in medicine, agriculture, and industry.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">CRISPR</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Cloning</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">PCR</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Genetics</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Growing 🚀
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Neuroscience -->
+            <div data-aos="fade-up" data-aos-delay="600" class="group">
+                <a href="Questions.html?dept=science&topic=neuroscience" class="block h-full"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#fff0cf] to-[#ffe2ad]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🧠
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Neuroscience
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Explore the nervous system, brain functions, memory, and cognitive science.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Brain</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Neurons</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Cognition</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Memory</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Advanced 💡
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Microbiology -->
+            <div data-aos="fade-up" data-aos-delay="700" class="group">
+                <a href="Questions.html?dept=science&topic=microbiology" class="block h-full"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e5eaff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🧫
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Microbiology
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study microorganisms like bacteria, viruses, and fungi and their roles.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Bacteria</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Viruses</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Immunology</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Fungi</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Crucial 🏥
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Geology -->
+            <div data-aos="fade-up" data-aos-delay="800" class="group">
+                <a href="Questions.html?dept=science&topic=geology" class="block h-full" style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e4ebff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🌋
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Geology
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Understand the Earth's structure, rocks, minerals, and tectonic plates.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Rocks</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Minerals</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Tectonics</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Fossils</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Foundational 🌍
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
+    </main>
 
-        <!-- Chemistry -->
-        <div class="card card-chemistry" data-aos="fade-up" data-aos-delay="100">
-            <a href="Questions.html?dept=science&topic=chemistry" style="text-decoration: none;">
-                <div class="card-icon">🧪</div>
-                <h3>Chemistry</h3>
-                <p>Understand atoms, molecules, chemical reactions, and the periodic table.</p>
-                <div class="tags">
-                    <span class="tag">Atoms</span>
-                    <span class="tag">Organic</span>
-                    <span class="tag">Bonding</span>
-                    <span class="tag">Reactions</span>
-                </div>
-                <div class="card-footer">
-                    <span class="card-badge">Core Subject ⭐</span>
-                    <div class="card-arrow">→</div>
-                </div>
-            </a>
-        </div>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 80
+        });
+    </script>
+</body>
 
-        <!-- Biology -->
-        <div class="card card-biology" data-aos="fade-up" data-aos-delay="200">
-            <a href="Questions.html?dept=science&topic=biology" style="text-decoration: none;">
-                <div class="card-icon">🧬</div>
-                <h3>Biology</h3>
-                <p>Study living organisms, cells, genetics, and the diversity of life on Earth.</p>
-                <div class="tags">
-                    <span class="tag">Genetics</span>
-                    <span class="tag">Cells</span>
-                    <span class="tag">Evolution</span>
-                    <span class="tag">DNA</span>
-                </div>
-                <div class="card-footer">
-                    <span class="card-badge">Core Subject ⭐</span>
-                    <div class="card-arrow">→</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Environmental Science -->
-        <div class="card card-environmental" data-aos="fade-up" data-aos-delay="300">
-            <a href="Questions.html?dept=science&topic=environmental" style="text-decoration: none;">
-                <div class="card-icon">🌿</div>
-                <h3>Environmental Science</h3>
-                <p>Learn about ecosystems, pollution, climate change, and sustainability.</p>
-                <div class="tags">
-                    <span class="tag">Ecology</span>
-                    <span class="tag">Climate</span>
-                    <span class="tag">Green Tech</span>
-                    <span class="tag">Conservation</span>
-                </div>
-                <div class="card-footer">
-                    <span class="card-badge">Important 📜</span>
-                    <div class="card-arrow">→</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Astronomy -->
-        <div class="card card-astronomy" data-aos="fade-up" data-aos-delay="400">
-            <a href="Questions.html?dept=science&topic=astronomy" style="text-decoration: none;">
-                <div class="card-icon">🔭</div>
-                <h3>Astronomy</h3>
-                <p>Discover the mysteries of the solar system, stars, galaxies, and black holes.</p>
-                <div class="tags">
-                    <span class="tag">Space</span>
-                    <span class="tag">Stars</span>
-                    <span class="tag">Galaxies</span>
-                    <span class="tag">Cosmology</span>
-                </div>
-                <div class="card-footer">
-                    <span class="card-badge">Fascinating ✨</span>
-                    <div class="card-arrow">→</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Biotechnology -->
-        <div class="card card-biotech" data-aos="fade-up" data-aos-delay="500">
-            <a href="Questions.html?dept=science&topic=biotechnology" style="text-decoration: none;">
-                <div class="card-icon">🔬</div>
-                <h3>Biotechnology</h3>
-                <p>Study the application of biology in medicine, agriculture, and industry.</p>
-                <div class="tags">
-                    <span class="tag">CRISPR</span>
-                    <span class="tag">Cloning</span>
-                    <span class="tag">PCR</span>
-                    <span class="tag">Genetics</span>
-                </div>
-                <div class="card-footer">
-                    <span class="card-badge">Growing 🚀</span>
-                    <div class="card-arrow">→</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Neuroscience -->
-        <div class="card card-neuro" data-aos="fade-up" data-aos-delay="600">
-            <a href="Questions.html?dept=science&topic=neuroscience" style="text-decoration: none;">
-                <div class="card-icon">🧠</div>
-                <h3>Neuroscience</h3>
-                <p>Explore the nervous system, brain functions, memory, and cognitive science.</p>
-                <div class="tags">
-                    <span class="tag">Brain</span>
-                    <span class="tag">Neurons</span>
-                    <span class="tag">Cognition</span>
-                    <span class="tag">Memory</span>
-                </div>
-                <div class="card-footer">
-                    <span class="card-badge">Advanced 💡</span>
-                    <div class="card-arrow">→</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Microbiology -->
-        <div class="card card-microbio" data-aos="fade-up" data-aos-delay="700">
-            <a href="Questions.html?dept=science&topic=microbiology" style="text-decoration: none;">
-                <div class="card-icon">🧫</div>
-                <h3>Microbiology</h3>
-                <p>Study microorganisms like bacteria, viruses, and fungi and their roles.</p>
-                <div class="tags">
-                    <span class="tag">Bacteria</span>
-                    <span class="tag">Viruses</span>
-                    <span class="tag">Immunology</span>
-                    <span class="tag">Fungi</span>
-                </div>
-                <div class="card-footer">
-                    <span class="card-badge">Crucial 🏥</span>
-                    <div class="card-arrow">→</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Geology -->
-        <div class="card card-geology" data-aos="fade-up" data-aos-delay="800">
-            <a href="Questions.html?dept=science&topic=geology" style="text-decoration: none;">
-                <div class="card-icon">🌋</div>
-                <h3>Geology</h3>
-                <p>Understand the Earth's structure, rocks, minerals, and tectonic plates.</p>
-                <div class="tags">
-                    <span class="tag">Rocks</span>
-                    <span class="tag">Minerals</span>
-                    <span class="tag">Tectonics</span>
-                    <span class="tag">Fossils</span>
-                </div>
-                <div class="card-footer">
-                    <span class="card-badge">Foundational 🌍</span>
-                    <div class="card-arrow">→</div>
-                </div>
-            </a>
-        </div>
-
-    </div>
+</html>

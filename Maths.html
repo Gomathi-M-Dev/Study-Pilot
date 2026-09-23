@@ -4,185 +4,702 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Learning</title>
 
     <link rel="icon" href="./img/Rocket .jpeg">
-    <link rel="stylesheet" href="./css/topics.css">
 
-    <!-- Fonts -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Anton+SC&family=DM+Serif+Text:ital@0;1&family=Niconne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
-<body>
-    <div class="section-title">
-        <h2>Maths <span class="highlight">Department</span> Topics</h2>
-        <p>Unlock the power of numbers and logic 📐</p>
-    </div>
+<body class="min-h-screen bg-white font-['Poppins'] text-[#11145c]">
+    <header>
+        <nav
+            class="navbar flex items-center justify-between px-6 md:px-10 lg:px-14 py-4 bg-white/90 backdrop-blur-md border-b border-[#eeeefe] sticky top-0 z-50">
 
-    <div class="cards-grid">
+            <div class="flex items-center gap-[10px] mr-[25px]">
 
-        <!-- Algebra -->
-        <div class="card card-algebra" data-aos="fade-up" data-aos-delay="0">
-            <div class="card-icon">🔢</div>
-            <h3>Algebra</h3>
-            <p>Master equations, polynomials, matrices and algebraic structures step by step.</p>
-            <div class="tags">
-                <span class="tag">Equations</span>
-                <span class="tag">Polynomials</span>
-                <span class="tag">Matrices</span>
-                <span class="tag">Functions</span>
+                <div class="w-[48px] h-[48px]
+                           rounded-[14px]
+                           bg-[#eef0ff]
+                           flex items-center justify-center
+                           text-[#3429d9]
+                           text-[24px]">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-send preview-icon">
+                        <path
+                            d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                        <path d="m21.854 2.147-10.94 10.939" />
+                    </svg>
+                </div>
+
+                <h1 class="text-[27px]
+                           font-extrabold
+                           tracking-[-1px]
+                           text-[#172071]">
+
+                    Study<span class="text-[#3d31d8]">Pilot</span>
+
+                </h1>
+
             </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Subject ⭐</span>
-                <div class="card-arrow">→</div>
+
+            <!-- Navigation -->
+            <ul class="nav-links hidden md:flex items-center gap-7 list-none">
+
+                <li>
+                    <a href="index.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="study-content.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Study
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Questions.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Practice
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Project
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coming_page.html"
+                        class="hover:border-b-2 border-[#4035d4] pb-2 cursor-pointer text-sm font-medium text-[#5f6290] hover:text-[#4035d4] transition">
+                        Interview
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto">
+
+        <!-- Section Title -->
+        <section class="text-center px-5 pt-12 pb-10">
+
+            <div class="inline-flex items-center justify-center
+                    w-20 h-11 rounded-full
+                    bg-[#e4ebff]
+                    shadow-sm mb-4">
+                <span class="text-2xl">📐</span>
             </div>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-[#11145c]">
+                Maths
+                <span class="bg-gradient-to-r from-[#3927e8] to-[#7027e8] bg-clip-text text-transparent">
+                    Department
+                </span>
+                Topics
+            </h2>
+            <p class="mt-4 text-base md:text-lg font-medium text-[#5270b8]">Unlock the power of numbers and logic 📐</p>
+        </section>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+                gap-5 md:gap-6
+                max-w-[1380px]
+                mx-auto
+                px-6 pb-16">
+
+            <!-- Algebra -->
+            <div data-aos="fade-up" data-aos-delay="0" class="group">
+                <a href="#" class="page-link block h-full" data-dept="maths" data-topic="algebra"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c9fff0] to-[#b9f5dd]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🔢
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Algebra
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Master equations, polynomials, matrices and algebraic structures step by step.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Equations</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Polynomials</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Matrices</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Functions</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Calculus -->
+            <div data-aos="fade-up" data-aos-delay="100" class="group">
+                <a href="#" class="page-link block h-full" data-dept="maths" data-topic="calculus"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#eadbff] to-[#d8c5ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            📉
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Calculus
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Learn differentiation, integration, limits and their real world applications.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Differentiation</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Integration</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Limits</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Applications</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Geometry -->
+            <div data-aos="fade-up" data-aos-delay="200" class="group">
+                <a href="#" class="page-link block h-full" data-dept="maths" data-topic="geometry"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#ffdfe3] to-[#ffcbd2]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            📐
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Geometry
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Explore shapes, angles, lines, coordinate geometry and 3D figures.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Euclidean</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Coordinate</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Triangles</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">3D
+                                    Shapes</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Core Subject ⭐
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Statistics -->
+            <div data-aos="fade-up" data-aos-delay="300" class="group">
+                <a href="#" class="page-link block h-full" data-dept="maths" data-topic="statistics"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#dff9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            📊
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Statistics
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Analyze data using mean, median, variance, distributions and hypothesis testing.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Mean
+                                    & Median</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Distribution</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Hypothesis</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Regression</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                High Demand 🔥
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Trigonometry -->
+            <div data-aos="fade-up" data-aos-delay="400" class="group">
+                <a href="#" class="page-link block h-full" data-dept="maths" data-topic="trigonometry"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e3e9ff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            📏
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Trigonometry
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study sine, cosine, tangent and their applications in angles and triangles.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Sin,
+                                    Cos, Tan</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Identities</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Inverse
+                                    Trig</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Applications</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Must Learn 💡
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Discrete Mathematics -->
+            <div data-aos="fade-up" data-aos-delay="500" class="group">
+                <a href="#" class="page-link block h-full" data-dept="maths" data-topic="discrete"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#c8fff1] to-[#b9f3df]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🧩
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Discrete Mathematics
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Learn logic, sets, graph theory and combinatorics used in computer science.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Logic</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Set
+                                    Theory</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Graph
+                                    Theory</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Combinatorics</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                CS Related 💻
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Number Theory -->
+            <div data-aos="fade-up" data-aos-delay="600" class="group">
+                <a href="#" class="page-link block h-full" data-dept="maths" data-topic="number-theory"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-gradient-to-br from-[#fff0cf] to-[#ffe2ad]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🔣
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Number Theory
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Explore prime numbers, divisibility, modular arithmetic and number patterns.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Prime
+                                    Numbers</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Divisibility</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Modular
+                                    Arithmetic</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">GCD
+                                    & LCM</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Interesting 🌟
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Probability -->
+            <div data-aos="fade-up" data-aos-delay="700" class="group">
+                <a href="#" class="page-link block h-full" data-dept="maths" data-topic="probability"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e5eaff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🎲
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Probability
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Understand chance, random events, Bayes theorem and probability distributions.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Random
+                                    Events</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Bayes
+                                    Theorem</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Distributions</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Expected
+                                    Value</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                Trending 🚀
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Linear Algebra -->
+            <div data-aos="fade-up" data-aos-delay="800" class="group">
+                <a href="#" class="page-link block h-full" data-dept="maths" data-topic="linear-algebra"
+                    style="text-decoration: none;">
+                    <div class="group relative h-full min-h-[270px]
+                            overflow-hidden
+                            rounded-2xl
+                            bg-white
+                            border border-gray-200
+                            shadow-[0_10px_35px_rgba(73,91,180,0.10)]
+                            p-6
+                            transition-all duration-300
+                            hover:-translate-y-2
+                            hover:shadow-[0_20px_45px_rgba(73,91,180,0.18)]
+                            hover:bg-gradient-to-br
+                            from-[#6558ed]
+                            to-[#3d35d3]
+                            hover:text-white">
+
+                        <div class="shrink-0 w-20 h-20
+                                    rounded-2xl
+                                    bg-[#e4ebff]
+                                    flex items-center justify-center
+                                    text-4xl
+                                    shadow-sm">
+                            🧮
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-5">
+                            <h3 class="text-xl font-bold text-[#11145c] group-hover:text-white w-full">
+                                Linear Algebra
+                            </h3>
+                            <p class="text-sm leading-6 text-[#5270b8] group-hover:text-white">
+                                Study vectors, matrices, transformations and their use in AI and data science.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-3 mt-2 w-full">
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Vectors</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Matrices</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Eigenvalues</span>
+                                <span
+                                    class="px-3 py-2 rounded-full bg-[#e8edff] text-[#2637c9] text-xs font-medium text-center group-hover:bg-white">Transformations</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5">
+                            <span class="text-sm font-bold uppercase text-[#2435d5] group-hover:text-white">
+                                AI Related 🤖
+                            </span>
+                            <span
+                                class="w-11 h-11 rounded-full bg-[#e7edff] flex items-center justify-center text-xl font-bold text-[#2938df] transition-all duration-300 group-hover:bg-white group-hover:text-[#4338e8] group-hover:rotate-[-45deg]">
+                                →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
+    </main>
 
-        <!-- Calculus -->
-        <div class="card card-calculus" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-icon">📉</div>
-            <h3>Calculus</h3>
-            <p>Learn differentiation, integration, limits and their real world applications.</p>
-            <div class="tags">
-                <span class="tag">Differentiation</span>
-                <span class="tag">Integration</span>
-                <span class="tag">Limits</span>
-                <span class="tag">Applications</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Subject ⭐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Geometry -->
-        <div class="card card-geometry" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-icon">📐</div>
-            <h3>Geometry</h3>
-            <p>Explore shapes, angles, lines, coordinate geometry and 3D figures.</p>
-            <div class="tags">
-                <span class="tag">Euclidean</span>
-                <span class="tag">Coordinate</span>
-                <span class="tag">Triangles</span>
-                <span class="tag">3D Shapes</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Core Subject ⭐</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Statistics -->
-        <div class="card card-statistics" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-icon">📊</div>
-            <h3>Statistics</h3>
-            <p>Analyze data using mean, median, variance, distributions and hypothesis testing.</p>
-            <div class="tags">
-                <span class="tag">Mean & Median</span>
-                <span class="tag">Distribution</span>
-                <span class="tag">Hypothesis</span>
-                <span class="tag">Regression</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">High Demand 🔥</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Trigonometry -->
-        <div class="card card-trigno" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-icon">📏</div>
-            <h3>Trigonometry</h3>
-            <p>Study sine, cosine, tangent and their applications in angles and triangles.</p>
-            <div class="tags">
-                <span class="tag">Sin, Cos, Tan</span>
-                <span class="tag">Identities</span>
-                <span class="tag">Inverse Trig</span>
-                <span class="tag">Applications</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Must Learn 💡</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Discrete Maths -->
-        <div class="card card-discrete" data-aos="fade-up" data-aos-delay="500">
-            <div class="card-icon">🧩</div>
-            <h3>Discrete Mathematics</h3>
-            <p>Learn logic, sets, graph theory and combinatorics used in computer science.</p>
-            <div class="tags">
-                <span class="tag">Logic</span>
-                <span class="tag">Set Theory</span>
-                <span class="tag">Graph Theory</span>
-                <span class="tag">Combinatorics</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">CS Related 💻</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Number Theory -->
-        <div class="card card-number" data-aos="fade-up" data-aos-delay="600">
-            <div class="card-icon">🔣</div>
-            <h3>Number Theory</h3>
-            <p>Explore prime numbers, divisibility, modular arithmetic and number patterns.</p>
-            <div class="tags">
-                <span class="tag">Prime Numbers</span>
-                <span class="tag">Divisibility</span>
-                <span class="tag">Modular Arithmetic</span>
-                <span class="tag">GCD & LCM</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Interesting 🌟</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Probability -->
-        <div class="card card-probability" data-aos="fade-up" data-aos-delay="700">
-            <div class="card-icon">🎲</div>
-            <h3>Probability</h3>
-            <p>Understand chance, random events, Bayes theorem and probability distributions.</p>
-            <div class="tags">
-                <span class="tag">Random Events</span>
-                <span class="tag">Bayes Theorem</span>
-                <span class="tag">Distributions</span>
-                <span class="tag">Expected Value</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">Trending 🚀</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Linear Algebra -->
-        <div class="card card-linear" data-aos="fade-up" data-aos-delay="800">
-            <div class="card-icon">🧮</div>
-            <h3>Linear Algebra</h3>
-            <p>Study vectors, matrices, transformations and their use in AI and data science.</p>
-            <div class="tags">
-                <span class="tag">Vectors</span>
-                <span class="tag">Matrices</span>
-                <span class="tag">Eigenvalues</span>
-                <span class="tag">Transformations</span>
-            </div>
-            <div class="card-footer">
-                <span class="card-badge">AI Related 🤖</span>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-    </div>
-
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        AOS.init({ duration: 800, once: true, offset: 80 });
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 80
+        });
     </script>
+
 </body>
+
+</html>

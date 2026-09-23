@@ -2,1058 +2,5017 @@ const questionbank = {
     cs: {
 
         "Web": {
+
             "Basic": {
-                "Frontend Foundations": [
-                    "What is the difference between ID and Class in CSS?",
-                    "Explain the CSS Box Model.",
-                    "What is Flex",
-                    "What is grid",
-                    "what is DOM",
-                    "What is Event"
-                ],
-                "HTML Structures": [
-                    "What are semantic HTML tags and why use them?",
-                    "Difference between block-level and inline elements?"
-                ]
+
+                "HTML Foundations": {
+
+                    "HTML": [
+                        "What is HTML and why is it used?",
+                        "HTML Basics",
+                        "Purpose of HTML"
+                    ],
+
+                    "HTML Document Structure": [
+                        "What is the basic structure of an HTML document?",
+                        "DOCTYPE and HTML document structure"
+                    ],
+
+                    "HTML Elements": [
+                        "What are HTML elements?",
+                        "Difference between div and span?",
+                        "Block-level and inline elements"
+                    ],
+
+                    "HTML Tags and Attributes": [
+                        "What are HTML tags?",
+                        "What are HTML attributes?",
+                        "How are attributes used in HTML?"
+                    ]
+                },
+
+                "CSS Foundations": {
+
+                    "CSS": [
+                        "What is CSS?",
+                        "Why is CSS used in web development?",
+                        "CSS Basics"
+                    ],
+
+                    "CSS Syntax": [
+                        "What is CSS syntax?",
+                        "How are CSS rules written?"
+                    ],
+
+                    "CSS Selectors": [
+                        "What are CSS selectors?",
+                        "Types of CSS selectors",
+                        "Basic selector usage"
+                    ],
+
+                    "CSS Properties": [
+                        "What are CSS properties?",
+                        "How are CSS properties used?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "JS Deep Dive": [
-                    "Explain ES6 features like Arrow functions and Destructuring.",
-                    "What is the difference between let, const, and var?"
-                ],
-                "React Basics": [
-                    "What is the difference between State and Props in React?",
-                    "Explain the React Component lifecycle."
-                ]
+
+                "CSS Display & Layout": {
+
+                    "Display Property": [
+                        "What is the display property?",
+                        "How does display affect an element?"
+                    ],
+
+                    "display: none": [
+                        "What is display: none?",
+                        "How does display: none affect element space?"
+                    ],
+
+                    "Visibility": [
+                        "What is the visibility property?",
+                        "What is visibility: hidden?"
+                    ],
+
+                    "Element Space": [
+                        "Difference between display: none and visibility: hidden?",
+                        "How does element space behave?"
+                    ]
+                },
+
+                "Flexbox": {
+
+                    "Flexbox Basics": [
+                        "What is Flexbox?",
+                        "Why is Flexbox used?"
+                    ],
+
+                    "Flex Container": [
+                        "What is a flex container?",
+                        "How to create a flex container?"
+                    ],
+
+                    "Flex Direction": [
+                        "What is flex-direction?",
+                        "Row and column directions"
+                    ],
+
+                    "Flex Alignment": [
+                        "How does Flexbox alignment work?",
+                        "Main axis and cross axis"
+                    ]
+                },
+
+                "CSS Box Model": {
+
+                    "CSS Box Model": [
+                        "What is the CSS Box Model?",
+                        "Parts of the CSS Box Model"
+                    ],
+
+                    "Margin": [
+                        "What is margin?",
+                        "How does margin affect an element?"
+                    ],
+
+                    "Padding": [
+                        "What is padding?",
+                        "How does padding affect an element?"
+                    ],
+
+                    "Border": [
+                        "What is a border?",
+                        "How does border fit into the Box Model?"
+                    ],
+
+                    "Content Area": [
+                        "What is the content area?",
+                        "How does content area work?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "API Architecture": [
-                    "Explain REST API vs GraphQL.",
-                    "What is CORS and how to handle it?"
-                ],
-                "Deployment & DevOps": [
-                    "How to deploy a website on Netlify or Vercel?",
-                    "Explain the basics of CI/CD for web apps."
-                ]
-            }
-        },
-        "App": {
-            "Basic": {
-                "Mobile Concepts": [
-                    "Difference between Native and Cross-platform development?",
-                    "What is an App Lifecycle?"
-                ],
-                "UI Layouts": [
-                    "What is a Widget in Flutter?",
-                    "How to use Flexbox in React Native?"
-                ]
-            },
-            "Intermediate": {
-                "State Management": [
-                    "Explain Redux vs Context API.",
-                    "How to manage local state in mobile apps?"
-                ],
-                "Backend Integration": [
-                    "How to connect a mobile app to Firebase?",
-                    "Explain how to fetch data from a REST API in mobile."
-                ]
-            },
-            "Advanced": {
-                "Performance": [
-                    "How to optimize mobile app rendering performance?",
-                    "What is Lazy Loading in mobile apps?"
-                ],
-                "App Store Ops": [
-                    "Steps to publish an app on Play Store/App Store.",
-                    "How to handle app permissions for iOS and Android?"
-                ]
-            }
-        },
-        "AI": {
-            "Basic": {
-                "Intro to AI": [
-                    "Difference between AI, ML, and Deep Learning?",
-                    "What is the Turing Test?"
-                ],
-                "ML Types": [
-                    "What is Supervised vs Unsupervised Learning?",
-                    "Explain Reinforcement Learning with an example."
-                ]
-            },
-            "Intermediate": {
-                "Regression & Stats": [
-                    "Explain Linear vs Logistic Regression.",
-                    "What is Mean Squared Error (MSE)?"
-                ],
-                "Classification": [
-                    "What is a Confusion Matrix and why is it used?",
-                    "How does a Decision Tree algorithm work?"
-                ]
-            },
-            "Advanced": {
-                "Neural Networks": [
-                    "What is a Convolutional Neural Network (CNN)?",
-                    "Explain Backpropagation in Neural Networks."
-                ],
-                "Modern AI": [
-                    "Explain the basics of Large Language Models (LLMs).",
-                    "What are Generative Adversarial Networks (GANs)?"
-                ]
-            }
-        },
-        "DS": {
-            "Basic": {
-                "Data Basics": [
-                    "What is a DataFrame in Pandas?",
-                    "Difference between structured and unstructured data?"
-                ],
-                "Data Prep": [
-                    "Why is Data Cleaning important in Data Science?",
-                    "What is Data Normalization?"
-                ]
-            },
-            "Intermediate": {
-                "EDA": [
-                    "Explain Exploratory Data Analysis (EDA).",
-                    "How to handle missing values in a dataset?"
-                ],
-                "Visualization": [
-                    "When to use a Bar Chart vs a Scatter Plot?",
-                    "Explain the use of Correlation Heatmaps."
-                ]
-            },
-            "Advanced": {
-                "Statistical Modeling": [
-                    "What is A/B Testing?",
-                    "Explain the P-value in statistics."
-                ],
-                "ML Ops": [
-                    "Explain Principal Component Analysis (PCA).",
-                    "How to deploy a Data Science model to production?"
-                ]
-            }
-        },
-        "CyberSecurity": {
-            "Basic": {
-                "Network Security": [
-                    "Difference between HTTP and HTTPS?",
-                    "What is a Firewall and how does it work?"
-                ],
-                "Threats": [
-                    "What is Phishing and how to prevent it?",
-                    "Explain the difference between a Virus and a Worm."
-                ]
-            },
-            "Intermediate": {
-                "Web Attacks": [
-                    "Explain SQL Injection and how to prevent it.",
-                    "What is a Man-in-the-Middle (MITM) attack?"
-                ],
-                "Auth Systems": [
-                    "What is Two-Factor Authentication (2FA)?",
-                    "Difference between Authorization and Authentication."
-                ]
-            },
-            "Advanced": {
-                "Cryptography": [
-                    "Symmetric vs Asymmetric Encryption basics.",
-                    "What is a Digital Signature?"
-                ],
-                "Security Testing": [
-                    "What is Penetration Testing?",
-                    "Explain Zero-Day Vulnerability."
-                ]
-            }
-        },
-        "Cloud": {
-            "Basic": {
-                "Cloud Models": [
-                    "Explain IaaS, PaaS, and SaaS.",
-                    "Public vs Private vs Hybrid Cloud differences."
-                ],
-                "Cloud Storage": [
-                    "What is Object Storage vs Block Storage?",
-                    "Explain the benefits of Cloud Scalability."
-                ]
-            },
-            "Intermediate": {
-                "Containers": [
-                    "What is Docker and why is it used?",
-                    "Difference between a Virtual Machine and a Container."
-                ],
-                "DevOps": [
-                    "Explain the CI/CD pipeline.",
-                    "What is 'Infrastructure as Code' (IaC)?"
-                ]
-            },
-            "Advanced": {
-                "Orchestration": [
-                    "What is Kubernetes (K8s)?",
-                    "Explain Load Balancing in Cloud."
-                ],
-                "Serverless": [
-                    "What is Serverless Computing (AWS Lambda)?",
-                    "Explain Microservices Architecture."
-                ]
-            }
-        },
-        "python": {
-            "Basic": {
-                "Data Structures": [
-                    "List vs Tuple vs Dictionary in Python.",
-                    "What is a Set and how is it different from a List?"
-                ],
-                "Control Flow": [
-                    "How to handle Exceptions using try-except?",
-                    "Explain the difference between 'is' and '=='."
-                ]
-            },
-            "Intermediate": {
-                "Pythonic Code": [
-                    "What are Lambda functions and List Comprehensions?",
-                    "Explain the use of 'with' statement in file handling."
-                ],
-                "Environment": [
-                    "Using virtual environments (venv) in Python.",
-                    "What is the purpose of requirements.txt?"
-                ]
-            },
-            "Advanced": {
-                "OOP Concepts": [
-                    "Explain Inheritance and Polymorphism in Python.",
-                    "What are Decorators and how do they work?"
-                ],
-                "Specialized Libraries": [
-                    "How to do Web Scraping using BeautifulSoup?",
-                    "Explain Multithreading vs Multiprocessing in Python."
-                ]
+
+                "JavaScript Execution": {
+
+                    "Synchronous JavaScript": [
+                        "What is synchronous JavaScript?",
+                        "How does synchronous execution work?"
+                    ],
+
+                    "Asynchronous JavaScript": [
+                        "What is asynchronous JavaScript?",
+                        "How does asynchronous execution work?"
+                    ],
+
+                    "Blocking and Non-blocking Code": [
+                        "What is blocking code?",
+                        "What is non-blocking code?"
+                    ],
+
+                    "Execution Flow": [
+                        "How does JavaScript execution flow work?",
+                        "Synchronous vs asynchronous execution"
+                    ]
+                },
+
+                "JavaScript Closures": {
+
+                    "Function Scope": [
+                        "What is function scope?",
+                        "How does function scope work?"
+                    ],
+
+                    "Lexical Scope": [
+                        "What is lexical scope?",
+                        "How does lexical scope work?"
+                    ],
+
+                    "Outer Variables": [
+                        "What are outer variables?",
+                        "How can a function access outer variables?"
+                    ],
+
+                    "Closures": [
+                        "What is a closure?",
+                        "How does a closure remember outer variables?"
+                    ]
+                },
+
+                "JavaScript Events": {
+
+                    "Event Propagation": [
+                        "What is event propagation?",
+                        "How does event propagation work?"
+                    ],
+
+                    "Event Bubbling": [
+                        "What is event bubbling?",
+                        "How does event bubbling work?"
+                    ],
+
+                    "Event Capturing": [
+                        "What is event capturing?",
+                        "How does event capturing work?"
+                    ],
+
+                    "Event Flow": [
+                        "What is event flow?",
+                        "How does an event move through elements?"
+                    ]
+                }
             }
         }
     },
     science: {
 
         "physics": {
+
             "Basic": {
-                "Foundations": ["What is Physics?", "What are the laws of motion?", "What is force?", "What is energy?", "Difference between speed and velocity?"]
+
+                "Foundations": {
+
+                    "Speed": [
+                        "What is the formula for speed?",
+                        "Distance and Time",
+                        "Speed Calculation"
+                    ],
+
+                    "Force": [
+                        "What is force?",
+                        "SI unit of force",
+                        "Types of force"
+                    ],
+
+                    "Gravity": [
+                        "What is gravity?",
+                        "Value of gravity on Earth",
+                        "Acceleration due to gravity"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Mechanics & Waves": ["Explain Newton’s laws", "What is thermodynamics?", "What is wave motion?", "Explain optics basics?", "What is electricity?"]
+
+                "Mechanics & Energy": {
+
+                    "Work": [
+                        "Define work",
+                        "Work formula",
+                        "Force and distance in work"
+                    ],
+
+                    "Newton's Second Law": [
+                        "Newton's Second Law",
+                        "Force and mass",
+                        "Acceleration and F = ma"
+                    ],
+
+                    "Kinetic & Potential Energy": [
+                        "Kinetic energy",
+                        "Potential energy",
+                        "Difference between kinetic and potential energy"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Modern Physics": ["What is quantum mechanics?", "Explain relativity?", "What is electromagnetic field?", "Particle physics basics?", "Applications of modern physics?"]
+
+                "Modern Mechanics": {
+
+                    "Projectile Motion": [
+                        "Projectile motion",
+                        "Motion under gravity",
+                        "Projectile path"
+                    ],
+
+                    "Electromagnetism": [
+                        "Maxwell's equations",
+                        "Electromagnetism",
+                        "Electric and magnetic fields"
+                    ],
+
+                    "Relativity": [
+                        "Theory of relativity",
+                        "Space and time",
+                        "Effect of speed on time and space"
+                    ]
+                }
             }
         },
+
+
         "chemistry": {
+
             "Basic": {
-                "Elements": ["What is Chemistry?", "What is an atom?", "What is a molecule?", "What is the periodic table?", "Types of chemical reactions?"]
+
+                "Chemical Foundations": {
+
+                    "Atoms": [
+                        "What is an atom?",
+                        "Basic structure of an atom",
+                        "Protons, neutrons and electrons"
+                    ],
+
+                    "pH": [
+                        "What is pH?",
+                        "pH scale",
+                        "Acidic and basic values"
+                    ],
+
+                    "Water": [
+                        "Formula of water",
+                        "H₂O",
+                        "Elements present in water"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Bonds & Acids": ["Explain bonding", "What is pH scale?", "Organic vs inorganic chemistry?", "What is equilibrium?", "What are acids and bases?"]
+
+                "Chemical Reactions": {
+
+                    "Chemical Bonds": [
+                        "Ionic bond",
+                        "Covalent bond",
+                        "Difference between ionic and covalent bonds"
+                    ],
+
+                    "Periodic Trends": [
+                        "Periodic table",
+                        "Periodic trends",
+                        "Atomic size and reactivity"
+                    ],
+
+                    "Redox Reactions": [
+                        "Oxidation",
+                        "Reduction",
+                        "Loss and gain of electrons"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Kinetics": ["Reaction mechanisms?", "Electrochemistry basics?", "Thermochemistry?", "Chemical kinetics?", "Advanced organic reactions?"]
+
+                "Advanced Chemistry": {
+
+                    "Hybridization": [
+                        "Hybridization",
+                        "Atomic orbitals",
+                        "Mixing of atomic orbitals"
+                    ],
+
+                    "Chemical Equilibrium": [
+                        "Le Chatelier's principle",
+                        "Chemical equilibrium",
+                        "Changes in equilibrium"
+                    ],
+
+                    "Reaction Kinetics": [
+                        "Reaction kinetics",
+                        "Reaction rate",
+                        "Factors affecting reaction rate"
+                    ]
+                }
             }
         },
+
+
         "biology": {
+
             "Basic": {
-                "Life Basics": ["What is Biology?", "What is a cell?", "Types of cells?", "What is DNA?", "What is an ecosystem?"]
+
+                "Life Foundations": {
+
+                    "Cells": [
+                        "What is a cell?",
+                        "Basic unit of life",
+                        "Cell structure"
+                    ],
+
+                    "DNA": [
+                        "Full form of DNA",
+                        "DNA structure",
+                        "Genetic information in DNA"
+                    ],
+
+                    "Photosynthesis": [
+                        "What is photosynthesis?",
+                        "Role of sunlight in photosynthesis",
+                        "How plants make food"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Genetics": ["Explain genetics", "What is evolution?", "Human body systems?", "What is photosynthesis?", "What is respiration?"]
+
+                "Life Processes": {
+
+                    "Mitosis & Meiosis": [
+                        "Mitosis",
+                        "Meiosis",
+                        "Difference between mitosis and meiosis"
+                    ],
+
+                    "Digestive System": [
+                        "Digestive system",
+                        "Digestion process",
+                        "Breakdown of food into nutrients"
+                    ],
+
+                    "Enzymes": [
+                        "What are enzymes?",
+                        "Enzyme function",
+                        "Role of enzymes in reactions"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Molecular": ["Molecular biology?", "Gene expression?", "Biotechnology basics?", "Advanced genetics?", "Human physiology deep concepts?"]
+
+                "Advanced Biology": {
+
+                    "Gene Expression": [
+                        "Gene expression",
+                        "DNA to RNA",
+                        "RNA to protein"
+                    ],
+
+                    "Immune System": [
+                        "Immune system",
+                        "Body defense",
+                        "Immune response against pathogens"
+                    ],
+
+                    "Evolution": [
+                        "Darwin's theory",
+                        "Natural selection",
+                        "Evolution"
+                    ]
+                }
             }
         },
-        "environmental": {
+
+
+        "evs": {
+
             "Basic": {
-                "Ecology": ["What is environment?", "What is pollution?", "Types of ecosystems?", "What is climate change?", "What is conservation?"]
+
+                "Environment Foundations": {
+
+                    "Pollution": [
+                        "What is pollution?",
+                        "Environmental pollution",
+                        "Effects of pollution"
+                    ],
+
+                    "Renewable Energy": [
+                        "What is renewable energy?",
+                        "Natural sources of energy",
+                        "Solar energy"
+                    ],
+
+                    "Ecosystem": [
+                        "What is an ecosystem?",
+                        "Living and non-living components",
+                        "Interaction between organisms and environment"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Sustainability": ["Causes of global warming?", "Sustainable development?", "Waste management?", "Water conservation?", "Biodiversity importance?"]
+
+                "Environmental Processes": {
+
+                    "Global Warming": [
+                        "What is global warming?",
+                        "Increase in Earth's temperature",
+                        "Causes of global warming"
+                    ],
+
+                    "Food Chain": [
+                        "What is a food chain?",
+                        "Flow of energy",
+                        "Producers and consumers"
+                    ],
+
+                    "Carbon Cycle": [
+                        "What is the carbon cycle?",
+                        "Movement of carbon in nature",
+                        "Carbon dioxide and the carbon cycle"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Impact & Policy": ["Environmental impact analysis?", "Climate models?", "Advanced sustainability methods?", "Green technologies?", "Policy and environmental laws?"]
+
+                "Environmental Challenges": {
+
+                    "Climate Change": [
+                        "Climate change",
+                        "Effects of climate change",
+                        "Rising sea levels and weather changes"
+                    ],
+
+                    "Biodiversity": [
+                        "What is biodiversity?",
+                        "Importance of biodiversity",
+                        "Biodiversity and ecosystem balance"
+                    ],
+
+                    "Sustainable Development": [
+                        "Sustainable development",
+                        "Using resources responsibly",
+                        "Protecting resources for future generations"
+                    ]
+                }
             }
         },
+
+
         "astronomy": {
+
             "Basic": {
-                "Solar System": ["What is Astronomy?", "What is solar system?", "What are planets?", "What is a star?", "What is a galaxy?"]
+
+                "Space Foundations": {
+
+                    "Sun and Stars": [
+                        "Is the Sun a star?",
+                        "What is a star?",
+                        "Characteristics of stars"
+                    ],
+
+                    "Earth and Moon": [
+                        "Earth's satellite",
+                        "What is the Moon?",
+                        "Earth and Moon relationship"
+                    ],
+
+                    "Galaxies": [
+                        "What is a galaxy?",
+                        "Collection of stars",
+                        "Types of galaxies"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Space Phenomena": ["Life cycle of stars?", "Black holes?", "What is light year?", "Types of galaxies?", "Space exploration basics?"]
+
+                "Space Phenomena": {
+
+                    "Solar System": [
+                        "What is the solar system?",
+                        "Sun and planets",
+                        "Structure of the solar system"
+                    ],
+
+                    "Black Holes": [
+                        "What is a black hole?",
+                        "Strong gravitational force",
+                        "Black hole formation"
+                    ],
+
+                    "Light-Year": [
+                        "What is a light-year?",
+                        "Speed of light",
+                        "Measuring distance in space"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Cosmology": ["Cosmology basics?", "Dark matter & energy?", "Advanced astrophysics?", "Universe expansion?", "Space-time concepts?"]
+
+                "Universe & Space": {
+
+                    "Big Bang": [
+                        "What is the Big Bang?",
+                        "Origin of the universe",
+                        "Expansion of the universe"
+                    ],
+
+                    "Dark Matter": [
+                        "What is dark matter?",
+                        "Invisible matter",
+                        "Dark matter and gravity"
+                    ],
+
+                    "Exoplanets": [
+                        "What are exoplanets?",
+                        "Planets outside the solar system",
+                        "Exoplanet discovery"
+                    ]
+                }
             }
         },
+
+
         "biotechnology": {
+
             "Basic": {
-                "Intro": ["What is Biotechnology?", "What is DNA technology?", "What is cloning?", "What is fermentation?", "Applications of biotech?"]
+
+                "Biotechnology Foundations": {
+
+                    "Biotechnology": [
+                        "What is Biotechnology?",
+                        "Biology and technology",
+                        "Applications of biotechnology"
+                    ],
+
+                    "DNA": [
+                        "What is DNA?",
+                        "Genetic information",
+                        "Uses of DNA"
+                    ],
+
+                    "GMO": [
+                        "What is a GMO?",
+                        "Genetically modified organisms",
+                        "Genetic modification"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Engineering": ["Genetic engineering?", "PCR technique?", "Biotech in medicine?", "Agricultural biotech?", "Bioinformatics?"]
+
+                "Genetic Technologies": {
+
+                    "PCR": [
+                        "What is PCR?",
+                        "DNA amplification",
+                        "PCR technique"
+                    ],
+
+                    "Genetic Engineering": [
+                        "What is genetic engineering?",
+                        "Gene modification",
+                        "DNA manipulation"
+                    ],
+
+                    "Cloning": [
+                        "What is cloning?",
+                        "Creating identical copies",
+                        "Cloning process"
+                    ]
+                }
             },
+
             "Advanced": {
-                "CRISPR": ["CRISPR technology?", "Advanced gene editing?", "Synthetic biology?", "Biotech ethics?", "Future of biotechnology?"]
+
+                "Advanced Biotechnology": {
+
+                    "CRISPR": [
+                        "What is CRISPR?",
+                        "Gene editing",
+                        "CRISPR technology"
+                    ],
+
+                    "Recombinant DNA": [
+                        "What is recombinant DNA?",
+                        "Combining DNA from different sources",
+                        "Recombinant DNA technology"
+                    ],
+
+                    "Stem Cells": [
+                        "What are stem cells?",
+                        "Stem cell differentiation",
+                        "Stem cell applications"
+                    ]
+                }
             }
         },
+
+
         "neuroscience": {
+
             "Basic": {
-                "Brain Intro": ["What is Neuroscience?", "What is a neuron?", "Parts of the brain?", "What is the nervous system?", "Brain functions?"]
+
+                "Brain Foundations": {
+
+                    "Brain": [
+                        "What is the brain?",
+                        "Brain functions",
+                        "How the brain controls body activities"
+                    ],
+
+                    "Neuron": [
+                        "What is a neuron?",
+                        "Nerve cell structure",
+                        "Functions of neurons"
+                    ],
+
+                    "Central Nervous System": [
+                        "What is CNS?",
+                        "Brain and spinal cord",
+                        "Functions of the central nervous system"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Cognition": ["How neurons communicate?", "What is cognition?", "Brain and behavior?", "Memory process?", "Neurotransmitters?"]
+
+                "Neural Communication": {
+
+                    "Synapse": [
+                        "What is a synapse?",
+                        "Connection between neurons",
+                        "Neural communication"
+                    ],
+
+                    "Brain Parts": [
+                        "Parts of the brain",
+                        "Functions of brain regions",
+                        "Major parts of the brain"
+                    ],
+
+                    "Reflex Action": [
+                        "What is reflex action?",
+                        "Automatic response",
+                        "Reflex arc"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Neural Systems": ["Brain disorders?", "Neural networks?", "Cognitive science?", "Advanced brain mapping?", "AI vs brain comparison?"]
+
+                "Advanced Neuroscience": {
+
+                    "Neurotransmitters": [
+                        "What are neurotransmitters?",
+                        "Chemical signals in the brain",
+                        "Neurotransmitter functions"
+                    ],
+
+                    "Brain Plasticity": [
+                        "What is brain plasticity?",
+                        "Brain adaptation",
+                        "Neuroplasticity"
+                    ],
+
+                    "Memory Formation": [
+                        "Memory formation",
+                        "Memory storage",
+                        "How the brain stores information"
+                    ]
+                }
             }
         },
+
+
         "microbiology": {
+
             "Basic": {
-                "Microbes": ["What is Microbiology?", "What are bacteria?", "What are viruses?", "What are fungi?", "Microorganisms role?"]
+
+                "Microbial Foundations": {
+
+                    "Microorganisms": [
+                        "What are microorganisms?",
+                        "Types of microorganisms",
+                        "Role of microorganisms"
+                    ],
+
+                    "Bacteria": [
+                        "What are bacteria?",
+                        "Examples of bacteria",
+                        "Bacterial characteristics"
+                    ],
+
+                    "Viruses": [
+                        "What is a virus?",
+                        "Virus structure",
+                        "Infectious particles"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Pathogens": ["Bacterial structure?", "Virus replication?", "Immunology basics?", "Pathogens?", "Microbial growth?"]
+
+                "Microbial Processes": {
+
+                    "Bacteria vs Viruses": [
+                        "Difference between bacteria and viruses",
+                        "Bacteria as living organisms",
+                        "Viruses and host cells"
+                    ],
+
+                    "Sterilization": [
+                        "What is sterilization?",
+                        "Removing microorganisms",
+                        "Sterilization methods"
+                    ],
+
+                    "Antibiotics": [
+                        "What are antibiotics?",
+                        "Antibiotics and bacteria",
+                        "Uses of antibiotics"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Virology": ["Antibiotic resistance?", "Advanced virology?", "Microbial genetics?", "Industrial microbiology?", "Medical microbiology?"]
+
+                "Advanced Microbiology": {
+
+                    "Pathogenesis": [
+                        "What is pathogenesis?",
+                        "Disease development",
+                        "Pathogens and infection"
+                    ],
+
+                    "Microbial Growth": [
+                        "Microbial growth",
+                        "Microbial growth curve",
+                        "Stages of microbial growth"
+                    ],
+
+                    "Immunology": [
+                        "What is immunology?",
+                        "Immune system",
+                        "Immune response"
+                    ]
+                }
             }
         },
+
+
         "geology": {
+
             "Basic": {
-                "Earth": ["What is Geology?", "Types of rocks?", "What are minerals?", "Earth structure?", "What is a fossil?"]
+
+                "Earth Foundations": {
+
+                    "Rocks": [
+                        "What is a rock?",
+                        "Types of rocks",
+                        "Igneous, sedimentary and metamorphic rocks"
+                    ],
+
+                    "Earth Layers": [
+                        "Layers of the Earth",
+                        "Crust",
+                        "Mantle and core"
+                    ],
+
+                    "Minerals": [
+                        "What are minerals?",
+                        "Natural solid substances",
+                        "Mineral properties"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Tectonics": ["Plate tectonics?", "Volcano formation?", "Earthquakes?", "Rock cycle?", "Soil formation?"]
+
+                "Earth Processes": {
+
+                    "Plate Tectonics": [
+                        "What is plate tectonics?",
+                        "Movement of Earth's plates",
+                        "Tectonic plate boundaries"
+                    ],
+
+                    "Volcanoes": [
+                        "Volcano formation",
+                        "Magma",
+                        "Volcanic eruptions"
+                    ],
+
+                    "Earthquakes": [
+                        "What are earthquakes?",
+                        "Earthquake causes",
+                        "Plate movement and earthquakes"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Mapping": ["Geological mapping?", "Advanced tectonics?", "Mineral exploration?", "Environmental geology?", "Earth history analysis?"]
+
+                "Advanced Geology": {
+
+                    "Rock Cycle": [
+                        "What is the rock cycle?",
+                        "Transformation of rocks",
+                        "Stages of the rock cycle"
+                    ],
+
+                    "Geological Time": [
+                        "Geological time scale",
+                        "History of Earth",
+                        "Major geological eras"
+                    ],
+
+                    "Mineral Science": [
+                        "Mineral formation",
+                        "Mineral properties",
+                        "Mineral classification"
+                    ]
+                }
             }
         }
+
     },
     arts: {
 
         "literature": {
+
             "Basic": {
-                "Foundations": ["What is Literature?", "Types of Genres?", "Introduction to Poetry?", "Elements of Fiction?", "Importance of Reading?"],
-                "Languages": ["History of Tamil Literature?", "Basics of English Prose?", "Grammar in Creative Writing?", "Literary Devices?", "Classic Authors intro?"]
+
+                "Poetry Foundations": {
+
+                    "Poetry": [
+                        "What is Poetry?",
+                        "Poetry as a form of writing",
+                        "Rhythm and expressive language"
+                    ],
+
+                    "Tamil Poetry": [
+                        "Famous Tamil Poets",
+                        "Subramania Bharati",
+                        "Tamil Poetry Basics"
+                    ],
+
+                    "Fiction Basics": [
+                        "What is a Novel?",
+                        "Novel as fictional prose",
+                        "Basic elements of a novel"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Poetry & Drama": ["Structure of a Poem?", "Analysis of Sonnets?", "Shakespearean Plays?", "Modern Tamil Poetry?", "Dramatic Techniques?"],
-                "Creative Writing": ["Character Development?", "Plot Construction?", "Narrative Styles?", "Writing Short Stories?", "Editing Basics?"]
+
+                "Prose & Poetry": {
+
+                    "Prose and Poetry": [
+                        "Difference between Prose and Poetry",
+                        "Prose writing style",
+                        "Poetry structure and rhythm"
+                    ],
+
+                    "Literary Themes": [
+                        "What is a Theme?",
+                        "Main idea of a story",
+                        "Theme and message"
+                    ],
+
+                    "Literary Devices": [
+                        "What are Literary Devices?",
+                        "Metaphor",
+                        "Simile",
+                        "Alliteration"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Literary Theory": ["Post-Colonial Literature?", "Feminism in Literature?", "Modernism vs Post-Modernism?", "Comparative Literature?", "Linguistic Analysis?"]
+
+                "Literary Analysis": {
+
+                    "Symbolism": [
+                        "What is Symbolism?",
+                        "Symbols and deeper meanings",
+                        "Using symbols in literature"
+                    ],
+
+                    "Classical & Modern Literature": [
+                        "Classical Literature",
+                        "Modern Literature",
+                        "Classical vs Modern Literature",
+                        "Different styles and themes"
+                    ],
+
+                    "Postmodern Literature": [
+                        "What is Postmodern Literature?",
+                        "Breaking traditional literary rules",
+                        "Mixing literary styles"
+                    ]
+                }
             }
         },
+
+
         "history": {
+
             "Basic": {
-                "Ancient Times": ["What is History?", "Indus Valley Civilization?", "Ancient River Civilizations?", "Introduction to Archeology?", "Stone Age Eras?"]
+
+                "History Foundations": {
+
+                    "History": [
+                        "What is History?",
+                        "Study of past events",
+                        "Importance of studying history"
+                    ],
+
+                    "Indian Leaders": [
+                        "First Prime Minister of India",
+                        "Jawaharlal Nehru",
+                        "Role of early Indian leaders"
+                    ],
+
+                    "World War II": [
+                        "World War II Basics",
+                        "End of World War II",
+                        "1945 and the end of WWII"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Indian History": ["Mughal Empire overview?", "Chola & Pandya Dynasties?", "British Rule in India?", "Indian Independence Movement?", "Cultural Heritage of India?"]
+
+                "Major Historical Events": {
+
+                    "World War I": [
+                        "Causes of World War I",
+                        "Alliances",
+                        "Nationalism",
+                        "Imperialism",
+                        "Assassination and its impact"
+                    ],
+
+                    "Indus Valley Civilization": [
+                        "Indus Valley Civilization",
+                        "Early urban civilization",
+                        "Major features of the civilization"
+                    ],
+
+                    "Indian Freedom Struggle": [
+                        "Freedom Struggle",
+                        "British Rule in India",
+                        "Indian independence movement"
+                    ]
+                }
             },
+
             "Advanced": {
-                "World History": ["The French Revolution?", "Causes of World War I & II?", "Cold War Era?", "History of Modern Europe?", "Ancient Greek Philosophy & Politics?"]
+
+                "Modern World History": {
+
+                    "Colonialism": [
+                        "Colonialism",
+                        "Economic exploitation",
+                        "Cultural changes caused by colonialism"
+                    ],
+
+                    "World Wars": [
+                        "World War I",
+                        "World War II",
+                        "WWI vs WWII",
+                        "Global impact of World Wars"
+                    ],
+
+                    "Cold War": [
+                        "Cold War Basics",
+                        "USA and USSR",
+                        "Political tensions",
+                        "Causes of the Cold War"
+                    ]
+                }
             }
         },
+
+
         "geography": {
+
             "Basic": {
-                "Earth Basics": ["Layers of the Earth?", "Continents and Oceans?", "Solar System overview?", "Types of Rocks?", "Latitudes and Longitudes?"]
+
+                "Geography Foundations": {
+
+                    "Continents": [
+                        "What is a Continent?",
+                        "Major Continents",
+                        "Landmass and continents"
+                    ],
+
+                    "Oceans": [
+                        "Major Oceans",
+                        "Largest Ocean",
+                        "Pacific Ocean"
+                    ],
+
+                    "Climate Basics": [
+                        "What is Climate?",
+                        "Weather vs Climate",
+                        "Long-term weather patterns"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Climate & Environment": ["Water Cycle process?", "Types of Climates?", "Natural Disasters (Earthquakes, Volcanos)?", "Forestry and Wildlife?", "Indian Monsoon system?"]
+
+                "Physical & Human Geography": {
+
+                    "Rainfall": [
+                        "Types of Rainfall",
+                        "Convectional Rainfall",
+                        "Orographic Rainfall",
+                        "Cyclonic Rainfall"
+                    ],
+
+                    "Population Geography": [
+                        "Population Density",
+                        "People per unit area",
+                        "Population distribution"
+                    ],
+
+                    "Physical & Human Geography": [
+                        "Physical Geography",
+                        "Human Geography",
+                        "Natural features vs human activities"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Human & Technical": ["Population Growth patterns?", "Economic Geography?", "Basics of GIS & Remote Sensing?", "Urbanization challenges?", "Cartography (Map making)?"]
+
+                "Advanced Geography": {
+
+                    "Plate Tectonics": [
+                        "Plate Tectonics",
+                        "Earth's Plates",
+                        "Movement of tectonic plates"
+                    ],
+
+                    "Climate Change": [
+                        "Climate Change",
+                        "Rising Temperature",
+                        "Sea Level Rise",
+                        "Effects of Climate Change"
+                    ],
+
+                    "GIS": [
+                        "What is GIS?",
+                        "Geographic Information System",
+                        "GIS for mapping data"
+                    ]
+                }
             }
         },
+
+
         "psychology": {
+
             "Basic": {
-                "Intro to Mind": ["Definition of Psychology?", "Basic Human Emotions?", "How Memory works?", "Sensation and Perception?", "Nature vs Nurture?"]
+
+                "Psychology Foundations": {
+
+                    "Psychology": [
+                        "What is Psychology?",
+                        "Study of Mind",
+                        "Study of Behavior"
+                    ],
+
+                    "Human Behavior": [
+                        "What is Behavior?",
+                        "Actions of a Person",
+                        "Understanding Human Behavior"
+                    ],
+
+                    "Emotions": [
+                        "What are Emotions?",
+                        "Types of Emotions",
+                        "Happiness and Anger"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Behavior & Development": ["Child Development stages?", "Social Psychology basics?", "Learning Theories (Pavlov/Skinner)?", "Personality Types?", "Stress Management?"]
+
+                "Mind & Personality": {
+
+                    "Memory": [
+                        "Types of Memory",
+                        "Short-term Memory",
+                        "Long-term Memory"
+                    ],
+
+                    "Personality": [
+                        "What is Personality?",
+                        "Personality Traits",
+                        "Individual Differences"
+                    ],
+
+                    "Stress": [
+                        "What is Stress?",
+                        "Mental Pressure",
+                        "Basic Stress Management"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Cognitive & Clinical": ["Cognitive Disorders?", "Brain Anatomy & Function?", "Psychological Research Methods?", "Counseling Techniques?", "Abnormal Psychology?"]
+
+                "Cognitive Psychology": {
+
+                    "Cognitive Development": [
+                        "Cognitive Development",
+                        "Growth of Thinking Ability",
+                        "Development of Cognitive Skills"
+                    ],
+
+                    "Freud Theory": [
+                        "Freud's Theory",
+                        "Id",
+                        "Ego",
+                        "Superego"
+                    ],
+
+                    "Scientific Study of Behavior": [
+                        "Scientific Study of Behavior",
+                        "Observation",
+                        "Experiments in Psychology"
+                    ]
+                }
             }
         },
+
+
         "politicalscience": {
+
             "Basic": {
-                "Civics": ["What is Democracy?", "Indian Constitution basics?", "Organs of Government?", "Fundamental Rights?", "What is Citizenship?"]
+
+                "Civics Foundations": {
+
+                    "Democracy": [
+                        "What is Democracy?",
+                        "Government by the People",
+                        "Basic Principles of Democracy"
+                    ],
+
+                    "Constitution": [
+                        "What is a Constitution?",
+                        "Constitution as a Set of Laws",
+                        "Importance of Constitution"
+                    ],
+
+                    "President of India": [
+                        "President of India",
+                        "Role of the President",
+                        "Indian Presidency"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Governance": ["Parliamentary vs Presidential forms?", "Local Self-Government?", "Public Administration?", "Political Parties in India?", "Electoral Systems?"]
+
+                "Government & Rights": {
+
+                    "Types of Government": [
+                        "Types of Government",
+                        "Democracy",
+                        "Monarchy",
+                        "Dictatorship"
+                    ],
+
+                    "Separation of Powers": [
+                        "Separation of Powers",
+                        "Legislative",
+                        "Executive",
+                        "Judiciary"
+                    ],
+
+                    "Fundamental Rights": [
+                        "Fundamental Rights",
+                        "Basic Rights of Citizens",
+                        "Importance of Fundamental Rights"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Theory & Relations": ["Political Ideologies (Marxism, Liberalism)?", "International Relations?", "United Nations & Global Organs?", "Public Policy making?", "Political Philosophy?"]
+
+                "Political Theory": {
+
+                    "Political Ideologies": [
+                        "Political Ideologies",
+                        "Socialism",
+                        "Capitalism",
+                        "Basic Political Beliefs"
+                    ],
+
+                    "International Relations": [
+                        "International Relations",
+                        "Relations Between Countries",
+                        "International Cooperation"
+                    ],
+
+                    "Public Policy": [
+                        "What is Public Policy?",
+                        "Government Decisions",
+                        "Policies for Society"
+                    ]
+                }
             }
         },
+
+
         "journalism": {
+
             "Basic": {
-                "Reporting": ["Ethics of Journalism?", "News Writing basics?", "Types of Media?", "Role of a Reporter?", "Interviewing Skills?"]
+
+                "Journalism Foundations": {
+
+                    "Journalism": [
+                        "What is Journalism?",
+                        "Reporting News",
+                        "Purpose of Journalism"
+                    ],
+
+                    "News": [
+                        "What is News?",
+                        "Information About Events",
+                        "Basic News Concepts"
+                    ],
+
+                    "Media": [
+                        "What is Media?",
+                        "Communication Channels",
+                        "Types of Media"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Digital & Broadcasting": ["Television Journalism?", "Radio Production?", "Online News Portals?", "Social Media Reporting?", "Photojournalism?"]
+
+                "Journalism & Digital Media": {
+
+                    "Types of Journalism": [
+                        "Types of Journalism",
+                        "Print Journalism",
+                        "Digital Journalism",
+                        "Broadcast Journalism"
+                    ],
+
+                    "Digital Media": [
+                        "What is Digital Media?",
+                        "Online Platforms",
+                        "Digital News"
+                    ],
+
+                    "Reporting": [
+                        "What is Reporting?",
+                        "Collecting News",
+                        "Presenting News"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Mass Comm & PR": ["Mass Communication Models?", "Public Relations (PR) strategies?", "Advertising basics?", "Media Laws and Censorship?", "Documentary Filmmaking?"]
+
+                "Media & Journalism": {
+
+                    "Journalism Ethics": [
+                        "Ethics in Journalism",
+                        "Truth in Reporting",
+                        "Fairness in Journalism"
+                    ],
+
+                    "Role of Media": [
+                        "Role of Media",
+                        "Informing the Public",
+                        "Media and Society"
+                    ],
+
+                    "Fake News": [
+                        "Fake News",
+                        "Impact of Fake News",
+                        "Misinformation",
+                        "Effects on the Public"
+                    ]
+                }
             }
         },
+
+
         "sociology": {
+
             "Basic": {
-                "Social Structure": ["What is Sociology?", "Concept of Family and Kinship?", "Social Groups?", "Culture and Values?", "Introduction to Community?"]
+
+                "Society Foundations": {
+
+                    "Society": [
+                        "What is Society?",
+                        "Groups of People",
+                        "Basic Social Structure"
+                    ],
+
+                    "Culture": [
+                        "What is Culture?",
+                        "Traditions",
+                        "Beliefs",
+                        "Cultural Values"
+                    ],
+
+                    "Family": [
+                        "What is Family?",
+                        "Family as a Social Unit",
+                        "Types of Family"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Society Issues": ["Social Stratification (Caste/Class)?", "Gender Roles in Society?", "Religion and Secularism?", "Rural vs Urban Sociology?", "Social Change factors?"]
+
+                "Social Relationships": {
+
+                    "Social Groups": [
+                        "What are Social Groups?",
+                        "Group Interaction",
+                        "Types of Social Groups"
+                    ],
+
+                    "Socialization": [
+                        "What is Socialization?",
+                        "Learning Social Norms",
+                        "Socialization Process"
+                    ],
+
+                    "Social Inequality": [
+                        "What is Inequality?",
+                        "Unequal Opportunities",
+                        "Social Inequality"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Theory & Research": ["Social Research Methods?", "Karl Marx & Max Weber Theories?", "Criminology basics?", "Industrial Sociology?", "Environmental Sociology?"]
+
+                "Social Theory": {
+
+                    "Social Theories": [
+                        "What are Social Theories?",
+                        "Ideas Explaining Society",
+                        "Major Social Concepts"
+                    ],
+
+                    "Gender Inequality": [
+                        "Gender Inequality",
+                        "Unequal Treatment",
+                        "Gender Roles in Society"
+                    ],
+
+                    "Social Institutions": [
+                        "What are Social Institutions?",
+                        "Organized Social Systems",
+                        "Schools and Social Institutions"
+                    ]
+                }
             }
         },
+
+
         "economics": {
+
             "Basic": {
-                "Markets": ["Supply and Demand?", "Market Structures?", "Basic Economic Problems?", "Introduction to Money?", "Consumer Behavior?"]
+
+                "Economic Foundations": {
+
+                    "Economics": [
+                        "What is Economics?",
+                        "Money and Resources",
+                        "Purpose of Economics"
+                    ],
+
+                    "Money": [
+                        "What is Money?",
+                        "Medium of Exchange",
+                        "Functions of Money"
+                    ],
+
+                    "Demand": [
+                        "What is Demand?",
+                        "Desire to Buy",
+                        "Basic Demand Concepts"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "National Economy": ["GDP and National Income?", "Inflation and Deflation?", "Banking System (RBI)?", "Fiscal Policy?", "Unemployment types?"]
+
+                "Markets & Economy": {
+
+                    "Supply and Demand": [
+                        "Supply and Demand",
+                        "Relationship Between Supply and Demand",
+                        "Price and Market"
+                    ],
+
+                    "Inflation": [
+                        "What is Inflation?",
+                        "Rise in Prices",
+                        "Effects of Inflation"
+                    ],
+
+                    "GDP": [
+                        "What is GDP?",
+                        "Total Production",
+                        "GDP and Economic Activity"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Global Finance": ["International Trade (WTO)?", "Balance of Payments?", "Economic Development Models?", "Public Finance?", "Environmental Economics?"]
+
+                "Economic Policy": {
+
+                    "Economic Growth": [
+                        "What is Economic Growth?",
+                        "Increase in Production",
+                        "Economic Development"
+                    ],
+
+                    "Fiscal Policy": [
+                        "What is Fiscal Policy?",
+                        "Government Taxation",
+                        "Government Spending"
+                    ],
+
+                    "Globalization": [
+                        "What is Globalization?",
+                        "Global Trade",
+                        "International Economic Connections"
+                    ]
+                }
             }
         },
+
+
         "philosophy": {
+
             "Basic": {
-                "Thinking": ["What is Philosophy?", "Branches of Philosophy?", "Basics of Logic?", "Critical Thinking?", "Introduction to Ethics?"]
+
+                "Philosophy Foundations": {
+
+                    "Philosophy": [
+                        "What is Philosophy?",
+                        "Study of Ideas",
+                        "Search for Truth"
+                    ],
+
+                    "Ethics": [
+                        "What is Ethics?",
+                        "Right and Wrong",
+                        "Ethical Principles"
+                    ],
+
+                    "Truth": [
+                        "What is Truth?",
+                        "Fact and Reality",
+                        "Understanding Truth"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Existence": ["Metaphysics intro?", "Epistemology (Nature of Knowledge)?", "Eastern vs Western Philosophy?", "Moral Philosophy?", "Existentialism basics?"]
+
+                "Logic & Knowledge": {
+
+                    "Logic": [
+                        "What is Logic?",
+                        "Reasoning Process",
+                        "Logical Thinking"
+                    ],
+
+                    "Knowledge": [
+                        "What is Knowledge?",
+                        "Understanding Information",
+                        "Sources of Knowledge"
+                    ],
+
+                    "Morality": [
+                        "What is Morality?",
+                        "Principles of Behavior",
+                        "Moral Decisions"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Logic & Science": ["Symbolic Logic?", "Philosophy of Mind?", "Philosophy of Science?", "Aesthetics (Art Philosophy)?", "Political Philosophy?"]
+
+                "Branches of Philosophy": {
+
+                    "Metaphysics": [
+                        "What is Metaphysics?",
+                        "Study of Reality",
+                        "Nature of Reality"
+                    ],
+
+                    "Existentialism": [
+                        "What is Existentialism?",
+                        "Human Existence",
+                        "Meaning of Life"
+                    ],
+
+                    "Epistemology": [
+                        "What is Epistemology?",
+                        "Study of Knowledge",
+                        "Nature of Knowledge"
+                    ]
+                }
             }
         }
     },
+
     maths: {
 
-        "Algebra": {
+        "algebra": {
+
             "Basic": {
-                "Equations & Variables": ["What is a linear equation?", "Solving for X basics?", "What are coefficients?", "Basic arithmetic properties?", "Concept of variables?"],
-                "Polynomials": ["What is a polynomial?", "Degree of a polynomial?", "Adding and subtracting polynomials?", "Basic factoring?", "Quadratic equation intro?"]
+
+                "Algebra Foundations": {
+
+                    "Equations": [
+                        "What is an Equation?",
+                        "Meaning of the Equal Sign",
+                        "Basic Mathematical Statements"
+                    ],
+
+                    "Variables": [
+                        "What is a Variable?",
+                        "Variable as a Symbol",
+                        "Examples of Variables"
+                    ],
+
+                    "Simple Equations": [
+                        "Solving Simple Equations",
+                        "Equation: x + 5 = 10",
+                        "Finding the Unknown Value"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Matrices": ["What is a matrix?", "Types of matrices?", "Matrix addition and subtraction?", "Scalar multiplication?", "Determinants basics?"],
-                "Functions": ["Definition of a function?", "Domain and Range?", "Types of functions (Linear, Quadratic)?", "Composition of functions?", "Inverse functions?"]
+
+                "Polynomial & Functions": {
+
+                    "Polynomials": [
+                        "What is a Polynomial?",
+                        "Variables and Powers",
+                        "Polynomial Expressions"
+                    ],
+
+                    "Linear Equations": [
+                        "Solving Linear Equations",
+                        "Equation: 2x = 8",
+                        "Finding the Value of x"
+                    ],
+
+                    "Functions": [
+                        "What is a Function?",
+                        "Input and Output",
+                        "Function Relationships"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Abstract Structures": ["Group Theory basics?", "Fields and Rings?", "Vector spaces intro?", "Complex numbers in algebra?", "Polynomial division & Remainder theorem?"]
+
+                "Advanced Algebra": {
+
+                    "Quadratic Equations": [
+                        "Quadratic Equations",
+                        "Solving x² - 5x + 6 = 0",
+                        "Roots of Quadratic Equations"
+                    ],
+
+                    "Matrices": [
+                        "What is a Matrix?",
+                        "Rows and Columns",
+                        "Rectangular Arrays of Numbers"
+                    ],
+
+                    "Factorization": [
+                        "What is Factorization?",
+                        "Factorizing Algebraic Expressions",
+                        "Factorization of x² - 9"
+                    ]
+                }
             }
         },
-        "Calculus": {
+
+
+        "calculus": {
+
             "Basic": {
-                "Limits & Continuity": ["What is a limit?", "Calculating simple limits?", "Concept of continuity?", "Infinite limits?", "Limits at infinity?"]
+
+                "Calculus Foundations": {
+
+                    "Limits": [
+                        "What is a Limit?",
+                        "Value a Function Approaches",
+                        "Basic Limit Concepts"
+                    ],
+
+                    "Derivatives": [
+                        "What is a Derivative?",
+                        "Rate of Change",
+                        "Basic Differentiation"
+                    ],
+
+                    "Basic Differentiation": [
+                        "Derivative of x²",
+                        "d/dx (x²)",
+                        "Basic Differentiation Rules"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Differentiation": ["Rules of differentiation (Power, Product)?", "Chain Rule?", "Derivatives of trig functions?", "Implicit differentiation?", "Tangents and Normals?"]
+
+                "Integration & Limits": {
+
+                    "Integration": [
+                        "What is Integration?",
+                        "Integration as Reverse Differentiation",
+                        "Basic Integration Concepts"
+                    ],
+
+                    "Basic Integration": [
+                        "Integrating x",
+                        "∫x dx",
+                        "Constant of Integration"
+                    ],
+
+                    "Limits": [
+                        "Evaluating Limits",
+                        "Limit as x approaches 0",
+                        "Limit of x²"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Integration": ["Definite vs Indefinite integrals?", "Integration by parts?", "U-substitution method?", "Applications of integration (Area/Volume)?", "Differential equations intro?"]
+
+                "Advanced Calculus": {
+
+                    "Trigonometric Derivatives": [
+                        "Derivative of sin x",
+                        "d/dx (sin x)",
+                        "Basic Trigonometric Differentiation"
+                    ],
+
+                    "Trigonometric Integration": [
+                        "Integration of cos x",
+                        "∫cos x dx",
+                        "Basic Trigonometric Integration"
+                    ],
+
+                    "Applications of Calculus": [
+                        "Applications of Calculus",
+                        "Calculus in Motion",
+                        "Calculus in Optimization"
+                    ]
+                }
             }
         },
-        "Geometry": {
+
+
+        "geometry": {
+
             "Basic": {
-                "Euclidean Geometry": ["Points, lines, and planes?", "Types of angles?", "Properties of triangles?", "Circles and its parts?", "Perimeter and Area basics?"]
+
+                "Geometry Foundations": {
+
+                    "Triangles": [
+                        "What is a Triangle?",
+                        "Three-sided Shapes",
+                        "Basic Triangle Properties"
+                    ],
+
+                    "Triangle Angles": [
+                        "Sum of Angles in a Triangle",
+                        "180° Triangle Rule",
+                        "Interior Angles"
+                    ],
+
+                    "Circles": [
+                        "What is a Circle?",
+                        "Center of a Circle",
+                        "Points Equidistant from the Center"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Coordinate Geometry": ["Distance formula?", "Section formula?", "Equation of a straight line?", "Slope of a line?", "Midpoint theorem?"]
+
+                "Geometry & Coordinates": {
+
+                    "Pythagoras Theorem": [
+                        "What is Pythagoras Theorem?",
+                        "a² + b² = c²",
+                        "Right-angled Triangles"
+                    ],
+
+                    "Area of Shapes": [
+                        "Area of a Rectangle",
+                        "Length × Breadth",
+                        "Basic Area Calculations"
+                    ],
+
+                    "Coordinate Geometry": [
+                        "What is Coordinate Geometry?",
+                        "Coordinates and Graphs",
+                        "Geometry Using Graphs"
+                    ]
+                }
             },
+
             "Advanced": {
-                "3D Shapes & Theorems": ["Volume of 3D objects?", "Surface area of spheres and cones?", "Pythagorean theorem applications?", "Congruence and Similarity?", "Non-Euclidean geometry intro?"]
+
+                "Advanced Geometry": {
+
+                    "Distance Formula": [
+                        "What is the Distance Formula?",
+                        "Distance Between Two Points",
+                        "√[(x₂-x₁)² + (y₂-y₁)²]"
+                    ],
+
+                    "Equation of Circle": [
+                        "Equation of a Circle",
+                        "(x-h)² + (y-k)² = r²",
+                        "Center and Radius"
+                    ],
+
+                    "3D Geometry": [
+                        "What are 3D Shapes?",
+                        "Shapes with Volume",
+                        "Cube and Sphere"
+                    ]
+                }
             }
         },
-        "Statistics": {
+
+
+        "statistics": {
+
             "Basic": {
-                "Data Basics": ["Calculating Mean, Median, and Mode?", "What is Range?", "Types of data sets?", "Frequency distribution?", "Interpreting bar graphs?"]
+
+                "Statistics Foundations": {
+
+                    "Mean": [
+                        "What is Mean?",
+                        "Average Value",
+                        "Calculating Mean"
+                    ],
+
+                    "Median": [
+                        "What is Median?",
+                        "Middle Value",
+                        "Finding the Median"
+                    ],
+
+                    "Data": [
+                        "What is Data?",
+                        "Collection of Values",
+                        "Types of Basic Data"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Variance & SD": ["Calculating Variance?", "What is Standard Deviation?", "Z-scores?", "Normal distribution basics?", "Correlation coefficients?"]
+
+                "Data Analysis": {
+
+                    "Mode": [
+                        "What is Mode?",
+                        "Most Frequent Value",
+                        "Finding the Mode"
+                    ],
+
+                    "Range": [
+                        "What is Range?",
+                        "Maximum and Minimum Values",
+                        "Range = Max - Min"
+                    ],
+
+                    "Distribution": [
+                        "What is Data Distribution?",
+                        "Data Patterns",
+                        "Understanding Data Distribution"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Hypothesis Testing": ["Null vs Alternative hypothesis?", "P-values and significance?", "T-tests and ANOVA?", "Linear Regression models?", "Sampling distributions?"]
+
+                "Statistical Analysis": {
+
+                    "Variance": [
+                        "What is Variance?",
+                        "Measure of Data Spread",
+                        "Calculating Variance"
+                    ],
+
+                    "Standard Deviation": [
+                        "What is Standard Deviation?",
+                        "Square Root of Variance",
+                        "Measuring Data Spread"
+                    ],
+
+                    "Regression": [
+                        "What is Regression?",
+                        "Relationship Between Variables",
+                        "Basic Regression Analysis"
+                    ]
+                }
             }
         },
-        "Trigonometry": {
+
+
+        "trigonometry": {
+
             "Basic": {
-                "Trig Ratios": ["Defining Sin, Cos, Tan?", "SOH-CAH-TOA rule?", "Trig values for standard angles?", "Right-angled triangle basics?", "Pythagorean identities?"]
+
+                "Trigonometry Foundations": {
+
+                    "Sine": [
+                        "Sine Function",
+                        "sin 0°",
+                        "Basic Sine Values"
+                    ],
+
+                    "Cosine": [
+                        "Cosine Function",
+                        "cos 0°",
+                        "Basic Cosine Values"
+                    ],
+
+                    "Tangent": [
+                        "Tangent Function",
+                        "tan 45°",
+                        "Basic Tangent Values"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Identities & Graphs": ["Reciprocal identities?", "Double angle formulas?", "Graphing Sin and Cos waves?", "Period and Amplitude?", "Sum and Difference formulas?"]
+
+                "Trigonometric Functions": {
+
+                    "Trigonometric Identities": [
+                        "What is a Trigonometric Identity?",
+                        "sin²θ + cos²θ = 1",
+                        "Basic Trigonometric Identities"
+                    ],
+
+                    "Tangent Relationship": [
+                        "tan θ",
+                        "tan θ = sin θ / cos θ",
+                        "Relationship Between Sine and Cosine"
+                    ],
+
+                    "Sine Values": [
+                        "sin 90°",
+                        "Important Sine Values",
+                        "Trigonometric Angle Values"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Inverse & Complex": ["Inverse trig functions?", "Solving trig equations?", "Law of Sines and Cosines?", "Polar coordinates?", "Trigonometry in 3D?"]
+
+                "Advanced Trigonometry": {
+
+                    "Cosine Values": [
+                        "cos 60°",
+                        "Important Cosine Values",
+                        "Cosine of Standard Angles"
+                    ],
+
+                    "Tangent Values": [
+                        "tan 0°",
+                        "Important Tangent Values",
+                        "Tangent of Standard Angles"
+                    ],
+
+                    "Inverse Trigonometry": [
+                        "What is Inverse Trigonometry?",
+                        "Reverse Trigonometric Functions",
+                        "Inverse Sine, Cosine and Tangent"
+                    ]
+                }
             }
         },
-        "DiscreteMaths": {
+
+
+        "discrete": {
+
             "Basic": {
-                "Logic & Sets": ["Truth tables?", "Logical connectives (AND, OR, NOT)?", "What is a Set?", "Venn diagrams?", "Subsets and Power sets?"]
+
+                "Discrete Mathematics Foundations": {
+
+                    "Sets": [
+                        "What is a Set?",
+                        "Collection of Elements",
+                        "Basic Set Concepts"
+                    ],
+
+                    "Logic": [
+                        "What is Logic?",
+                        "Reasoning in Mathematics",
+                        "Basic Logical Concepts"
+                    ],
+
+                    "Binary": [
+                        "What is Binary?",
+                        "Base-2 Number System",
+                        "Binary Digits"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Graph Theory": ["Vertices and Edges?", "Types of graphs?", "Paths and Circuits?", "Trees and Forests?", "Planar graphs?"]
+
+                "Sets & Logic": {
+
+                    "Types of Sets": [
+                        "Types of Sets",
+                        "Finite Sets",
+                        "Infinite Sets"
+                    ],
+
+                    "Graphs": [
+                        "What is a Graph?",
+                        "Nodes and Edges",
+                        "Basic Graph Concepts"
+                    ],
+
+                    "Truth Tables": [
+                        "What is a Truth Table?",
+                        "Logical Results",
+                        "Basic Truth Table Construction"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Combinatorics": ["Permutations vs Combinations?", "Pigeonhole Principle?", "Mathematical Induction?", "Recurrence relations?", "Algorithm complexity basics?"]
+
+                "Combinatorics & Recursion": {
+
+                    "Combinatorics": [
+                        "What is Combinatorics?",
+                        "Counting Methods",
+                        "Basic Counting Problems"
+                    ],
+
+                    "Permutations": [
+                        "What is a Permutation?",
+                        "Arrangement of Objects",
+                        "Permutation Concepts"
+                    ],
+
+                    "Recursion": [
+                        "What is Recursion?",
+                        "Function Calling Itself",
+                        "Basic Recursive Problems"
+                    ]
+                }
             }
         },
-        "NumberTheory": {
+
+
+        "numbertheory": {
+
             "Basic": {
-                "Divisibility": ["Prime vs Composite numbers?", "Sieve of Eratosthenes?", "GCD and LCM calculation?", "Euclidean algorithm?", "Factors and Multiples?"]
+
+                "Number Theory Foundations": {
+
+                    "Prime Numbers": [
+                        "What is a Prime Number?",
+                        "Numbers Divisible by 1 and Itself",
+                        "Prime Number Examples"
+                    ],
+
+                    "Prime Examples": [
+                        "Examples of Prime Numbers",
+                        "Prime Number 2",
+                        "Identifying Prime Numbers"
+                    ],
+
+                    "Even Numbers": [
+                        "What is an Even Number?",
+                        "Numbers Divisible by 2",
+                        "Even Number Examples"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Modular Arithmetic": ["Congruence relations?", "Properties of modulo?", "Chinese Remainder Theorem?", "Fermat's Little Theorem?", "Euler's Totient function?"]
+
+                "Divisibility & Factors": {
+
+                    "GCD": [
+                        "What is GCD?",
+                        "Greatest Common Divisor",
+                        "Finding GCD"
+                    ],
+
+                    "LCM": [
+                        "What is LCM?",
+                        "Least Common Multiple",
+                        "Finding LCM"
+                    ],
+
+                    "Divisibility Rules": [
+                        "What is a Divisibility Rule?",
+                        "Rules for Checking Division",
+                        "Common Divisibility Tests"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Cryptography & Patterns": ["Prime number theorem?", "RSA algorithm basics?", "Diophantine equations?", "Goldbach conjecture?", "Perfect numbers?"]
+
+                "Advanced Number Theory": {
+
+                    "Modular Arithmetic": [
+                        "What is Modular Arithmetic?",
+                        "Arithmetic with Remainders",
+                        "Basic Modular Operations"
+                    ],
+
+                    "Theorems": [
+                        "What is a Theorem?",
+                        "Proven Mathematical Statements",
+                        "Basic Theorem Concepts"
+                    ],
+
+                    "Prime Factorization": [
+                        "What is Prime Factorization?",
+                        "Breaking Numbers into Prime Factors",
+                        "Prime Factorization Process"
+                    ]
+                }
             }
         },
-        "Probability": {
+
+
+        "probability": {
+
             "Basic": {
-                "Chance Basics": ["Defining probability?", "Sample space and Events?", "Independent vs Dependent events?", "Mutually exclusive events?", "Basic coin/dice problems?"]
+
+                "Probability Foundations": {
+
+                    "Probability": [
+                        "What is Probability?",
+                        "Chance of an Event",
+                        "Basic Probability Concepts"
+                    ],
+
+                    "Probability Range": [
+                        "Probability Range",
+                        "Values from 0 to 1",
+                        "Meaning of Probability Values"
+                    ],
+
+                    "Events": [
+                        "What is an Event?",
+                        "Examples of Events",
+                        "Coin Toss Events"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Rules & Theorems": ["Addition and Multiplication rules?", "Conditional probability?", "Bayes' Theorem?", "Bernoulli trials?", "Binomial distribution?"]
+
+                "Probability & Events": {
+
+                    "Probability Formula": [
+                        "Probability Formula",
+                        "Favorable Outcomes",
+                        "Total Outcomes",
+                        "Favorable / Total Outcomes"
+                    ],
+
+                    "Independent Events": [
+                        "What are Independent Events?",
+                        "Events Not Affecting Each Other",
+                        "Independent Event Examples"
+                    ],
+
+                    "Sample Space": [
+                        "What is Sample Space?",
+                        "All Possible Outcomes",
+                        "Sample Space Examples"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Distributions": ["Poisson distribution?", "Continuous random variables?", "Central Limit Theorem?", "Expected value and Variance?", "Markov chains intro?"]
+
+                "Advanced Probability": {
+
+                    "Conditional Probability": [
+                        "What is Conditional Probability?",
+                        "Probability with a Condition",
+                        "Conditional Event Concepts"
+                    ],
+
+                    "Bayes Theorem": [
+                        "What is Bayes Theorem?",
+                        "Updating Probability",
+                        "Bayesian Probability Basics"
+                    ],
+
+                    "Expected Value": [
+                        "What is Expected Value?",
+                        "Average Outcome",
+                        "Expected Value Calculation"
+                    ]
+                }
             }
         },
-        "LinearAlgebra": {
+
+
+        "linearalgebra": {
+
             "Basic": {
-                "Vectors": ["Vector addition?", "Dot product?", "Vector magnitude?", "Unit vectors?", "Direction cosines?"]
+
+                "Linear Algebra Foundations": {
+
+                    "Vectors": [
+                        "What is a Vector?",
+                        "Magnitude and Direction",
+                        "Basic Vector Concepts"
+                    ],
+
+                    "Matrices": [
+                        "What is a Matrix?",
+                        "Array of Numbers",
+                        "Basic Matrix Structure"
+                    ],
+
+                    "Dimensions": [
+                        "What is Matrix Dimension?",
+                        "Rows and Columns",
+                        "Size of a Matrix"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Transformations": ["Linear transformations?", "Inverse of a matrix?", "System of linear equations?", "Cramer's rule?", "Rank of a matrix?"]
+
+                "Matrix Operations": {
+
+                    "Matrix Addition": [
+                        "What is Matrix Addition?",
+                        "Adding Corresponding Elements",
+                        "Matrix Addition Rules"
+                    ],
+
+                    "Dot Product": [
+                        "What is Dot Product?",
+                        "Multiplying and Adding Vector Values",
+                        "Basic Dot Product"
+                    ],
+
+                    "Identity Matrix": [
+                        "What is an Identity Matrix?",
+                        "1s on the Main Diagonal",
+                        "Identity Matrix Structure"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Eigenvalues": ["Characteristic equations?", "Eigenvectors calculation?", "Diagonalization?", "Inner product spaces?", "Singular Value Decomposition (SVD)?"]
+
+                "Advanced Linear Algebra": {
+
+                    "Eigenvalues": [
+                        "What is an Eigenvalue?",
+                        "Scalar Related to a Matrix",
+                        "Basic Eigenvalue Concepts"
+                    ],
+
+                    "Transformations": [
+                        "What is a Transformation?",
+                        "Changes in Space",
+                        "Linear Transformations"
+                    ],
+
+                    "Determinants": [
+                        "What is a Determinant?",
+                        "Determinant of a Matrix",
+                        "Basic Determinant Concepts"
+                    ]
+                }
             }
         }
     },
     engineering: {
 
-        "MechanicalEngineering": {
+        "Mechanical": {
+
             "Basic": {
-                "Thermodynamics": ["What is the Zeroth Law?", "First Law of Thermodynamics?", "Difference between Open and Closed systems?", "What is Enthalpy?", "Understanding Heat vs Work?"],
-                "Engineering Mechanics": ["What is Newton’s Second Law?", "Concept of Friction?", "Resultant of forces?", "What is a Free Body Diagram?", "Scalar vs Vector quantities?"]
+
+                "Machines & Mechanics": {
+                    "Machine Basics": [
+                        "What is a machine?",
+                        "What are the basic types of machines?"
+                    ],
+
+                    "Force": [
+                        "What is force?",
+                        "What are the effects of force?"
+                    ],
+
+                    "Energy": [
+                        "What is energy?",
+                        "What are the basic forms of energy?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Fluid Mechanics": ["Bernoulli’s Principle?", "Laminar vs Turbulent flow?", "What is Viscosity?", "Pascal’s Law applications?", "Concept of Buoyancy?"],
-                "Manufacturing Tech": ["Types of Casting?", "What is Lathe machine?", "Milling vs Drilling?", "Welding techniques?", "CNC machine basics?"]
+
+                "Thermodynamics": {
+                    "Heat & Energy": [
+                        "What is thermodynamics?",
+                        "What is heat?",
+                        "What is energy transfer?"
+                    ]
+                },
+
+                "Fluid Mechanics": {
+                    "Fluid Flow": [
+                        "What is fluid mechanics?",
+                        "What is fluid flow?",
+                        "What are the basic properties of fluids?"
+                    ]
+                },
+
+                "Computer-Aided Design": {
+                    "CAD": [
+                        "What is CAD?",
+                        "What is computer-aided design?",
+                        "What is CAD used for?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "CAD/CAM & Robotics": ["Finite Element Analysis (FEA)?", "3D Modeling in SolidWorks?", "Kinematics of robots?", "Rapid Prototyping?", "Industry 4.0 basics?"]
+
+                "Thermodynamics": {
+                    "Entropy": [
+                        "What is entropy?",
+                        "What does entropy represent?",
+                        "How is entropy related to thermodynamics?"
+                    ]
+                },
+
+                "Fluid Mechanics": {
+                    "Bernoulli Principle": [
+                        "What is Bernoulli’s principle?",
+                        "How are pressure and velocity related in fluid flow?"
+                    ]
+                },
+
+                "Manufacturing": {
+                    "Manufacturing Processes": [
+                        "What is a manufacturing process?",
+                        "How are raw materials converted into products?",
+                        "What are common manufacturing processes?"
+                    ]
+                }
             }
         },
-        "CivilEngineering": {
+
+
+        "Civil": {
+
             "Basic": {
-                "Surveying": ["What is Chain Surveying?", "Compass surveying basics?", "Concept of Levelling?", "Unit conversions in Civil?", "What is a Contour map?"]
+
+                "Structures": {
+                    "Structure Basics": [
+                        "What is a structure?",
+                        "What are common types of structures?"
+                    ]
+                },
+
+                "Concrete": {
+                    "Concrete Basics": [
+                        "What is concrete?",
+                        "What are the main components of concrete?",
+                        "What is concrete used for?"
+                    ]
+                },
+
+                "Foundations": {
+                    "Foundation Basics": [
+                        "What is a foundation?",
+                        "Why is a foundation important?",
+                        "What are the basic types of foundations?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Structural Analysis": ["Bending Moment vs Shear Force?", "Types of Beams?", "Stress-Strain curve?", "Concrete technology basics?", "Foundation types?"]
+
+                "Surveying": {
+                    "Land Measurement": [
+                        "What is surveying?",
+                        "Why is surveying used?",
+                        "What is land measurement?"
+                    ]
+                },
+
+                "Structural Loads": {
+                    "Loads": [
+                        "What is a load?",
+                        "What are the different types of loads?",
+                        "How do loads act on structures?"
+                    ]
+                },
+
+                "Soil Testing": {
+                    "Soil Strength": [
+                        "What is soil testing?",
+                        "Why is soil testing important?",
+                        "How is soil strength checked?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Geotechnical & Transportation": ["Soil compaction?", "Highway pavement design?", "Earthquake resistant structures?", "Smart City infrastructure?", "Environmental impact of construction?"]
+
+                "Stress": {
+                    "Structural Stress": [
+                        "What is stress?",
+                        "What is force per unit area?",
+                        "How does stress affect structures?"
+                    ]
+                },
+
+                "Strain": {
+                    "Structural Deformation": [
+                        "What is strain?",
+                        "What is deformation due to stress?",
+                        "How is strain related to stress?"
+                    ]
+                },
+
+                "Structural Analysis": {
+                    "Force Analysis": [
+                        "What is structural analysis?",
+                        "How are forces studied in structures?",
+                        "Why is structural analysis important?"
+                    ]
+                }
             }
         },
-        "ElectricalEngineering": {
+
+
+        "Electrical": {
+
             "Basic": {
-                "Circuit Theory": ["Ohm’s Law?", "Kirchhoff’s Laws (KCL & KVL)?", "Series vs Parallel circuits?", "What is Resistance?", "AC vs DC basics?"]
+
+                "Electric Current": {
+                    "Current Basics": [
+                        "What is current?",
+                        "What is electric charge?",
+                        "How does electric current flow?"
+                    ]
+                },
+
+                "Voltage": {
+                    "Voltage Basics": [
+                        "What is voltage?",
+                        "What is the SI unit of voltage?",
+                        "What does voltage represent?"
+                    ]
+                },
+
+                "Circuits": {
+                    "Circuit Basics": [
+                        "What is a circuit?",
+                        "What is the path for current flow?",
+                        "What are the basic parts of a circuit?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Electrical Machines": ["Working of a DC Motor?", "Transformer working principle?", "Induction motors?", "Stepper motor basics?", "Speed control methods?"]
+
+                "Ohm's Law": {
+                    "Voltage Current Resistance": [
+                        "What is Ohm’s Law?",
+                        "What is the relationship between voltage, current and resistance?",
+                        "What is the formula V = I × R?"
+                    ]
+                },
+
+                "Electrical Power": {
+                    "Power Basics": [
+                        "What is power?",
+                        "What is electrical power?",
+                        "How is power related to energy?"
+                    ]
+                },
+
+                "Resistance": {
+                    "Resistance Basics": [
+                        "What is resistance?",
+                        "How does resistance oppose current?",
+                        "What factors affect resistance?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Power & Control": ["Power Grid stability?", "Smart Grid technology?", "PID Controllers?", "PLC and SCADA basics?", "Renewable energy integration?"]
+
+                "AC & DC": {
+                    "Alternating and Direct Current": [
+                        "What is AC and DC?",
+                        "What is the difference between AC and DC?",
+                        "How does current direction differ in AC and DC?"
+                    ]
+                },
+
+                "Transformers": {
+                    "Transformer Basics": [
+                        "What is a transformer?",
+                        "How does a transformer change voltage?",
+                        "What is a transformer used for?"
+                    ]
+                },
+
+                "Control Systems": {
+                    "Control System Basics": [
+                        "What is a control system?",
+                        "How does a control system manage outputs?",
+                        "What are the basic parts of a control system?"
+                    ]
+                }
             }
         },
+
+
         "ECE": {
+
             "Basic": {
-                "Electronic Devices": ["P-N Junction diode?", "Working of Transistors?", "What is Rectification?", "Zener diode applications?", "LED vs LCD?"]
+
+                "Electronic Circuits": {
+                    "Circuit Basics": [
+                        "What is an electronic circuit?",
+                        "How is an electronic circuit different from a basic circuit?",
+                        "What are electronic components?"
+                    ]
+                },
+
+                "Signals": {
+                    "Signal Basics": [
+                        "What is a signal?",
+                        "What does a signal carry?",
+                        "Why are signals important in electronics?"
+                    ]
+                },
+
+                "Diodes": {
+                    "Diode Basics": [
+                        "What is a diode?",
+                        "How does a diode allow current to flow?",
+                        "What is a diode used for?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Signal Processing": ["Analog vs Digital signals?", "Sampling theorem?", "Frequency modulation?", "Embedded systems basics?", "Microcontroller 8051?"]
+
+                "Amplifiers": {
+                    "Signal Amplification": [
+                        "What is an amplifier?",
+                        "How does an amplifier increase signal strength?",
+                        "What is signal amplification?"
+                    ]
+                },
+
+                "Modulation": {
+                    "Signal Transmission": [
+                        "What is modulation?",
+                        "Why is modulation used?",
+                        "How does modulation help signal transmission?"
+                    ]
+                },
+
+                "IoT": {
+                    "Internet of Things": [
+                        "What is IoT?",
+                        "What are IoT devices?",
+                        "How do IoT devices connect to the internet?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "VLSI & IoT": ["IC Fabrication steps?", "Verilog/VHDL basics?", "IoT architecture?", "Wireless sensor networks?", "Antenna design fundamentals?"]
+
+                "VLSI": {
+                    "Integrated Circuits": [
+                        "What is VLSI?",
+                        "What is Very Large Scale Integration?",
+                        "Where is VLSI used?"
+                    ]
+                },
+
+                "Embedded Systems": {
+                    "Embedded Computing": [
+                        "What is an embedded system?",
+                        "What is a dedicated computing system?",
+                        "Where are embedded systems used?"
+                    ]
+                },
+
+                "Signal Processing": {
+                    "Signal Analysis": [
+                        "What is signal processing?",
+                        "Why are signals analyzed?",
+                        "What are the basic applications of signal processing?"
+                    ]
+                }
             }
         },
-        "ComputerScience": {
+
+
+        "CSE": {
+
             "Basic": {
-                "Programming Basics": ["What is a Variable?", "Loops and Conditions?", "Functions and Scope?", "Object Oriented Programming (OOP)?", "Basic Syntax of Python?"]
+
+                "Computers": {
+                    "Computer Basics": [
+                        "What is a computer?",
+                        "What does a computer do?",
+                        "What are the basic functions of a computer?"
+                    ]
+                },
+
+                "Programming": {
+                    "Programming Basics": [
+                        "What is programming?",
+                        "What are programming instructions?",
+                        "Why is programming used?"
+                    ]
+                },
+
+                "Software": {
+                    "Software Basics": [
+                        "What is software?",
+                        "What are computer programs?",
+                        "What is software used for?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Data Structures": ["Array vs Linked List?", "Stack and Queue?", "Binary Search Tree?", "Sorting algorithms?", "Hashing techniques?"]
+
+                "Data Structures": {
+                    "Data Organization": [
+                        "What is a data structure?",
+                        "Why is data organized using data structures?",
+                        "What are common data structures?"
+                    ]
+                },
+
+                "Algorithms": {
+                    "Algorithm Basics": [
+                        "What is an algorithm?",
+                        "What is a step-by-step solution?",
+                        "Why are algorithms used?"
+                    ]
+                },
+
+                "Cloud Computing": {
+                    "Cloud Basics": [
+                        "What is cloud computing?",
+                        "What are online data storage and services?",
+                        "What are the benefits of cloud computing?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "AI & Cloud": ["Neural Networks?", "Supervised vs Unsupervised learning?", "Cloud Deployment models?", "Cybersecurity protocols?", "Big Data architecture?"]
+
+                "Artificial Intelligence": {
+                    "AI Basics": [
+                        "What is AI?",
+                        "How do machines simulate intelligence?",
+                        "What are common AI applications?"
+                    ]
+                },
+
+                "Machine Learning": {
+                    "ML Basics": [
+                        "What is machine learning?",
+                        "How do systems learn from data?",
+                        "What are common machine learning applications?"
+                    ]
+                },
+
+                "Databases": {
+                    "Database Basics": [
+                        "What is a database?",
+                        "Why is data stored in databases?",
+                        "What is organized data storage?"
+                    ]
+                }
             }
         },
-        "ChemicalEngineering": {
+
+
+        "Chemical": {
+
             "Basic": {
-                "Chemistry Basics": ["Stoichiometry?", "Chemical bonding?", "Periodic table trends?", "PH scale meaning?", "Organic vs Inorganic?"]
+
+                "Chemical Processes": {
+                    "Process Basics": [
+                        "What is a chemical process?",
+                        "What happens during a chemical process?",
+                        "Why are chemical processes used?"
+                    ]
+                },
+
+                "Chemical Reactions": {
+                    "Reaction Basics": [
+                        "What is a chemical reaction?",
+                        "What is a chemical change?",
+                        "What happens during a reaction?"
+                    ]
+                },
+
+                "Catalysts": {
+                    "Catalyst Basics": [
+                        "What is a catalyst?",
+                        "How does a catalyst speed up a reaction?",
+                        "Why are catalysts used?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Process Design": ["Mass Transfer basics?", "Heat Exchangers?", "Distillation process?", "Reaction Kinetics?", "Fluidization?"]
+
+                "Thermodynamics": {
+                    "Heat & Energy": [
+                        "What is thermodynamics?",
+                        "What is heat and energy?",
+                        "How is energy transferred?"
+                    ]
+                },
+
+                "Process Design": {
+                    "Production Systems": [
+                        "What is process design?",
+                        "How is a production system planned?",
+                        "Why is process design important?"
+                    ]
+                },
+
+                "Distillation": {
+                    "Separation Process": [
+                        "What is distillation?",
+                        "How does distillation separate substances?",
+                        "What is the role of boiling point in distillation?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Petroleum & Materials": ["Refining process?", "Polymer science?", "Nano-materials?", "Green chemistry?", "Corrosion control?"]
+
+                "Reaction Engineering": {
+                    "Chemical Reactors": [
+                        "What is reaction engineering?",
+                        "What are chemical reactors?",
+                        "How are chemical reactions studied in reactors?"
+                    ]
+                },
+
+                "Mass Transfer": {
+                    "Substance Movement": [
+                        "What is mass transfer?",
+                        "How do substances move between phases?",
+                        "Why is mass transfer important?"
+                    ]
+                },
+
+                "Petroleum Refining": {
+                    "Crude Oil Processing": [
+                        "What is petroleum refining?",
+                        "How is crude oil processed?",
+                        "What are the basic steps in petroleum refining?"
+                    ]
+                }
             }
         },
-        "AerospaceEngineering": {
+
+
+        "Aerospace": {
+
             "Basic": {
-                "Flight Mechanics": ["The Four Forces of Flight?", "How Wings generate Lift?", "Newton’s Third Law in Propulsion?", "Aircraft parts?", "What is Airspeed?"]
+
+                "Aircraft": {
+                    "Aircraft Basics": [
+                        "What is an aircraft?",
+                        "What are the basic parts of an aircraft?",
+                        "How does an aircraft fly?"
+                    ]
+                },
+
+                "Lift": {
+                    "Lift Basics": [
+                        "What is lift?",
+                        "How does lift keep a plane in the air?",
+                        "What factors affect lift?"
+                    ]
+                },
+
+                "Drag": {
+                    "Drag Basics": [
+                        "What is drag?",
+                        "What is air resistance?",
+                        "How does drag affect an aircraft?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Aerodynamics": ["Airfoil shapes?", "Supersonic vs Subsonic?", "Drag reduction techniques?", "Wind tunnel testing?", "Boundary layer theory?"]
+
+                "Aerodynamics": {
+                    "Air Flow": [
+                        "What is aerodynamics?",
+                        "How does air flow around an aircraft?",
+                        "Why is aerodynamics important?"
+                    ]
+                },
+
+                "Propulsion": {
+                    "Aircraft Movement": [
+                        "What is propulsion?",
+                        "What force moves an aircraft?",
+                        "How does aircraft propulsion work?"
+                    ]
+                },
+
+                "Avionics": {
+                    "Aircraft Electronics": [
+                        "What is avionics?",
+                        "What are electronic systems in aircraft?",
+                        "Why are avionics important?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Space Tech": ["Rocket staging?", "Orbital mechanics?", "Satellite communication?", "Spacecraft thermal control?", "Mars rover technology?"]
+
+                "Rocket Propulsion": {
+                    "Rocket Thrust": [
+                        "What is rocket propulsion?",
+                        "How does thrust move a rocket?",
+                        "What is rocket thrust?"
+                    ]
+                },
+
+                "Orbital Motion": {
+                    "Space Orbits": [
+                        "What is orbital motion?",
+                        "How do objects move around Earth?",
+                        "What is an orbit?"
+                    ]
+                },
+
+                "Space Technology": {
+                    "Space Missions": [
+                        "What is space technology?",
+                        "What technologies are used in space missions?",
+                        "What are common applications of space technology?"
+                    ]
+                }
             }
         },
-        "BiomedicalEngineering": {
+
+
+        "Biomedical": {
+
             "Basic": {
-                "Human Anatomy": ["Skeletal system?", "Circulatory system?", "Basic Physiology?", "Cell structure?", "Medical terminology?"]
+
+                "Biomedical Engineering": {
+                    "Medical Engineering": [
+                        "What is biomedical engineering?",
+                        "How is engineering applied to medicine?",
+                        "What are the applications of biomedical engineering?"
+                    ]
+                },
+
+                "Medical Devices": {
+                    "Healthcare Devices": [
+                        "What is a medical device?",
+                        "What are medical devices used for?",
+                        "What are common medical devices?"
+                    ]
+                },
+
+                "Prosthetics": {
+                    "Artificial Body Parts": [
+                        "What is prosthetics?",
+                        "What are artificial body parts?",
+                        "Why are prosthetics used?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Medical Devices": ["How ECG works?", "MRI basics?", "Pacemakers?", "Biocompatibility?", "Biosensors?"]
+
+                "Biomechanics": {
+                    "Body Movement": [
+                        "What is biomechanics?",
+                        "How is body movement studied?",
+                        "What are the applications of biomechanics?"
+                    ]
+                },
+
+                "Medical Imaging": {
+                    "Imaging Techniques": [
+                        "What is medical imaging?",
+                        "What are medical imaging techniques?",
+                        "How is X-ray used in medical imaging?"
+                    ]
+                },
+
+                "ECG": {
+                    "Heart Signals": [
+                        "What is ECG?",
+                        "What does an ECG record?",
+                        "How does ECG help study heart signals?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Imaging & Prosthetics": ["X-ray vs Ultrasound?", "Artificial Organs?", "Robotic surgery?", "Bio-materials for implants?", "Tissue engineering?"]
+
+                "Bioinstrumentation": {
+                    "Medical Instruments": [
+                        "What is bioinstrumentation?",
+                        "How do devices measure body signals?",
+                        "What are bioinstrumentation applications?"
+                    ]
+                },
+
+                "Tissue Engineering": {
+                    "Artificial Tissues": [
+                        "What is tissue engineering?",
+                        "How are tissues grown artificially?",
+                        "What are the applications of tissue engineering?"
+                    ]
+                },
+
+                "Rehabilitation Engineering": {
+                    "Assistive Technology": [
+                        "What is rehabilitation engineering?",
+                        "How does engineering help people with disabilities?",
+                        "What are rehabilitation engineering applications?"
+                    ]
+                }
             }
         }
+
     },
     commerce: {
 
         "Accountancy": {
+
             "Basic": {
-                "Accounting Principles": ["What is Double Entry system?", "Definition of Assets and Liabilities?", "What are Real, Personal, and Nominal accounts?", "Golden rules of accounting?", "What is a Journal entry?"],
-                "Bookkeeping": ["Difference between Bookkeeping and Accounting?", "What is a Ledger?", "How to prepare a Trial Balance?", "Purpose of Cash Book?", "What is Depreciation?"]
+
+                "Accounting Foundations": {
+
+                    "Accounting": [
+                        "What is accounting?",
+                        "What is the purpose of accounting?",
+                        "What are financial transactions?"
+                    ],
+
+                    "Ledger": [
+                        "What is a ledger?",
+                        "What is a book of accounts?",
+                        "Why is a ledger used?"
+                    ],
+
+                    "Debit and Credit": [
+                        "What is debit?",
+                        "What is credit?",
+                        "What is the difference between debit and credit?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Financial Statements": ["How to prepare a Profit & Loss account?", "Components of a Balance Sheet?", "What is an Operating Profit?", "Adjustment entries basics?", "Inventory valuation methods (FIFO/LIFO)?"],
-                "GST & Tally": ["Basic concepts of GST?", "How to record GST in Tally?", "Voucher types in accounting software?", "Bank Reconciliation Statement (BRS)?", "Rectification of errors?"]
+
+                "Financial Statements": {
+
+                    "Balance Sheet": [
+                        "What is a balance sheet?",
+                        "What are assets and liabilities?",
+                        "What is the purpose of a balance sheet?"
+                    ]
+                },
+
+                "Bookkeeping": {
+
+                    "Bookkeeping Basics": [
+                        "What is bookkeeping?",
+                        "How are daily transactions recorded?",
+                        "What is the difference between bookkeeping and accounting?"
+                    ]
+                },
+
+                "GST": {
+
+                    "Goods and Services Tax": [
+                        "What is GST?",
+                        "What does GST stand for?",
+                        "Why is GST used?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Corporate Accounting": ["Issue of Shares and Debentures?", "What is Cash Flow Statement?", "Consolidated financial statements?", "Amalgamation and Reconstruction?", "Analysis of Financial Ratios?"],
-                "Auditing": ["Internal vs External Audit?", "Audit planning and program?", "Verification of assets?", "Vouching basics?", "Statutory audit requirements?"]
+
+                "Double Entry System": {
+
+                    "Double Entry Accounting": [
+                        "What is the double entry system?",
+                        "Why does every transaction have two entries?",
+                        "What are the two sides of a transaction?"
+                    ]
+                },
+
+                "Trial Balance": {
+
+                    "Account Accuracy": [
+                        "What is a trial balance?",
+                        "Why is a trial balance prepared?",
+                        "How does a trial balance check account accuracy?"
+                    ]
+                },
+
+                "Financial Statements": {
+
+                    "Financial Performance": [
+                        "What is a financial statement?",
+                        "What does a financial statement show?",
+                        "Why are financial statements important?"
+                    ]
+                }
             }
         },
-        "BusinessStudies": {
+
+
+        "Business": {
+
             "Basic": {
-                "Business Basics": ["What is a Sole Proprietorship?", "Difference between Trade and Commerce?", "Objectives of a Business?", "Types of business organizations?", "What is Partnership?"],
-                "Management Intro": ["Levels of Management?", "Functions of Management (POSDCORB)?", "Importance of Coordination?", "Management as an Art vs Science?", "Role of a Manager?"]
+
+                "Business Foundations": {
+
+                    "Business": [
+                        "What is business?",
+                        "What is buying and selling?",
+                        "What are the basic activities of a business?"
+                    ],
+
+                    "Management": [
+                        "What is management?",
+                        "What is planning and controlling work?",
+                        "Why is management important?"
+                    ],
+
+                    "Organization": [
+                        "What is an organization?",
+                        "What is the structure of a company?",
+                        "Why is organizational structure important?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Organization & Ethics": ["Centralization vs Decentralization?", "Formal vs Informal organization?", "Business Ethics and CSR?", "Principles of Scientific Management?", "Staffing process?"]
+
+                "Leadership": {
+
+                    "Leadership Basics": [
+                        "What is leadership?",
+                        "How does a leader guide a team?",
+                        "What are the qualities of a good leader?"
+                    ]
+                },
+
+                "Entrepreneurship": {
+
+                    "Starting a Business": [
+                        "What is entrepreneurship?",
+                        "What does it mean to start a business?",
+                        "What are the basic features of entrepreneurship?"
+                    ]
+                },
+
+                "Planning": {
+
+                    "Business Planning": [
+                        "What is planning?",
+                        "Why is planning important in business?",
+                        "How are future actions decided?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Entrepreneurship": ["Characteristics of an Entrepreneur?", "Stages of a Startup?", "Business Plan preparation?", "Innovation in business?", "Venture capital basics?"]
+
+                "Decision Making": {
+
+                    "Business Decisions": [
+                        "What is decision making?",
+                        "How is the best option selected?",
+                        "Why is decision making important in business?"
+                    ]
+                },
+
+                "Coordination": {
+
+                    "Business Coordination": [
+                        "What is coordination?",
+                        "Why should business activities be aligned?",
+                        "How does coordination help an organization?"
+                    ]
+                },
+
+                "Business Environment": {
+
+                    "External Business Factors": [
+                        "What is business environment?",
+                        "What are external factors affecting business?",
+                        "How does the business environment affect a company?"
+                    ]
+                }
             }
         },
+
+
         "Economics": {
+
             "Basic": {
-                "Micro Economics": ["Law of Demand?", "Factors affecting Supply?", "What is Opportunity Cost?", "Market Equilibrium basics?", "Elasticity of Demand?"]
+
+                "Economic Foundations": {
+
+                    "Economics": [
+                        "What is economics?",
+                        "What are resources?",
+                        "What does economics study?"
+                    ],
+
+                    "Demand": [
+                        "What is demand?",
+                        "What does desire to buy mean?",
+                        "What factors can affect demand?"
+                    ],
+
+                    "Supply": [
+                        "What is supply?",
+                        "What does quantity available mean?",
+                        "What factors can affect supply?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Macro Economics": ["What is GDP and GNP?", "Inflation and its types?", "Functions of Money?", "Budgetary policy basics?", "Unemployment types?"]
+
+                "Inflation": {
+
+                    "Price Changes": [
+                        "What is inflation?",
+                        "Why do prices rise?",
+                        "How does inflation affect consumers?"
+                    ]
+                },
+
+                "GDP": {
+
+                    "Economic Production": [
+                        "What is GDP?",
+                        "What does total production mean?",
+                        "Why is GDP important?"
+                    ]
+                },
+
+                "Markets": {
+
+                    "Market Basics": [
+                        "What is a market?",
+                        "What happens in a market?",
+                        "How are goods and services exchanged?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Development & Trade": ["Balance of Payments (BOP)?", "Comparative Advantage theory?", "Foreign Direct Investment (FDI)?", "Economic growth vs Development?", "International Trade organizations?"]
+
+                "Fiscal Policy": {
+
+                    "Government Spending and Tax": [
+                        "What is fiscal policy?",
+                        "How does government spending affect the economy?",
+                        "How are taxes related to fiscal policy?"
+                    ]
+                },
+
+                "Globalization": {
+
+                    "Global Trade": [
+                        "What is globalization?",
+                        "What is global trade connection?",
+                        "How does globalization affect businesses?"
+                    ]
+                },
+
+                "Economic Growth": {
+
+                    "Economic Output": [
+                        "What is economic growth?",
+                        "What does increase in output mean?",
+                        "What factors can support economic growth?"
+                    ]
+                }
             }
         },
+
+
         "Finance": {
+
             "Basic": {
-                "Financial Literacy": ["What is Simple vs Compound interest?", "Importance of Savings?", "Basic Investment avenues?", "Risk-Return trade-off?", "Inflation's impact on money?"]
+
+                "Financial Foundations": {
+
+                    "Finance": [
+                        "What is finance?",
+                        "What does management of money mean?",
+                        "Why is finance important?"
+                    ],
+
+                    "Investment": [
+                        "What is investment?",
+                        "Why do people invest money?",
+                        "What does putting money for returns mean?"
+                    ],
+
+                    "Stock Market": [
+                        "What is a stock market?",
+                        "What are shares?",
+                        "How are shares bought and sold?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Investment": ["Mutual Funds vs Stocks?", "Time Value of Money (TVM)?", "Working Capital management?", "Portfolio diversification?", "Fixed income securities?"]
+
+                "Mutual Funds": {
+
+                    "Pooled Investments": [
+                        "What are mutual funds?",
+                        "How do pooled investments work?",
+                        "Why do people invest in mutual funds?"
+                    ]
+                },
+
+                "Investment Risk": {
+
+                    "Financial Risk": [
+                        "What is risk?",
+                        "What is the chance of loss?",
+                        "Why is risk important in investment?"
+                    ]
+                },
+
+                "Investment Returns": {
+
+                    "Returns": [
+                        "What is return?",
+                        "What is profit from investment?",
+                        "How are investment returns measured?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Stock Market": ["Technical vs Fundamental analysis?", "Derivatives and Options?", "Capital Asset Pricing Model (CAPM)?", "IPO process?", "Wealth management strategies?"]
+
+                "Investment Portfolio": {
+
+                    "Portfolio Management": [
+                        "What is a portfolio?",
+                        "What is a collection of investments?",
+                        "Why is a portfolio created?"
+                    ]
+                },
+
+                "Diversification": {
+
+                    "Risk Management": [
+                        "What is diversification?",
+                        "How does diversification spread risk?",
+                        "Why is diversification important?"
+                    ]
+                },
+
+                "Financial Planning": {
+
+                    "Future Financial Management": [
+                        "What is financial planning?",
+                        "Why is money managed for the future?",
+                        "What are the basics of financial planning?"
+                    ]
+                }
             }
         },
+
+
         "Banking": {
+
             "Basic": {
-                "Banking Intro": ["Types of Bank Accounts?", "Difference between Savings and Current accounts?", "Functions of Commercial Banks?", "What is a Cheque?", "KYC requirements?"]
+
+                "Banking Foundations": {
+
+                    "Bank": [
+                        "What is a bank?",
+                        "What services does a bank provide?",
+                        "Why are banks important?"
+                    ],
+
+                    "Deposits": [
+                        "What is a deposit?",
+                        "Why is money kept in a bank?",
+                        "What are bank deposits?"
+                    ],
+
+                    "Loans": [
+                        "What is a loan?",
+                        "What is borrowed money?",
+                        "Why do people take loans?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "RBI & Policy": ["Role of RBI?", "What is Repo Rate and SLR?", "Digital Banking (UPI, NEFT, RTGS)?", "NPA (Non-Performing Assets) basics?", "Credit creation by banks?"]
+
+                "Reserve Bank of India": {
+
+                    "RBI": [
+                        "What is RBI?",
+                        "What is the Reserve Bank of India?",
+                        "What is the role of RBI?"
+                    ]
+                },
+
+                "Interest": {
+
+                    "Borrowing Cost": [
+                        "What is interest?",
+                        "Why is interest charged on borrowing?",
+                        "How is interest related to loans?"
+                    ]
+                },
+
+                "Digital Banking": {
+
+                    "Online Banking": [
+                        "What is digital banking?",
+                        "What are online banking services?",
+                        "What are common digital banking methods?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Financial Services": ["Insurance types (Life/General)?", "Merchant Banking?", "Leasing and Hire purchase?", "International Banking basics?", "Microfinance and Rural banking?"]
+
+                "Monetary Policy": {
+
+                    "Money Supply": [
+                        "What is monetary policy?",
+                        "What is money supply?",
+                        "How does monetary policy control money supply?"
+                    ]
+                },
+
+                "Credit System": {
+
+                    "Lending System": [
+                        "What is a credit system?",
+                        "How does a lending system work?",
+                        "Why is credit important?"
+                    ]
+                },
+
+                "Insurance": {
+
+                    "Financial Protection": [
+                        "What is insurance?",
+                        "How does insurance protect against loss?",
+                        "Why is insurance important?"
+                    ]
+                }
             }
         },
+
+
         "Marketing": {
+
             "Basic": {
-                "Marketing Mix": ["What are the 4Ps of Marketing?", "Consumer vs Customer?", "Importance of Branding?", "Product Life Cycle (PLC)?", "Marketing vs Selling?"]
+
+                "Marketing Foundations": {
+
+                    "Marketing": [
+                        "What is marketing?",
+                        "Why are products promoted?",
+                        "What are the basic functions of marketing?"
+                    ],
+
+                    "Branding": [
+                        "What is branding?",
+                        "What is product identity?",
+                        "Why is branding important?"
+                    ],
+
+                    "Advertising": [
+                        "What is advertising?",
+                        "How are products promoted through media?",
+                        "Why is advertising used?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Digital Marketing": ["SEO and SEM basics?", "Social Media Marketing strategies?", "Content Marketing?", "Email Marketing ROI?", "E-marketing tools?"]
+
+                "Digital Marketing": {
+
+                    "Online Promotion": [
+                        "What is digital marketing?",
+                        "How are products promoted online?",
+                        "What are common digital marketing methods?"
+                    ]
+                },
+
+                "SEO": {
+
+                    "Search Engine Optimization": [
+                        "What is SEO?",
+                        "What does search engine optimization mean?",
+                        "Why is SEO important for websites?"
+                    ]
+                },
+
+                "Consumer Behavior": {
+
+                    "Customer Buying Behavior": [
+                        "What is consumer behavior?",
+                        "What is customer buying behavior?",
+                        "Why is consumer behavior important?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Consumer Behavior": ["Factors influencing buying decisions?", "Market Segmentation and Targeting?", "Marketing Research process?", "Public Relations (PR)?", "Global Marketing strategies?"]
+
+                "Market Segmentation": {
+
+                    "Customer Groups": [
+                        "What is market segmentation?",
+                        "Why are customers divided into groups?",
+                        "What are the benefits of market segmentation?"
+                    ]
+                },
+
+                "Marketing Mix": {
+
+                    "4Ps of Marketing": [
+                        "What is marketing mix?",
+                        "What are Product, Price, Place and Promotion?",
+                        "Why are the 4Ps important?"
+                    ]
+                },
+
+                "Brand Strategy": {
+
+                    "Long-term Branding": [
+                        "What is brand strategy?",
+                        "What is long-term brand planning?",
+                        "Why is brand strategy important?"
+                    ]
+                }
             }
         },
+
+
         "Taxation": {
+
             "Basic": {
-                "Tax Basics": ["Direct vs Indirect Taxes?", "What is Income Tax?", "Definition of Assessee?", "Tax slabs for individuals?", "PAN and its importance?"]
+
+                "Tax Foundations": {
+
+                    "Tax": [
+                        "What is tax?",
+                        "Why is money paid to the government?",
+                        "Why are taxes collected?"
+                    ],
+
+                    "Income Tax": [
+                        "What is income tax?",
+                        "What is tax on income?",
+                        "Who may need to pay income tax?"
+                    ],
+
+                    "GST": [
+                        "What is GST?",
+                        "What does Goods and Services Tax mean?",
+                        "Why is GST collected?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "GST & Filing": ["CGST, SGST, and IGST?", "Input Tax Credit (ITC)?", "How to file ITR?", "TDS (Tax Deducted at Source)?", "Tax planning vs Tax evasion?"]
+
+                "Tax Filing": {
+
+                    "Tax Details": [
+                        "What is tax filing?",
+                        "Why are tax details submitted?",
+                        "What is involved in tax filing?"
+                    ]
+                },
+
+                "Direct Tax": {
+
+                    "Direct Tax Basics": [
+                        "What is direct tax?",
+                        "Why is income tax a direct tax?",
+                        "Who pays direct tax?"
+                    ]
+                },
+
+                "Indirect Tax": {
+
+                    "Indirect Tax Basics": [
+                        "What is indirect tax?",
+                        "Why is GST an indirect tax?",
+                        "How is indirect tax collected?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Corporate Tax": ["Taxation for Companies?", "International Taxation?", "Double Taxation Avoidance Agreement (DTAA)?", "Tax audit under Section 44AB?", "Capital Gains tax?"]
+
+                "Corporate Tax": {
+
+                    "Company Tax": [
+                        "What is corporate tax?",
+                        "Why are companies taxed?",
+                        "How does corporate tax apply to companies?"
+                    ]
+                },
+
+                "Tax Evasion": {
+
+                    "Illegal Tax Avoidance": [
+                        "What is tax evasion?",
+                        "Why is non-payment of tax illegal?",
+                        "What are the risks of tax evasion?"
+                    ]
+                },
+
+                "Tax Planning": {
+
+                    "Legal Tax Management": [
+                        "What is tax planning?",
+                        "How can tax be reduced legally?",
+                        "Why is tax planning important?"
+                    ]
+                }
             }
         },
-        "BusinessStats": {
+
+
+        "Statistics": {
+
             "Basic": {
-                "Stats Intro": ["Mean, Median, and Mode?", "Types of Data (Primary/Secondary)?", "Sampling methods?", "Data Representation (Charts/Graphs)?", "Importance of Statistics in business?"]
+
+                "Data Foundations": {
+
+                    "Data": [
+                        "What is data?",
+                        "What is a collection of values?",
+                        "Why is data important?"
+                    ],
+
+                    "Mean": [
+                        "What is mean?",
+                        "How is average calculated?",
+                        "What does mean represent?"
+                    ],
+
+                    "Median": [
+                        "What is median?",
+                        "What is the middle value?",
+                        "How is median found?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Probability": ["Basic Probability rules?", "Correlation and Regression?", "Index Numbers?", "Time Series analysis?", "Standard Deviation?"]
+
+                "Probability": {
+
+                    "Probability Basics": [
+                        "What is probability?",
+                        "What does chance of an event mean?",
+                        "How is probability used?"
+                    ]
+                },
+
+                "Distribution": {
+
+                    "Data Distribution": [
+                        "What is a distribution?",
+                        "What is a data pattern?",
+                        "Why are distributions used?"
+                    ]
+                },
+
+                "Data Analysis": {
+
+                    "Analysis Basics": [
+                        "What is analysis?",
+                        "What does studying data mean?",
+                        "Why is data analysis important?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Data Analysis": ["Hypothesis Testing?", "Chi-Square test?", "Excel for Business Analytics?", "Forecasting models?", "ANOVA basics?"]
+
+                "Forecasting": {
+
+                    "Future Trends": [
+                        "What is forecasting?",
+                        "How are future trends predicted?",
+                        "Why is forecasting useful?"
+                    ]
+                },
+
+                "Regression": {
+
+                    "Variable Relationships": [
+                        "What is regression?",
+                        "How are variables related?",
+                        "Why is regression used?"
+                    ]
+                },
+
+                "Hypothesis Testing": {
+
+                    "Statistical Testing": [
+                        "What is hypothesis testing?",
+                        "What is a statistical assumption?",
+                        "How are assumptions tested?"
+                    ]
+                }
             }
         },
-        "Ecommerce": {
+
+
+        "E-Commerce": {
+
             "Basic": {
-                "Online Business": ["B2B vs B2C models?", "Advantages of E-commerce?", "Digital Payment types?", "M-commerce basics?", "Security in online transactions?"]
+
+                "E-Commerce Foundations": {
+
+                    "E-Commerce": [
+                        "What is e-commerce?",
+                        "What is online buying and selling?",
+                        "How does e-commerce work?"
+                    ],
+
+                    "Digital Payments": [
+                        "What is digital payment?",
+                        "What are online payment methods?",
+                        "Why are digital payments used?"
+                    ],
+
+                    "Online Business": [
+                        "What is online business?",
+                        "How does business work on the internet?",
+                        "What are the benefits of online business?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Operations": ["Supply Chain Management in E-commerce?", "Dropshipping model?", "Inventory management for online stores?", "E-commerce platforms (Shopify/WooCommerce)?", "Customer retention?"]
+
+                "Supply Chain": {
+
+                    "Flow of Goods": [
+                        "What is a supply chain?",
+                        "How do goods move from seller to customer?",
+                        "Why is supply chain management important?"
+                    ]
+                },
+
+                "Dropshipping": {
+
+                    "Stockless Selling": [
+                        "What is dropshipping?",
+                        "How can products be sold without keeping stock?",
+                        "How does dropshipping work?"
+                    ]
+                },
+
+                "Payment Gateway": {
+
+                    "Online Payment Systems": [
+                        "What is a payment gateway?",
+                        "How does an online payment system work?",
+                        "Why are payment gateways used?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Tech & Trends": ["AI and Chatbots in retail?", "Big Data in E-commerce?", "Global E-commerce logistics?", "Cyber laws in E-commerce?", "Future of Blockchain in payments?"]
+
+                "Logistics": {
+
+                    "Delivery Management": [
+                        "What is logistics?",
+                        "How is delivery managed?",
+                        "Why is logistics important in e-commerce?"
+                    ]
+                },
+
+                "Customer Experience": {
+
+                    "Customer Satisfaction": [
+                        "What is customer experience?",
+                        "What does user satisfaction mean?",
+                        "Why is customer experience important?"
+                    ]
+                },
+
+                "E-Commerce Platforms": {
+
+                    "Online Selling Platforms": [
+                        "What is an e-commerce platform?",
+                        "How do websites and apps support online selling?",
+                        "What are the main features of an e-commerce platform?"
+                    ]
+                }
             }
         }
+
     },
     law: {
 
-        "ConstitutionalLaw": {
-            "Basic": {
-                "Constitution Intro": ["What is a Constitution?", "Preamble meaning?", "Framing of Indian Constitution?", "Salient features?", "State vs Union basics?"],
-                "Fundamental Rights": ["What is Article 14?", "Right to Liberty?", "Right against Exploitation?", "Right to Remedies?", "Are rights absolute?"]
-            },
-            "Intermediate": {
-                "Directive Principles": ["Nature of DPSP?", "Socialist principles?", "Gandhian principles?", "Fundamental Duties?", "DPSP vs Fundamental Rights?"],
-                "Government Structure": ["President's powers?", "Parliamentary system?", "Role of Prime Minister?", "Governor's role?", "Local self-government?"]
-            },
-            "Advanced": {
-                "Judiciary & Amendments": ["Supreme Court jurisdiction?", "Judicial Review?", "Basic Structure Doctrine?", "Article 368 process?", "Emergency provisions?"],
-                "Constitutional Writs": ["Habeas Corpus?", "Mandamus?", "Certiorari?", "Quo Warranto?", "Prohibition?"]
-            }
-        },
-        "CriminalLaw": {
-            "Basic": {
-                "Crime Basics": ["What is a crime?", "Mens Rea vs Actus Reus?", "Stages of crime?", "Types of punishments?", "Cognizable vs Non-cognizable?"]
-            },
-            "Intermediate": {
-                "Procedures (CrPC)": ["F.I.R process?", "Bailable vs Non-bailable?", "Arrest rules?", "Role of Police?", "Summary trial basics?"]
-            },
-            "Advanced": {
-                "Evidence & Trial": ["Burden of proof?", "Admissibility of evidence?", "Hearsay evidence?", "Examination of witnesses?", "Confession vs Admission?"]
-            }
-        },
-        "CivilLaw": {
-            "Basic": {
-                "Civil Rights": ["Civil vs Criminal suits?", "Contract basics?", "Agreement vs Contract?", "Property types?", "Tort basics?"]
-            },
-            "Intermediate": {
-                "CPC & Contracts": ["Res Judicata?", "Summons process?", "Breach of contract?", "Specific performance?", "Agency contracts?"]
-            },
-            "Advanced": {
-                "Torts & Property": ["Negligence?", "Strict vs Absolute liability?", "Vicarious liability?", "Transfer of property?", "Lease vs License?"]
-            }
-        },
-        "CorporateLaw": {
-            "Basic": {
-                "Company Basics": ["What is a company?", "Separate Legal Entity?", "Types of companies?", "MOA vs AOA?", "Shares and Capital?"]
-            },
-            "Intermediate": {
-                "Governance": ["Directors' duties?", "Board meetings?", "Audit basics?", "SEBI regulations?", "Insider trading?"]
-            },
-            "Advanced": {
-                "M&A and Insolvency": ["Mergers process?", "Winding up methods?", "Insolvency & Bankruptcy Code?", "Corporate restructuring?", "CSR laws?"]
-            }
-        },
-        "FamilyLaw": {
-            "Basic": {
-                "Marriage Laws": ["Marriage requirements?", "Hindu Marriage Act?", "Special Marriage Act?", "Guardianship basics?", "Void vs Voidable marriage?"]
-            },
-            "Intermediate": {
-                "Divorce & Maintenance": ["Grounds for divorce?", "Mutual consent divorce?", "Alimony rules?", "Child custody?", "Restitution of conjugal rights?"]
-            },
-            "Advanced": {
-                "Inheritance": ["Succession types?", "Ancestral property?", "Will vs Gift?", "Uniform Civil Code debate?", "Adoption laws?"]
-            }
-        },
-        "CyberLaw": {
-            "Basic": {
-                "Digital Basics": ["IT Act overview?", "What is cyber crime?", "Digital signature?", "E-records?", "Online privacy?"]
-            },
-            "Intermediate": {
-                "Offences": ["Hacking penalties?", "Identity theft?", "Phishing?", "Cyber stalking?", "Obscenity laws?"]
-            },
-            "Advanced": {
-                "Data Protection": ["GDPR vs Indian laws?", "Data sovereignty?", "Intermediary liability?", "Electronic evidence tech?", "Blockchain legalities?"]
-            }
-        },
-        "IntellectualProperty": {
-            "Basic": {
-                "IP Intro": ["What is IP?", "Copyright basics?", "Trademark meaning?", "Patent intro?", "Design protection?"]
-            },
-            "Intermediate": {
-                "Registration": ["Patent filing process?", "Trademark infringement?", "Fair use in copyright?", "Geographical Indications?", "Trade secrets?"]
-            },
-            "Advanced": {
-                "Enforcement": ["IP litigation?", "Passing off actions?", "Traditional knowledge?", "Bio-piracy?", "International IP treaties?"]
-            }
-        },
-        "InternationalLaw": {
-            "Basic": {
-                "Global Basics": ["Sources of Int. Law?", "State sovereignty?", "Treaty basics?", "UN Charter?", "Subject of Int. Law?"]
-            },
-            "Intermediate": {
-                "Relations": ["Diplomatic immunity?", "Human Rights law?", "Extradition?", "Asylum?", "Sea laws (UNCLOS)?"]
-            },
-            "Advanced": {
-                "Conflict & Trade": ["WTO regulations?", "War crimes?", "International Court of Justice?", "State responsibility?", "Environmental treaties?"]
-            }
-        },
-        "EnvironmentalLaw": {
-            "Basic": {
-                "Nature Laws": ["Wildlife Act basics?", "Pollution definitions?", "Forest conservation?", "Environment protection?", "Right to clean environment?"]
-            },
-            "Intermediate": {
-                "Control Acts": ["Water Act?", "Air Act?", "National Green Tribunal?", "Environmental Impact Assessment?", "Waste management?"]
-            },
-            "Advanced": {
-                "Principles": ["Polluter Pays principle?", "Precautionary principle?", "Sustainable development?", "Public trust doctrine?", "International climate protocols?"]
-            }
-        }
-    },
-    management: {
+        "Constitutional": {
 
-        "BusinessStrategy": {
             "Basic": {
-                "Strategy Fundamentals": ["What is a business mission?", "Difference between vision and goals?", "Strategic vs Operational planning?", "Corporate level strategy basics?", "Business environment analysis?"],
-                "SWOT Analysis": ["What is SWOT analysis?", "How to identify Strengths?", "Analyzing Weaknesses?", "Opportunity spotting?", "Threat management?"]
+
+                "Constitution Foundations": {
+
+                    "Constitution": [
+                        "What is the Constitution?",
+                        "What is the Constitution used for?",
+                        "Why is the Constitution important?"
+                    ],
+
+                    "Fundamental Rights": [
+                        "What are Fundamental Rights?",
+                        "What are basic rights of citizens?",
+                        "Why are Fundamental Rights important?"
+                    ],
+
+                    "Fundamental Duties": [
+                        "What is a duty?",
+                        "What are Fundamental Duties?",
+                        "Why should citizens follow their duties?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Competitive Frameworks": ["Porter's Five Forces model?", "Value Chain analysis?", "Competitive advantage types?", "Generic strategies (Cost vs Differentiation)?", "Market positioning?"],
-                "Growth Strategies": ["Ansoff Matrix basics?", "Vertical vs Horizontal integration?", "Diversification strategies?", "Strategic alliances?", "Mergers and Acquisitions intro?"]
+
+                "Constitutional Principles": {
+
+                    "Directive Principles": [
+                        "What are Directive Principles?",
+                        "Why are Directive Principles important?",
+                        "How do they guide government policies?"
+                    ],
+
+                    "Constitutional Amendment": [
+                        "What is an amendment?",
+                        "Why is the Constitution amended?",
+                        "How does a constitutional amendment work?"
+                    ],
+
+                    "Judiciary": [
+                        "What is judiciary?",
+                        "What is the role of courts?",
+                        "Why is an independent judiciary important?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Corporate Governance": ["Board of directors role?", "Ethics in business?", "Stakeholder management?", "Corporate Social Responsibility?", "Crisis management strategy?"],
-                "Blue Ocean Strategy": ["Red vs Blue oceans?", "Value innovation?", "Creating new market space?", "Strategy canvas?", "Four actions framework?"]
+
+                "Constitutional Governance": {
+
+                    "Judicial Review": [
+                        "What is judicial review?",
+                        "How do courts check laws?",
+                        "Why is judicial review important?"
+                    ],
+
+                    "Federalism": [
+                        "What is federalism?",
+                        "How is power divided between center and states?",
+                        "Why is federalism important?"
+                    ],
+
+                    "Separation of Powers": [
+                        "What is separation of powers?",
+                        "What are legislative, executive and judiciary?",
+                        "Why are powers divided?"
+                    ]
+                }
             }
         },
-        "MarketingManagement": {
+
+
+        "Criminal": {
+
             "Basic": {
-                "Marketing Basics": ["What are the 4Ps?", "Difference between Sales and Marketing?", "Market segmentation?", "Targeting strategies?", "Brand awareness basics?"],
-                "Consumer Behavior": ["Consumer buying process?", "Factors affecting purchase?", "Types of consumers?", "Customer satisfaction?", "Need vs Want?"]
+
+                "Criminal Law Foundations": {
+
+                    "Crime": [
+                        "What is crime?",
+                        "What is an act against law?",
+                        "What makes an act a crime?"
+                    ],
+
+                    "Indian Penal Code": [
+                        "What is IPC?",
+                        "What is the purpose of IPC?",
+                        "What does criminal law deal with?"
+                    ],
+
+                    "Punishment": [
+                        "What is punishment?",
+                        "Why is punishment given?",
+                        "What are the purposes of punishment?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Branding": ["Brand equity?", "Brand identity vs Image?", "Brand loyalty?", "Positioning statements?", "Co-branding?"],
-                "Digital Marketing": ["SEO basics?", "Content marketing?", "Social media strategy?", "Email marketing ROI?", "Pay-per-click basics?"]
+
+                "Criminal Procedure": {
+
+                    "CrPC": [
+                        "What is CrPC?",
+                        "What is Criminal Procedure Code?",
+                        "Why is criminal procedure important?"
+                    ],
+
+                    "Bail": [
+                        "What is bail?",
+                        "Why is bail given?",
+                        "What is temporary release of an accused?"
+                    ],
+
+                    "Evidence": [
+                        "What is evidence?",
+                        "Why is evidence important in court?",
+                        "What can be used as proof in court?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Market Research": ["Primary vs Secondary research?", "Qualitative vs Quantitative data?", "Sampling techniques?", "Market forecasting?", "Competitor benchmarking?"],
-                "CRM Strategy": ["Customer Lifetime Value (CLV)?", "Retention strategies?", "Lead generation?", "Customer journey mapping?", "Marketing automation?"]
+
+                "Criminal Trial & Responsibility": {
+
+                    "Trial": [
+                        "What is a trial?",
+                        "What happens during a court trial?",
+                        "How does a court decide guilt?"
+                    ],
+
+                    "Mens Rea": [
+                        "What is mens rea?",
+                        "What does guilty mind mean?",
+                        "Why is intention important in criminal law?"
+                    ],
+
+                    "Actus Reus": [
+                        "What is actus reus?",
+                        "What does guilty act mean?",
+                        "How is actus reus related to crime?"
+                    ]
+                }
             }
         },
-        "FinancialManagement": {
+
+
+        "Civil": {
+
             "Basic": {
-                "Finance Basics": ["What is Profit vs Cash Flow?", "Time value of money?", "Basic financial statements?", "Liquidity vs Solvency?", "Financial goals?"]
+
+                "Civil Law Foundations": {
+
+                    "Civil Law": [
+                        "What is civil law?",
+                        "What types of disputes come under civil law?",
+                        "How is civil law different from criminal law?"
+                    ],
+
+                    "Contract": [
+                        "What is a contract?",
+                        "What is a legal agreement?",
+                        "Why are contracts important?"
+                    ],
+
+                    "Property": [
+                        "What is property?",
+                        "What are owned assets?",
+                        "What are property rights?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Capital Budgeting": ["Net Present Value (NPV)?", "Internal Rate of Return (IRR)?", "Payback period?", "Risk-return trade-off?", "Cost of capital?"],
-                "Investment": ["Stock market basics?", "Bonds vs Equity?", "Portfolio diversification?", "Asset allocation?", "Market indices?"]
+
+                "Civil Procedure & Torts": {
+
+                    "CPC": [
+                        "What is CPC?",
+                        "What is Civil Procedure Code?",
+                        "Why is civil procedure important?"
+                    ],
+
+                    "Tort": [
+                        "What is a tort?",
+                        "What is a civil wrong?",
+                        "How does a tort affect another person?"
+                    ],
+
+                    "Damages": [
+                        "What are damages?",
+                        "Why is compensation given?",
+                        "What is compensation for loss?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Risk Management": ["Types of financial risk?", "Hedging techniques?", "Derivatives intro?", "Capital structure theory?", "Working capital optimization?"]
+
+                "Civil Liability": {
+
+                    "Breach of Contract": [
+                        "What is breach of contract?",
+                        "What happens when an agreement is broken?",
+                        "What are the effects of breach of contract?"
+                    ],
+
+                    "Injunction": [
+                        "What is an injunction?",
+                        "What is a court order?",
+                        "Why is an injunction issued?"
+                    ],
+
+                    "Liability": [
+                        "What is liability?",
+                        "What is legal responsibility?",
+                        "When can a person be legally liable?"
+                    ]
+                }
             }
         },
-        "HumanResource": {
+
+
+        "Corporate": {
+
             "Basic": {
-                "HR Basics": ["What is HRM?", "Recruitment process?", "Job analysis?", "Employee onboarding?", "Importance of HR?"]
+
+                "Corporate Law Foundations": {
+
+                    "Company": [
+                        "What is a company?",
+                        "What is a legal business entity?",
+                        "Why is a company formed?"
+                    ],
+
+                    "Shareholder": [
+                        "What is a shareholder?",
+                        "Who owns company shares?",
+                        "What are shareholder rights?"
+                    ],
+
+                    "SEBI": [
+                        "What is SEBI?",
+                        "What is the role of SEBI?",
+                        "Why does the stock market need regulation?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Training & Development": ["Need for training?", "On-the-job vs Off-the-job?", "Performance appraisal methods?", "Compensation management?", "Employee motivation?"]
+
+                "Corporate Structure & Transactions": {
+
+                    "Companies Act": [
+                        "What is the Companies Act?",
+                        "What does the Companies Act govern?",
+                        "Why is company law important?"
+                    ],
+
+                    "Merger": [
+                        "What is a merger?",
+                        "Why do companies merge?",
+                        "What happens when two companies merge?"
+                    ],
+
+                    "Acquisition": [
+                        "What is an acquisition?",
+                        "How does one company acquire another?",
+                        "Why do companies make acquisitions?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Organizational Behavior": ["Group dynamics?", "Conflict resolution?", "Change management?", "Labour laws?", "Talent retention strategies?"]
+
+                "Corporate Governance & Compliance": {
+
+                    "Insolvency": [
+                        "What is insolvency?",
+                        "What does inability to pay debts mean?",
+                        "Why does insolvency matter to companies?"
+                    ],
+
+                    "Corporate Governance": [
+                        "What is corporate governance?",
+                        "What are the rules for managing a company?",
+                        "Why is corporate governance important?"
+                    ],
+
+                    "Compliance": [
+                        "What is compliance?",
+                        "What does following legal rules mean?",
+                        "Why is legal compliance important?"
+                    ]
+                }
             }
         },
-        "OperationsManagement": {
+
+
+        "Family": {
+
             "Basic": {
-                "Operations Basics": ["What is production planning?", "Inventory management basics?", "Operations vs Logistics?", "Process flow?", "Productivity measurement?"]
+
+                "Family Law Foundations": {
+
+                    "Marriage": [
+                        "What is marriage?",
+                        "What is a legal union?",
+                        "What are the legal aspects of marriage?"
+                    ],
+
+                    "Divorce": [
+                        "What is divorce?",
+                        "What is legal separation?",
+                        "Why does divorce involve legal procedures?"
+                    ],
+
+                    "Adoption": [
+                        "What is adoption?",
+                        "What does legally taking a child mean?",
+                        "Why is adoption legally regulated?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Supply Chain": ["What is SCM?", "Sourcing and procurement?", "Distribution channels?", "Warehousing?", "Bullwhip effect?"]
+
+                "Family Rights & Support": {
+
+                    "Inheritance": [
+                        "What is inheritance?",
+                        "What happens to property after death?",
+                        "Who can inherit property?"
+                    ],
+
+                    "Maintenance": [
+                        "What is maintenance?",
+                        "What is financial support?",
+                        "Who may receive maintenance?"
+                    ],
+
+                    "Guardianship": [
+                        "What is guardianship?",
+                        "What is legal care of a minor?",
+                        "Why is guardianship important?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Quality & Lean": ["Six Sigma basics?", "Lean management (Kaizen)?", "Total Quality Management (TQM)?", "Just-In-Time (JIT)?", "Process optimization?"]
+
+                "Personal & Succession Law": {
+
+                    "Personal Law": [
+                        "What is personal law?",
+                        "What are laws based on religion?",
+                        "How does personal law affect family matters?"
+                    ],
+
+                    "Alimony": [
+                        "What is alimony?",
+                        "What is financial support after divorce?",
+                        "Why may alimony be provided?"
+                    ],
+
+                    "Succession Law": [
+                        "What is succession law?",
+                        "How is property transferred after death?",
+                        "Why is succession law important?"
+                    ]
+                }
             }
         },
-        "Entrepreneurship": {
+
+
+        "Cyber": {
+
             "Basic": {
-                "Startup Basics": ["Who is an entrepreneur?", "Ideation techniques?", "Business model canvas?", "Feasibility study?", "Problem-solution fit?"]
+
+                "Cyber Law Foundations": {
+
+                    "Cyber Law": [
+                        "What is cyber law?",
+                        "What activities are covered by cyber law?",
+                        "Why is cyber law important?"
+                    ],
+
+                    "Cyber Crime": [
+                        "What is cyber crime?",
+                        "What is crime using the internet?",
+                        "What are common cyber crimes?"
+                    ],
+
+                    "Hacking": [
+                        "What is hacking?",
+                        "What is unauthorized access?",
+                        "Why is unauthorized access illegal?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Business Planning": ["Writing a business plan?", "Pitching to investors?", "Bootstrapping vs Funding?", "Product-market fit?", "Scaling a startup?"]
+
+                "Digital Law & Privacy": {
+
+                    "IT Act": [
+                        "What is the IT Act?",
+                        "What does the IT Act deal with?",
+                        "Why is the IT Act important?"
+                    ],
+
+                    "Data Privacy": [
+                        "What is data privacy?",
+                        "Why should personal data be protected?",
+                        "What is personal data protection?"
+                    ],
+
+                    "Phishing": [
+                        "What is phishing?",
+                        "How does phishing attempt to steal data?",
+                        "How can phishing affect users?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Venture Capital": ["Angel investors?", "VC funding rounds (Series A, B, C)?", "Exit strategies (IPO, Acquisition)?", "Valuation methods?", "Intellectual Property (IP) rights?"]
+
+                "Cyber Security & Digital Crimes": {
+
+                    "Digital Signature": [
+                        "What is a digital signature?",
+                        "How is electronic authentication used?",
+                        "Why are digital signatures important?"
+                    ],
+
+                    "Cyber Security": [
+                        "What is cybersecurity?",
+                        "How are computer systems protected?",
+                        "Why is cybersecurity important?"
+                    ],
+
+                    "Cyber Fraud": [
+                        "What is cyber fraud?",
+                        "What is online cheating?",
+                        "How does cyber fraud affect users?"
+                    ]
+                }
             }
         },
-        "BusinessAnalytics": {
+
+
+        "IP": {
+
             "Basic": {
-                "Data Basics": ["What is descriptive analytics?", "Mean, Median, Mode in business?", "Importance of data?", "Excel for beginners?", "Data visualization basics?"]
+
+                "Intellectual Property Foundations": {
+
+                    "Intellectual Property": [
+                        "What is IP?",
+                        "What are intellectual property rights?",
+                        "Why is intellectual property protected?"
+                    ],
+
+                    "Patent": [
+                        "What is a patent?",
+                        "What does a patent protect?",
+                        "Why are inventions protected by patents?"
+                    ],
+
+                    "Trademark": [
+                        "What is a trademark?",
+                        "What does a trademark represent?",
+                        "Why is brand identity protected?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Tools & Analysis": ["SQL for data retrieval?", "Tableau dashboards?", "Predictive modeling?", "Trend analysis?", "Data cleaning?"]
+
+                "Creative & Business Protection": {
+
+                    "Copyright": [
+                        "What is copyright?",
+                        "What does copyright protect?",
+                        "Why are creative works protected?"
+                    ],
+
+                    "Trade Secret": [
+                        "What is a trade secret?",
+                        "What is confidential business information?",
+                        "Why are trade secrets protected?"
+                    ],
+
+                    "Infringement": [
+                        "What is infringement?",
+                        "What is unauthorized use?",
+                        "How can intellectual property be infringed?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Strategy & AI": ["Prescriptive analytics?", "Big data in business?", "AI for decision making?", "Machine learning intro?", "A/B testing?"]
+
+                "Intellectual Property Rights": {
+
+                    "Licensing": [
+                        "What is licensing?",
+                        "What does permission to use IP mean?",
+                        "Why are IP licenses used?"
+                    ],
+
+                    "IP Rights": [
+                        "What are IP rights?",
+                        "What legal rights do creators have?",
+                        "Why are creator rights important?"
+                    ],
+
+                    "Industrial Design": [
+                        "What is industrial design?",
+                        "What does design protection mean?",
+                        "Why are industrial designs protected?"
+                    ]
+                }
             }
         },
-        "Leadership": {
+
+
+        "International": {
+
             "Basic": {
-                "Leadership Intro": ["Leadership vs Management?", "Traits of a leader?", "Team building basics?", "Communication skills?", "Self-awareness?"]
+
+                "International Law Foundations": {
+
+                    "International Law": [
+                        "What is international law?",
+                        "What does law between countries mean?",
+                        "Why is international law important?"
+                    ],
+
+                    "Treaty": [
+                        "What is a treaty?",
+                        "What is an agreement between nations?",
+                        "Why are treaties important?"
+                    ],
+
+                    "United Nations": [
+                        "What is the UN?",
+                        "What is the United Nations?",
+                        "What is the role of the UN?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Leadership Styles": ["Democratic vs Autocratic?", "Transformational leadership?", "Servant leadership?", "Emotional intelligence?", "Delegation skills?"]
+
+                "International Relations": {
+
+                    "Human Rights": [
+                        "What are human rights?",
+                        "What are basic rights globally?",
+                        "Why are human rights important?"
+                    ],
+
+                    "Trade Law": [
+                        "What is trade law?",
+                        "What rules govern global trade?",
+                        "Why is international trade regulated?"
+                    ],
+
+                    "Diplomacy": [
+                        "What is diplomacy?",
+                        "How are relations between countries managed?",
+                        "Why is diplomacy important?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Strategic Leadership": ["Managing organizational culture?", "Ethical leadership?", "Global leadership?", "Succession planning?", "Influencing skills?"]
+
+                "International Legal Principles": {
+
+                    "Jurisdiction": [
+                        "What is jurisdiction?",
+                        "What does legal authority mean?",
+                        "Why is jurisdiction important?"
+                    ],
+
+                    "Sovereignty": [
+                        "What is sovereignty?",
+                        "What is the supreme power of a state?",
+                        "Why is state sovereignty important?"
+                    ],
+
+                    "Arbitration": [
+                        "What is arbitration?",
+                        "What is an alternative dispute resolution method?",
+                        "Why is arbitration used?"
+                    ]
+                }
             }
         },
-        "InternationalBusiness": {
+
+
+        "Environmental": {
+
             "Basic": {
-                "Global Trade": ["What is export-import?", "Globalization basics?", "Foreign exchange intro?", "Cultural differences?", "Global market entry?"]
+
+                "Environmental Law Foundations": {
+
+                    "Environmental Law": [
+                        "What is environmental law?",
+                        "Why are laws created to protect nature?",
+                        "What does environmental law protect?"
+                    ],
+
+                    "Pollution": [
+                        "What is pollution?",
+                        "How does pollution harm the environment?",
+                        "What are common types of pollution?"
+                    ],
+
+                    "Wildlife Protection": [
+                        "What is wildlife protection?",
+                        "Why should animals be protected?",
+                        "What does wildlife protection involve?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "MNC Strategy": ["Types of MNCs?", "Foreign Direct Investment (FDI)?", "International trade barriers?", "Global supply chain?", "Export documentation?"]
+
+                "Environmental Protection": {
+
+                    "Pollution Control": [
+                        "What is pollution control?",
+                        "How can pollution be reduced?",
+                        "Why is pollution control important?"
+                    ],
+
+                    "Forest Law": [
+                        "What is forest law?",
+                        "Why are forests legally protected?",
+                        "What does forest protection involve?"
+                    ],
+
+                    "Green Tribunal": [
+                        "What is the Green Tribunal?",
+                        "What is an environmental court?",
+                        "Why is environmental dispute resolution important?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Forex & Policy": ["Exchange rate determination?", "International monetary fund (IMF)?", "Trade agreements (WTO)?", "Global risk assessment?", "Hedging in forex?"]
+
+                "Environmental Policy & Law": {
+
+                    "Sustainable Development": [
+                        "What is sustainable development?",
+                        "How can development happen without harming nature?",
+                        "Why is sustainable development important?"
+                    ],
+
+                    "Environmental Impact": [
+                        "What is environmental impact?",
+                        "How do activities affect nature?",
+                        "Why is environmental impact assessment important?"
+                    ],
+
+                    "Climate Law": [
+                        "What is climate law?",
+                        "Why are laws needed for climate protection?",
+                        "What does climate protection involve?"
+                    ]
+                }
             }
         }
+
+    },
+    mba: {
+
+        "Business Strategy": {
+
+            "Basic": {
+
+                "Business Strategy Foundations": {
+
+                    "Business Strategy": [
+                        "What is business strategy?",
+                        "What is competition?",
+                        "What are business goals?"
+                    ],
+
+                    "SWOT Analysis": [
+                        "What is SWOT analysis?",
+                        "What are Strengths and Weaknesses?",
+                        "What are Opportunities and Threats?"
+                    ]
+                }
+            },
+
+            "Intermediate": {
+
+                "Strategic Planning": {
+
+                    "Strategic Planning": [
+                        "What is strategic planning?",
+                        "What is Porter’s 5 Forces?",
+                        "What is competitive advantage?"
+                    ],
+
+                    "Business Competition": [
+                        "What is cost leadership?",
+                        "What is differentiation strategy?",
+                        "What is business expansion?"
+                    ]
+                }
+            },
+
+            "Advanced": {
+
+                "Competitive Strategy": {
+
+                    "Competitive Strategy": [
+                        "What is cost leadership strategy?",
+                        "What is differentiation strategy?",
+                        "How does competitive advantage help a business?"
+                    ]
+                }
+            }
+        },
+
+        "Marketing": {
+
+            "Basic": {
+
+                "Marketing Foundations": {
+
+                    "Marketing": [
+                        "What is marketing?",
+                        "What is branding?",
+                        "What is a customer?"
+                    ]
+                }
+            },
+
+            "Intermediate": {
+
+                "Marketing Management": {
+
+                    "Marketing Mix": [
+                        "What are the 4Ps?",
+                        "What is consumer behavior?",
+                        "What is digital marketing?"
+                    ]
+                }
+            },
+
+            "Advanced": {
+
+                "Marketing Strategy": {
+
+                    "Market Strategy": [
+                        "What is market segmentation?",
+                        "What is positioning?",
+                        "What is marketing research?"
+                    ]
+                }
+            }
+        },
+
+        "Finance": {
+
+            "Basic": {
+
+                "Finance Foundations": {
+
+                    "Finance": [
+                        "What is finance?",
+                        "What is a budget?",
+                        "What is investment?"
+                    ]
+                }
+            },
+
+            "Intermediate": {
+
+                "Financial Management": {
+
+                    "Financial Management": [
+                        "What is capital structure?",
+                        "What is financial risk?",
+                        "What is profit?"
+                    ]
+                }
+            },
+
+            "Advanced": {
+
+                "Financial Planning": {
+
+                    "Financial Planning": [
+                        "What is financial planning?",
+                        "What is working capital?",
+                        "What is dividend?"
+                    ]
+                }
+            }
+        },
+
+        "HRM": {
+
+            "Basic": {
+
+                "Human Resource Foundations": {
+
+                    "Human Resource Management": [
+                        "What is HRM?",
+                        "What is recruitment?",
+                        "What is training?"
+                    ]
+                }
+            },
+
+            "Intermediate": {
+
+                "Employee Management": {
+
+                    "Employee Management": [
+                        "What is performance management?",
+                        "What is motivation?",
+                        "What is labour law?"
+                    ]
+                }
+            },
+
+            "Advanced": {
+
+                "Organizational Management": {
+
+                    "Organizational Management": [
+                        "What is organizational culture?",
+                        "What is employee engagement?",
+                        "What is conflict resolution?"
+                    ]
+                }
+            }
+        },
+
+        "Operations": {
+
+            "Basic": {
+
+                "Operations Foundations": {
+
+                    "Operations Management": [
+                        "What is operations?",
+                        "What is supply chain?",
+                        "What is production?"
+                    ]
+                }
+            },
+
+            "Intermediate": {
+
+                "Quality and Inventory Management": {
+
+                    "Quality Control": [
+                        "What is quality control?",
+                        "What is inventory?",
+                        "What is lean management?"
+                    ]
+                }
+            },
+
+            "Advanced": {
+
+                "Process Optimization": {
+
+                    "Process Optimization": [
+                        "What is Six Sigma?",
+                        "What is process optimization?",
+                        "What is logistics?"
+                    ]
+                }
+            }
+        },
+
+        "Entrepreneurship": {
+
+            "Basic": {
+
+                "Entrepreneurship Foundations": {
+
+                    "Entrepreneurship": [
+                        "What is entrepreneurship?",
+                        "What is a startup?",
+                        "What is a business idea?"
+                    ]
+                }
+            },
+
+            "Intermediate": {
+
+                "Business Planning": {
+
+                    "Business Planning": [
+                        "What is a business plan?",
+                        "What is funding?",
+                        "What is innovation?"
+                    ]
+                }
+            },
+
+            "Advanced": {
+
+                "Startup Growth": {
+
+                    "Startup Growth": [
+                        "What is venture capital?",
+                        "What is scaling?",
+                        "What is risk-taking?"
+                    ]
+                }
+            }
+        },
+
+        "Business Analytics": {
+
+            "Basic": {
+
+                "Data Analytics Foundations": {
+
+                    "Data Analytics": [
+                        "What is data?",
+                        "What is data analysis?",
+                        "What is Excel?"
+                    ]
+                }
+            },
+
+            "Intermediate": {
+
+                "Data Analysis Tools": {
+
+                    "Data Analysis Tools": [
+                        "What is SQL?",
+                        "What is a dashboard?",
+                        "What is a trend?"
+                    ]
+                }
+            },
+
+            "Advanced": {
+
+                "Predictive Analytics": {
+
+                    "Predictive Analytics": [
+                        "What is predictive analysis?",
+                        "What is data mining?",
+                        "What is KPI?"
+                    ]
+                }
+            }
+        },
+
+        "Leadership": {
+
+            "Basic": {
+
+                "Leadership Foundations": {
+
+                    "Leadership": [
+                        "What is leadership?",
+                        "What is a team?",
+                        "What is motivation?"
+                    ]
+                }
+            },
+
+            "Intermediate": {
+
+                "Team Management": {
+
+                    "Team Management": [
+                        "What are leadership styles?",
+                        "What is team building?",
+                        "What is communication?"
+                    ]
+                }
+            },
+
+            "Advanced": {
+
+                "Organizational Leadership": {
+
+                    "Organizational Behavior": [
+                        "What is organizational behavior?",
+                        "What is emotional intelligence?",
+                        "What is conflict management?"
+                    ]
+                }
+            }
+        },
+
+        "International Business": {
+
+            "Basic": {
+
+                "International Business Foundations": {
+
+                    "International Business": [
+                        "What is international business?",
+                        "What is export?",
+                        "What is import?"
+                    ]
+                }
+            },
+
+            "Intermediate": {
+
+                "Global Trade": {
+
+                    "Global Trade": [
+                        "What is global trade?",
+                        "What is forex?",
+                        "What is an MNC?"
+                    ]
+                }
+            },
+
+            "Advanced": {
+
+                "Global Business Strategy": {
+
+                    "Global Business Strategy": [
+                        "What is trade policy?",
+                        "What is globalization?",
+                        "What is a trade barrier?"
+                    ]
+                }
+            }
+        }
+
     },
     agri: {
 
-        "CropScience": {
+        "Crop Science": {
+
             "Basic": {
-                "Plant Anatomy": ["Root system types?", "Photosynthesis process?", "Leaf structure?", "Stems function?", "Flower parts?"],
-                "Crop Varieties": ["Kharif crops?", "Rabi crops?", "Zaid crops?", "Cereal examples?", "Pulse crops?"]
+
+                "Crop Science Foundations": {
+
+                    "Crop Production": [
+                        "What is crop production?",
+                        "What is a seed?",
+                        "What is agronomy?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Seed Tech": ["Seed germination?", "Dormancy causes?", "Seed treatment?", "Purity testing?", "Storage conditions?"],
-                "Agronomy": ["Tillage types?", "Nutrient management?", "Weed control?", "Crop rotation?", "Sowing depth?"]
+
+                "Crop Management": {
+
+                    "Plant Breeding": [
+                        "What is plant breeding?",
+                        "Why is plant breeding important?",
+                        "How does plant breeding improve crops?"
+                    ],
+
+                    "Irrigation": [
+                        "What is irrigation?",
+                        "Why is irrigation important for crops?",
+                        "How is water supplied to crops?"
+                    ],
+
+                    "Fertilizers": [
+                        "What is fertilizer?",
+                        "Why are fertilizers used?",
+                        "How do fertilizers help plant growth?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Plant Breeding": ["Hybridization tech?", "Mutation breeding?", "Genetic engineering?", "Tissue culture?", "MAS breeding?"],
-                "Precision Agri": ["GIS in farming?", "Variable rate tech?", "Yield mapping?", "Satellite imaging?", "Sensor technology?"]
+
+                "Advanced Crop Science": {
+
+                    "Hybrid Crops": [
+                        "What is a hybrid crop?",
+                        "Why are hybrid crops developed?",
+                        "What are the benefits of hybrid crops?"
+                    ],
+
+                    "Crop Rotation": [
+                        "What is crop rotation?",
+                        "Why is crop rotation important?",
+                        "How does crop rotation improve soil?"
+                    ],
+
+                    "Crop Yield": [
+                        "What is crop yield?",
+                        "How is crop yield measured?",
+                        "What factors affect crop yield?"
+                    ]
+                }
             }
         },
-        "SoilScience": {
+
+        "Soil Science": {
+
             "Basic": {
-                "Soil Basics": ["Soil components?", "Soil texture?", "Organic matter?", "Soil pH?", "Soil color?"],
-                "Soil Types": ["Alluvial soil?", "Black soil?", "Red soil?", "Laterite soil?", "Sandy soil?"]
+
+                "Soil Science Foundations": {
+
+                    "Soil": [
+                        "What is soil?",
+                        "Why is soil important for plants?",
+                        "What is soil made of?"
+                    ],
+
+                    "Soil Fertility": [
+                        "What is soil fertility?",
+                        "Why is soil fertility important?",
+                        "How can soil fertility be improved?"
+                    ],
+
+                    "Compost": [
+                        "What is compost?",
+                        "Why is compost used in agriculture?",
+                        "How does compost improve soil?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Fertility": ["Nitrogen cycle?", "Phosphorus role?", "Potassium benefits?", "Micro-nutrients?", "Fertilizer types?"],
-                "Conservation": ["Wind erosion?", "Water erosion?", "Mulching?", "Terrace farming?", "Cover crops?"]
+
+                "Soil Types and Conservation": {
+
+                    "Soil Types": [
+                        "What are soil types?",
+                        "What are the common types of soil?",
+                        "How do soil types differ?"
+                    ],
+
+                    "Soil Erosion": [
+                        "What is soil erosion?",
+                        "What causes soil erosion?",
+                        "How can soil erosion be prevented?"
+                    ],
+
+                    "Soil Conservation": [
+                        "What is soil conservation?",
+                        "Why is soil conservation important?",
+                        "How can soil be conserved?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Soil Chemistry": ["Cation exchange?", "Soil colloids?", "Clay mineralogy?", "Acidity causes?", "Salinity management?"],
-                "Microbiology": ["Rhizobium role?", "Mycorrhiza benefits?", "Soil enzymes?", "Nitrogen fixation?", "Decomposition?"]
+
+                "Advanced Soil Management": {
+
+                    "Soil Profile": [
+                        "What is a soil profile?",
+                        "What are the layers of soil?",
+                        "Why is a soil profile important?"
+                    ],
+
+                    "Soil pH": [
+                        "What is soil pH?",
+                        "What does soil acidity mean?",
+                        "Why is soil pH important for crops?"
+                    ],
+
+                    "Soil Management": [
+                        "What is soil management?",
+                        "Why is soil management important?",
+                        "How can soil health be maintained?"
+                    ]
+                }
             }
         },
+
         "Horticulture": {
+
             "Basic": {
-                "Classification": ["Fruit types?", "Vegetable categories?", "Ornamental plants?", "Climate zones?", "Growth habits?"],
-                "Propagation": ["Cutting methods?", "Layering tech?", "Grafting basics?", "Budding process?", "Seed sowing?"]
+
+                "Horticulture Foundations": {
+
+                    "Horticulture": [
+                        "What is horticulture?",
+                        "Why is horticulture important?",
+                        "What crops are grown in horticulture?"
+                    ],
+
+                    "Floriculture": [
+                        "What is floriculture?",
+                        "Why is floriculture important?",
+                        "What types of plants are grown in floriculture?"
+                    ],
+
+                    "Vegetables": [
+                        "What are vegetables?",
+                        "Which plant parts are commonly eaten as vegetables?",
+                        "Why are vegetables important?"
+                    ]
+                }
             },
+
             "Intermediate": {
-                "Fruit Production": ["Mango cultivation?", "Banana spacing?", "Citrus pruning?", "Grapes training?", "Pollination in fruits?"],
-                "Floriculture": ["Rose varieties?", "Jasmine cultivation?", "Greenhouse flowers?", "Flower harvesting?", "Vase life?"]
+
+                "Garden and Nursery Management": {
+
+                    "Landscaping": [
+                        "What is landscaping?",
+                        "Why is landscaping important?",
+                        "Where is landscaping used?"
+                    ],
+
+                    "Pruning": [
+                        "What is pruning?",
+                        "Why are plants pruned?",
+                        "How does pruning help plants?"
+                    ],
+
+                    "Nursery": [
+                        "What is a nursery?",
+                        "Why are nurseries important?",
+                        "What plants are commonly grown in nurseries?"
+                    ]
+                }
             },
+
             "Advanced": {
-                "Post Harvest": ["Cold storage?", "Ripening chambers?", "Packaging tech?", "Ethylene role?", "Preservation methods?"],
-                "Landscaping": ["Garden styles?", "Lawn making?", "Indoor plants?", "Bonsai tech?", "Xeriscaping?"]
-            }
-        },
-        "AnimalHusbandry": {
-            "Basic": {
-                "Breeds": ["Cattle breeds?", "Buffalo types?", "Sheep breeds?", "Goat varieties?", "Poultry types?"],
-                "Management": ["Feeding basics?", "Housing types?", "Watering?", "Sanitation?", "Grooming?"]
-            },
-            "Intermediate": {
-                "Dairy Farming": ["Milking methods?", "Milk composition?", "Pasteurization?", "Cream separation?", "Butter making?"],
-                "Poultry": ["Broiler management?", "Layer farming?", "Incubation?", "Egg quality?", "Poultry feed?"]
-            },
-            "Advanced": {
-                "Veterinary": ["Vaccination schedule?", "Common diseases?", "Parasite control?", "Artificial Insemination?", "Animal nutrition?"]
-            }
-        },
-        "AgriculturalEngineering": {
-            "Basic": {
-                "Hand Tools": ["Sickle use?", "Spade types?", "Plough basics?", "Harrow types?", "Leveller?"]
-            },
-            "Intermediate": {
-                "Farm Power": ["Tractor systems?", "Engine types?", "Power tiller?", "Combine harvester?", "Sprayer types?"],
-                "Irrigation Eng": ["Pump types?", "Drip design?", "Sprinkler tech?", "Canal design?", "Water flow?"]
-            },
-            "Advanced": {
-                "Farm Structures": ["Silo design?", "Greenhouse construction?", "Storage structures?", "Cold storage eng?", "Renewable energy?"]
-            }
-        },
-        "AgriculturalChemistry": {
-            "Basic": {
-                "Chemicals": ["Fertilizer basics?", "Manure types?", "Pesticide intro?", "Herbicide role?", "Bio-fertilizers?"]
-            },
-            "Intermediate": {
-                "Nutrients": ["Urea production?", "DAP components?", "Potash sources?", "Micro-nutrient mix?", "NPK ratios?"]
-            },
-            "Advanced": {
-                "Biochemistry": ["Plant hormones?", "Enzyme activity?", "Protein synthesis?", "Metabolism?", "Pesticide residue?"]
-            }
-        },
-        "Agribusiness": {
-            "Basic": {
-                "Markets": ["Local mandis?", "Market types?", "Price basics?", "Wholesale?", "Retail?"]
-            },
-            "Intermediate": {
-                "Management": ["Farm planning?", "Budgeting?", "Resource allocation?", "Risk management?", "Record keeping?"]
-            },
-            "Advanced": {
-                "Economics": ["Supply & Demand?", "Export-Import?", "Cooperative farming?", "Agri-insurance?", "Value chain?"]
-            }
-        },
-        "Entomology": {
-            "Basic": {
-                "Insects": ["Insects anatomy?", "Metamorphosis?", "Insect orders?", "Common pests?", "Beneficial insects?"]
-            },
-            "Intermediate": {
-                "Pest Control": ["Chemical control?", "Biological control?", "Physical control?", "Cultural methods?", "Traps?"]
-            },
-            "Advanced": {
-                "Toxicology": ["Insecticide mode?", "Resistance?", "IPM strategy?", "Bio-pesticides?", "Safe handling?"]
+
+                "Advanced Horticulture": {
+
+                    "Grafting": [
+                        "What is grafting?",
+                        "Why is grafting used?",
+                        "How does grafting help plants?"
+                    ],
+
+                    "Plant Propagation": [
+                        "What is plant propagation?",
+                        "What are the methods of plant propagation?",
+                        "Why is plant propagation important?"
+                    ],
+
+                    "Orchards": [
+                        "What is an orchard?",
+                        "What crops are grown in orchards?",
+                        "Why are orchards important?"
+                    ]
+                }
             }
         }
+
     }
 };

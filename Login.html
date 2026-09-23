@@ -7,7 +7,10 @@
   <title>Learning</title>
 
   <link rel="icon" href="./img/Rocket .jpeg">
-  <link rel="stylesheet" href="./css/Login.css">
+  <link rel="stylesheet" href="./assets/css/Login.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,92 +22,139 @@
 </head>
 
 <body>
-  <form class="form" id="login-form" action="#" onsubmit="return false;">
-    <div class="flex-column">
-      <label>Email</label>
-    </div>
-    <div class="inputForm">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20">
-        <g data-name="Layer 3" id="Layer_3">
-          <path
-            d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z">
-          </path>
-        </g>
-      </svg>
-      <input placeholder="Enter your Email" class="input" id="email" type="text" />
-    </div>
-    <small id="email-error" class="error-msg"></small>
+  <header class="bg-[#2724cede]">
+    <nav class="container mx-auto flex justify-between items-center py-3 px-4">
 
+      <div class='flex items-center'>
+        <img src="./assets/img/rocket.png" alt="brand-logo" class='w-[90px] mt-1' />
+        <h1 class="text-[27px]
+                           font-extrabold
+                           tracking-[-1px]
+                           text-white -ml-[17px] mt-1">
 
-    <div class="flex-column">
-      <label>Password </label>
-    </div>
-    <div class="inputForm">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="-64 0 512 512" height="20">
-        <path
-          d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0">
-        </path>
-        <path
-          d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0">
-        </path>
-      </svg>
-      <input placeholder="Enter your Password" class="input" id="password" type="password" />
-    </div>
-    <small id="password-error" class="error-msg"></small>
+          Study<span class="text-white">Pilot</span>
 
-
-    <div class="flex-row">
-      <div>
-        <input type="checkbox" id="remember" />
-        <label>Remember me </label>
+        </h1>
       </div>
-      <a href="reset-password.html" style="font-size: 12px; color: white; text-decoration: none;">Forgot Password?</a>
-    </div>
-    <button class="button-submit" id="sign-in">Sign In</button>
-    <p class="p">Don't have an account? <a href="sign-up.html" style="text-decoration: none;"><span class="span">Sign
-          Up</span></a></p>
-    <p class="p line">Or With</p>
+
+      <!-- Navigation -->
+      <div class='nav-link'>
+        <ul class='flex gap-8 text-white'>
+          <li><a href="index.html"
+              class='text-[16px] font-bold hover:border-b-2 border-[#eeedff] pb-2 cursor-pointer'>Home</a>
+          </li>
+          <li><a href="study-content.html"
+              class='text-[16px] font-bold hover:border-b-2 border-[#eeedff] pb-2 cursor-pointer'>Study</a>
+          </li>
+          <li><a href="Questions.html"
+              class='text-[16px] font-bold hover:border-b-2 border-[#eeedff] pb-2 cursor-pointer'>Practice</a>
+          </li>
+          <li><a href="#"
+              class='text-[16px] font-bold hover:border-b-2 border-[#eeedff] pb-2 cursor-pointer'>Project</a>
+          </li>
+          <li><a href="coming_page.html"
+              class='text-[16px] font-bold hover:border-b-2 border-[#eeedff] pb-2 cursor-pointer'>Interview</a>
+          </li>
+        </ul>
+      </div>
 
 
-    <!-- Social Buttons -->
-    <div class="social-row">
-      <button class="social-btn" id="google-btn" type="button">
-        <!-- Google SVG -->
-        <svg class="google-icon" viewBox="0 0 24 24">
-          <path fill="#4285F4"
-            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-          <path fill="#34A853"
-            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-          <path fill="#FBBC05"
-            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-          <path fill="#EA4335"
-            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+    </nav>
+
+
+
+  </header>
+  <main>
+
+    <form class="form" id="login-form" action="#" onsubmit="return false;">
+      <div class="flex-column">
+        <label>Email</label>
+      </div>
+      <div class="inputForm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 32 32" height="20">
+          <g data-name="Layer 3" id="Layer_3">
+            <path
+              d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z">
+            </path>
+          </g>
         </svg>
-        Google
-      </button>
-      <button class="social-btn" id="ms-btn">
-        <!-- Microsoft SVG -->
-        <svg class="google-icon" viewBox="0 0 24 24">
-          <rect x="1" y="1" width="10" height="10" fill="#F25022" />
-          <rect x="13" y="1" width="10" height="10" fill="#7FBA00" />
-          <rect x="1" y="13" width="10" height="10" fill="#00A4EF" />
-          <rect x="13" y="13" width="10" height="10" fill="#FFB900" />
+        <input placeholder="Enter your Email" class="input" id="email" type="text" />
+      </div>
+      <small id="email-error" class="error-msg"></small>
+
+
+      <div class="flex-column">
+        <label>Password </label>
+      </div>
+      <div class="inputForm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="-64 0 512 512" height="20">
+          <path
+            d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0">
+          </path>
+          <path
+            d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0">
+          </path>
         </svg>
-        Microsoft
-      </button>
+        <input placeholder="Enter your Password" class="input" id="password" type="password" />
+      </div>
+      <small id="password-error" class="error-msg"></small>
 
-    </div>
 
-  </form>
+      <div class="flex-row">
+        <div>
+          <input type="checkbox" id="remember" />
+          <label>Remember me </label>
+        </div>
+        <a href="reset-password.html" style="font-size: 12px; color: white; text-decoration: none;">Forgot Password?</a>
+      </div>
+      <button class="button-submit" id="sign-in">Sign In</button>
+      <p class="p">Don't have an account? <a href="sign-up.html" style="text-decoration: none;"><span class="span">Sign
+            Up</span></a></p>
+      <p class="p line">Or With</p>
+
+
+      <!-- Social Buttons -->
+      <div class="social-row">
+        <button class="social-btn" id="google-btn" type="button">
+          <!-- Google SVG -->
+          <svg class="google-icon" viewBox="0 0 24 24">
+            <path fill="#4285F4"
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+            <path fill="#34A853"
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+            <path fill="#FBBC05"
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+            <path fill="#EA4335"
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+          </svg>
+          Google
+        </button>
+        <button class="social-btn" id="ms-btn">
+          <!-- Microsoft SVG -->
+          <svg class="google-icon" viewBox="0 0 24 24">
+            <rect x="1" y="1" width="10" height="10" fill="#F25022" />
+            <rect x="13" y="1" width="10" height="10" fill="#7FBA00" />
+            <rect x="1" y="13" width="10" height="10" fill="#00A4EF" />
+            <rect x="13" y="13" width="10" height="10" fill="#FFB900" />
+          </svg>
+          Microsoft
+        </button>
+
+      </div>
+
+    </form>
+  </main>
+
+
   <script src="JS/login.js"></script>
-    <script type="module">
+  <script type="module">
     // 1. Ella tools-aiyum ORE ORE thadava import pannu
-      import {initializeApp} from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
-      import {getAnalytics} from "https://www.gstatic.com/firebasejs/12.13.0/firebase-analytics.js";
-      import {getAuth, signInWithPopup, GoogleAuthProvider, OAuthProvider} from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-analytics.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider, OAuthProvider } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
-      const firebaseConfig = {
-        apiKey: "AIzaSyD8cYD1SRj4DseGdWiJtv8k7XXVZp8GoiQ",
+    const firebaseConfig = {
+      apiKey: "AIzaSyD8cYD1SRj4DseGdWiJtv8k7XXVZp8GoiQ",
       authDomain: "study-pilot-d6fef.firebaseapp.com",
       projectId: "study-pilot-d6fef",
       storageBucket: "study-pilot-d6fef.firebasestorage.app",
@@ -113,22 +163,22 @@
       measurementId: "G-X7K93CRFX0"
     };
 
-      // 2. Initialize
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      const auth = getAuth(app); // Ithu ORE thadava thaan irukkanum
+    // 2. Initialize
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app); // Ithu ORE thadava thaan irukkanum
 
-      // 3. Providers
-      const googleProvider = new GoogleAuthProvider();
-      const msProvider = new OAuthProvider('microsoft.com');
+    // 3. Providers
+    const googleProvider = new GoogleAuthProvider();
+    const msProvider = new OAuthProvider('microsoft.com');
 
     // 4. Google Login Event
     document.getElementById("google-btn").addEventListener("click", async (event) => {
-        event.preventDefault();
+      event.preventDefault();
       try {
         const result = await signInWithPopup(auth, googleProvider);
-      console.log("Google Success:", result.user.displayName);
-        setTimeout(() => {window.location.href = "index.html"; }, 300);
+        console.log("Google Success:", result.user.displayName);
+        setTimeout(() => { window.location.href = "index.html"; }, 300);
       } catch (error) {
         console.error("Error:", error);
       }
@@ -136,11 +186,11 @@
 
     // 5. Microsoft Login Event
     document.getElementById("ms-btn").addEventListener("click", async (event) => {
-        event.preventDefault();
+      event.preventDefault();
       try {
         const result = await signInWithPopup(auth, msProvider);
-      console.log("Microsoft Success:", result.user.displayName);
-      window.location.href = "index.html";
+        console.log("Microsoft Success:", result.user.displayName);
+        window.location.href = "index.html";
       } catch (error) {
         console.error("Microsoft Error:", error);
       }

@@ -1,776 +1,290 @@
-body { 
-    background: linear-gradient(135deg, #1a1a6e 0%, #6c63ff 50%, #2d1b69 100%);
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+body{
+    font-family: 'Poppins',sans-serif;
 }
-
-/* From Uiverse.io by ArturCodeCraft */
-/* <reset-style> ============================ */
-button {
-    border: none;
-    background: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    font-family: inherit;
-}
-
-.nav {
-    display: flex;
-    gap: 15px;
-}
-
-h2 {
-    margin-top: 28px;
-    color: white;
-    margin-left: -3px;
-}
-
-/* ============================ */
-/* <style for bg> ======== */
-.background {
-    border-radius: 16px;
-    border: 1px solid #1a1a1a;
-    background: rgba(74, 74, 74, 0.39);
-    mix-blend-mode: luminosity;
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
-    backdrop-filter: blur(15px);
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 5px;
-}
-
-/* <style for menu__icon> ======== */
-.menu__icon {
-    width: 23px;
-    height: 20px;
-    padding: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    margin-left: -9px;
-    margin-top: -7px;
-}
-
-.menu__icon span {
-    width: 100%;
-    height: 0.125rem;
-    border-radius: 0.125rem;
-    background-color: rgb(0, 122, 255);
-    box-shadow: 0 .5px 2px 0 hsla(0, 0%, 0%, .2);
-    transition: transform .4s, background-color .4s, width .4s, opacity .4s;
-}
-
-.menu__icon span:nth-child(2) {
-    width: 60%;
-}
-
-.menu__icon:hover span:nth-child(1) {
-    transform: translateY(7.5px) rotate(-45deg);
-}
-
-.menu__icon:hover span:nth-child(2) {
-    width: 0;
-    opacity: 0;
-}
-
-.menu__icon:hover span:nth-child(3) {
-    background-color: rgb(255, 59, 48);
-    transform: translateY(-7.5px) rotate(45deg);
-}
-
-.menu {
-    position: fixed;
-    top: 0;
-    left: -330px;
-    /* Initial-ah screen-ku veliya (left side) irukum */
-    width: 280px;
-    height: 80%;
-    background: #3a34a1;
-    /* Darker purple for menu */
-    z-index: 1000;
-    transition: transform 0.4s ease-in-out;
-    /* Smooth slide animation */
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
-}
-
-.menu.open {
-    transform: translateX(280px);
-    /* Menu-va right side-la push pannum */
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    padding: 12px 20px;
-    border-radius: 8px;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.menu a:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* --- HERO/CONTENT PUSH LOGIC --- */
-.hero {
-    transition: transform 0.4s ease-in-out;
-    /* Content-um smooth-ah move aaganum */
-}
-
-/* Menu open-aagum pothu hero-vaiyum light-ah push pannuvom */
-.hero.push-content {
-    transform: translateX(20px);
-    /* Content light-ah right-la pogum */
-    opacity: 0.8;
-    /* Light-ah dim aagum */
-}
-
-.label-box {
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
-    min-height: auto;
-    height: auto;
-    width: max-content;
-    max-width: fit-content;
-    display: inline-flex;
-    align-items: center;
-    padding: 7px 14px;
-    text-align: center;
-    color: rgb(44, 5, 136);
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 0.85rem;
-    margin-top: 12px;
-}
-
-.hide {
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s;
-}
-
-/* ==========================================
-   📌 FIX: MAIN LAYOUT CONTAINER - EQUAL STRETCH
-   ========================================== */
-.main-container {
-    display: flex;
-    align-items: stretch; /* All 3 items stretch to match the exact same height */
-    height: calc(100vh - 120px); /* Responsive vertical box footprint spacing */
-    width: 100%;
-    overflow: hidden; /* Stops double body scrolling gaps */
-    padding: 10px 20px;
-    box-sizing: border-box;
-    gap: 5px; /* Clean tracking break space between side panels */
-}
-
-hr {
-    border: none;
-    height: 12px;
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
-    background: transparent;
-    box-shadow: 0 12px 18px -6px rgba(0, 0, 0, 0.7),
-                0 4px 6px -4px rgba(0, 0, 0, 0.9);
-    width: 100%;
-    pointer-events: none;
-    opacity: 0.85;
-}
-
-/* --- VERTICAL DIVIDERS --- */
-.vertical,
-.vertical2 {
-    width: 1px;
-    background: rgba(255, 255, 255, 0.15);
-    border: none;
-    height: 95%; /* Clean responsive center line margins */
-    align-self: center;
-}
-
-/* --- LEFT SIDEBAR (Topics) --- */
-.sidebar {
-    width: 20%;
-    padding: 20px 15px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
-.sidebar-header h3 {
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 15px;
-}
-
-/* --- CUSTOM SCROLLBAR GLOBAL STYLING --- */
-.sidebar::-webkit-scrollbar,
-.tools-sidebar::-webkit-scrollbar,
-.content-display::-webkit-scrollbar {
-    width: 6px; /* Slightly thinner look for precise layouts */
-}
-
-.sidebar::-webkit-scrollbar-track,
-.tools-sidebar::-webkit-scrollbar-track,
-.content-display::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
-}
-
-.sidebar::-webkit-scrollbar-thumb,
-.tools-sidebar::-webkit-scrollbar-thumb,
-.content-display::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Progress Bar Styling */
-.progress-container {
-    margin-bottom: 25px;
-}
-
-.progress-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-    color: white;
-}
-
-.progress-bar-bg {
-    width: 100%;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
-.progress-fill {
-    width: 0%;
-    height: 100%;
-    background: #4ade80;
-    border-radius: 10px;
-    transition: 0.5s ease;
-    box-shadow: 0 0 10px #4ade80;
-}
-
-/* Sidebar List Items */
-.category-title {
-    font-size: 0.75rem;
-    margin: 20px 0 10px;
-    font-weight: bold;
-}
-
-.topic-item {
-    padding: 10px 15px;
-    margin: 5px 0;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    transition: 0.3s;
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.topic-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
-}
-
-.topic-item input[type="checkbox"] {
-    accent-color: #4ade80;
-}
-
-/* --- MIDDLE SECTION (Questions) --- */
-.content-display {
-    width: 52%;
-    padding: 30px 35px !important;
-    overflow-y: auto;
-    color: white;
-    background: rgba(255, 255, 255, 0.02) !important;
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-sizing: border-box;
-}
-
-#current-topic-title {
-    color: #de804a;
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-}
-
-.separator {
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 25px;
-    width: 100%;
-}
-
-.question-item {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.05rem !important;
-    font-weight: 500;
-    color: #ffffff !important;
-    background: rgba(255, 255, 255, 0.04) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 16px 24px !important;
-    margin-bottom: 14px !important;
-    border-radius: 12px !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    box-sizing: border-box;
-}
-
-.question-item:hover {
-    background: rgba(255, 255, 255, 0.07) !important;
-    transform: translateX(4px);
-    border-color: rgba(255, 255, 255, 0.15) !important;
-}
-
-.question-item .q-number {
-    font-weight: 600 !important;
-    color: #ffffff !important;
-    font-size: 1.05rem;
-    user-select: none;
-}
-
-.question-item .q-text {
-    margin: 0 !important;
-    display: inline;
-    line-height: 1.5;
-    letter-spacing: 0.2px;
-}
-
-/* ==========================================
-   📌 FIX: RIGHT SIDEBAR (Tools Content Stretch Layout)
-   ========================================== */
-.tools-sidebar {
-    width: 28%;
-    padding: 0px 15px; /* Removed extra top spacing to match center area */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    /* Removed the hardcoded height that was causing layout breaks */
-    overflow-y: auto;
-    box-sizing: border-box;
-}
-
-.tools-sidebar::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-.tool-card {
-    background: rgba(0, 0, 0, 0.15);
-    padding: 13px;
-    border-radius: 15px;
-    border-top: 5px solid rgba(26, 1, 87, 0.993);
-}
-
-.tool-card h4 {
-    font-size: 0.85rem;
-    letter-spacing: 1.5px;
-    margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.timer-display {
-    font-size: 2rem;
-    text-align: center;
-    margin: 15px 0;
-    font-weight: 200;
-}
-
-/* Notes Card auto adjustments */
-.notes-card {
-    height: auto !important;
-    padding: 10px !important;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.timer-controls,
-.note-tools {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.note-tools {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 4px !important;
-    width: 100%;
-}
-
-.note-tools button {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 4px 2px !important;
-    border-radius: 5px;
-    font-size: 10px !important;
-    cursor: pointer;
-    transition: 0.3s;
-    text-align: center;
-    white-space: nowrap;
-    height: 38px;
-}
-
-.note-tools button:hover {
-    background: #4ade80;
-    color: #1a1a6e;
-    border-color: #4ade80;
-}
-
-#btn-back,
-#btn-next {
-    font-weight: bold;
-    background: rgba(108, 99, 255, 0.3);
-}
-
-.timer-controls button,
-.note-tools button {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-size: 0.75rem;
-    cursor: pointer;
-}
-
-.timer-controls button:hover {
-    background: white;
-    color: #4c44cf;
-}
-
-/* Textarea styling */
-textarea#topic-notes {
-    width: 100% !important;
-    height: 80px !important;
-    background: rgba(255, 255, 255, 0.95);
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    color: #333;
-    font-size: 0.85rem;
-    resize: none;
-    box-sizing: border-box;
-    margin-bottom: 8px;
-}
-
-/* Real checkbox-ah hide pannu */
-.custom-checkbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.custom-checkbox {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-/* Custom Checkbox Design (The Box) */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 18px;
-    width: 18px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-/* --- LEVEL HEADERS COLOR MATRIX --- */
 .level-header {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem !important;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    margin: 20px 0 10px;
-    padding-left: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
     text-transform: uppercase;
 }
 
+/* BASIC */
 .level-header.basic {
-    color: #10b981 !important;
+    background: #e8f8ee;
+    color: #16834b;
 }
 
+/* INTERMEDIATE */
 .level-header.intermediate {
-    color: #f59e0b !important;
+    background: #fff4df;
+    color: #c47a00;
 }
 
+/* ADVANCED */
 .level-header.advanced {
-    color: #f43f5e !important;
+    background: #ffe8e8;
+    color: #d93636;
 }
 
-/* --- DESIGN WRAPPER AND MODERN TICK BOX SYNC --- */
+/* Each topic row */
 .topic-link-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px 15px;
-    margin: 5px 0;
+    gap: 10px;
+
+    width: 100%;
+    min-height: 42px;
+
+    padding: 5px 8px;
+    box-sizing: border-box;
+
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+
+    transition: all 0.2s ease;
 }
 
-.topic-link-wrapper:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
-}
+/* Checkbox */
+.topic-checkbox {
+    width: 17px;
+    height: 17px;
 
-.topic-link-wrapper.active {
-    background: rgba(255, 255, 255, 0.15);
-    border-left: 3px solid #4ade80;
-}
+    margin: 0;
+    flex-shrink: 0;
 
-/* Custom Checkbox Design Target Selector overrides default layout box */
-input.topic-checkbox {
-    -webkit-appearance: none;
-    appearance: none;
-    position: relative;
-    width: 18px !important;
-    height: 18px !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    border: 2px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 5px !important;
     cursor: pointer;
-    display: grid;
-    place-content: center;
+    accent-color: #4f46c5;
+}
+
+/* Topic text */
+.sidebar-topic-btn {
+    flex: 1;
+
+    padding: 8px 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+/* Hover */
+.topic-link-wrapper:hover {
+    background: #f1efff;
+}
+
+.topic-link-wrapper:hover .sidebar-topic-btn {
+    color: #4f46c5;
+}
+
+/* Selected topic */
+.topic-link-wrapper.active {
+    background: #eeeaff;
+}
+
+.topic-link-wrapper.active .sidebar-topic-btn {
+    color: #4f46c5;
+    font-weight: 700;
+}
+
+#questions-container h3 {
+    background-color: #dad9dd67;
+    padding: 10px 15px;
+    border-left: 6px blue solid;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+#questions-container .question-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 5px;
+}
+
+#questions-container .question-item .q-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dedfff;
+    color: rgb(26, 26, 231);
+    font-weight: 700;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.select-selected {
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 16px;
+    color: #888;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     transition: all 0.3s ease;
-    margin: 0 !important;
+    font-size: 0.95rem;
 }
 
-input.topic-checkbox:hover {
-    border-color: #4ade80 !important;
+.select-selected.active,
+.select-selected:hover {
+    border-color: #a370f0;
+    box-shadow: 0 0 0 3px rgba(163, 112, 240, 0.3);
 }
 
-input.topic-checkbox:checked {
-    background-color: #4ade80 !important;
-    border-color: #4ade80 !important;
-    box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+.select-selected.has-value {
+    color: #1a1a2e;
 }
 
-input.topic-checkbox::after {
-    content: "";
+.arrow {
+    transition: transform 0.3s ease;
+    color: #a370f0;
+    font-size: 0.8rem;
+}
+
+.select-selected.active .arrow {
+    transform: rotate(180deg);
+}
+
+.select-options {
     position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: white;
+    border: 2px solid #a370f0;
+    border-radius: 12px;
+    overflow: hidden;
     display: none;
-    left: 4px;
-    top: 1px;
-    width: 4px;
-    height: 8px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+    z-index: 999;
+    box-shadow: 0 10px 40px rgba(163, 112, 240, 0.3);
+    animation: dropDown 0.2s ease;
 }
 
-input.topic-checkbox:checked::after {
+@keyframes dropDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.select-options.open {
     display: block;
 }
 
-.sidebar-topic-btn {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8) !important;
-    user-select: none;
-}
-
-.timer-card {
-    background: rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 20px !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.select-option {
+    padding: 12px 16px;
+    cursor: pointer;
+    color: #444;
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-/* Timer Input Group Container */
-.timer-inputs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    width: 100%;
-}
-
-/* Input + Label Group Alignment */
-.input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-/* Styled Number Inputs */
-.input-group input {
-    width: 55px !important;
-    height: 45px !important;
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1.5px solid rgba(74, 222, 128, 0.3) !important;
-    border-radius: 10px !important;
-    color: #4ade80 !important;
-    font-size: 1.3rem !important;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: #4ade80 !important;
-    box-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
-    background: rgba(0, 0, 0, 0.3) !important;
-}
-
-.input-group label {
-    font-size: 10px !important;
-    color: rgba(255, 255, 255, 0.4) !important;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-}
-
-/* Dots (:) Styling */
-.timer-inputs span {
-    color: #4ade80;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: -22px;
-}
-
-.input-group input::-webkit-outer-spin-button,
-.input-group input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Countdown Display Text */
-.timer-display {
-    font-size: 2.5rem !important;
-    font-weight: 200 !important;
-    color: white;
-    letter-spacing: 2px;
-    margin: 15px 0 !important;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-/* Timer Control Buttons */
-.timer-controls {
-    display: flex;
     gap: 10px;
-    width: 100%;
+    border-bottom: 1px solid #f5f5ff;
 }
 
-.timer-controls button {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.select-option:last-child {
+    border-bottom: none;
+}
+
+.select-option:hover {
+    background: #f0eeff;
+    color: #a370f0;
+    padding-left: 22px;
+}
+
+.select-option.selected {
+    background: #a370f0;
     color: white;
-    padding: 10px 5px;
-    border-radius: 8px;
-    font-size: 0.8rem;
+}
+
+.select-option.placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.opt-icon {
+    font-size: 1.1rem;
+}
+
+
+.cssbuttons-io-button {
+    background: #a370f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
     font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
     cursor: pointer;
-    transition: 0.3s all ease;
 }
 
-.btn-start:hover {
-    background: #4ade80 !important;
-    color: #1a1a6e !important;
-    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
 }
 
-.btn-pause:hover {
-    background: #ffcc00 !important;
-    color: #000 !important;
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
 }
 
-.btn-reset:hover {
-    background: #ff4d4d !important;
-    color: white !important;
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
 }
 
-.topic-list {
-    color: #000;
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
 }
 
-/* --- PREMIUM GLOWING PRACTICE BUTTON DESIGN --- */
-.practice-section {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.practice-btn {
-    width: 100%;
-    background: linear-gradient(135deg, #6c63ff 0%, #3a34a1 100%) !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    padding: 12px 18px !important;
-    border-radius: 10px !important;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.2);
-}
-
-.practice-btn:hover {
-    transform: translateY(-2px);
-    background: #4ade80 !important;
-    color: #1a1a6e !important;
-    border-color: #4ade80 !important;
-    box-shadow: 0 6px 20px rgba(74, 222, 128, 0.4);
-}
-
-.practice-btn:active {
-    transform: translateY(1px);
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
 }

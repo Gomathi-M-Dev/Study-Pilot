@@ -4,124 +4,739 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/question.css">
+    <title>StudyPilot - Practice Questions</title>
+    <link rel="stylesheet" href="./assets/css/question.css">
+    <link rel="stylesheet" href="./assets/css/study-content.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide {
+            display: none !important;
+        }
+    </style>
 </head>
 
-<body>
+<body class="min-h-screen bg-white text-[#11145c] font-sans 
+    overflow-x-hidden">
 
-    <nav class="navbar">
-        <div class="nav-logo"><span>✈️</span> StudyPilot</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="study.html">Study</a></li>
-            <li><a href="Practice.html">Practice</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="interview.html">Interview</a></li>
-        </ul>
+    <!-- ================= NAVBAR ================= -->
+
+    <nav
+        class="navbar flex items-center justify-between px-6 md:px-10 lg:px-14 py-4 bg-white/90 backdrop-blur-md border-b border-[#eeeefe] sticky top-0 z-50">
+
+        <div class='flex items-center'>
+            <img src="./assets/img/rocket.png" alt="brand-logo" class='w-[90px] mt-1' />
+            <h1 class="text-[27px]
+                           font-extrabold
+                           tracking-[-1px]
+                           text-[#172071] -ml-[17px] mt-2">
+
+                Study<span class="text-[#3d31d8]">Pilot</span>
+
+            </h1>
+        </div>
+
+        <!-- Navigation -->
+        <div class='nav-link'>
+            <ul class='flex gap-8 text-[#3d31d8]'>
+                <li><a href="index.html"
+                        class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Home</a>
+                </li>
+                <li><a href="study-content.html"
+                        class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Study</a>
+                </li>
+                <li><a href="Questions.html"
+                        class='px-5 py-2.5 rounded-full bg-[#eeedff] text-[#4035d4] text-sm font-semibold'>Practice</a>
+                </li>
+                <li><a href="#"
+                        class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Project</a>
+                </li>
+                <li><a href="coming_page.html"
+                        class='text-[16px] font-bold hover:border-b-2 border-[#3F20B9] pb-2 cursor-pointer'>Interview</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="breadcrumb">
-        <span>Practice</span><span class="sep">›</span>
-        <span id="breadcrumb-dept">-</span><span class="sep">›</span>
-        <span class="active" id="breadcrumb-topic">-</span>
+
+    <!-- ================= BREADCRUMB ================= -->
+    <div class="relative ">
+        <img src="./assets/img/study-page-banner.png" class="h-[350px]">
+        <div class="input-wrapper absolute top-[15%]  z-10 px-6 md:px-10 lg:px-14 py-4 ">
+            <span class="text-blue-800 text-md font-bold bg-blue-200 px-4 py-2 rounded-2xl"> <i
+                    class="fa-solid fa-book-open text-blue-800"></i>
+                Study Mode</span>
+            <h1 class="pt-4 text-3xl"><span class="text-black font-bold text-4xl">Study at Your Own
+                    Space</span></br><span class="text-blue-800 font-bold text-4xl">Build Your Skill</span>
+            </h1>
+            <p class="text-black pt-2">Choose a department, select a topic and start learning with</br>structured
+                content, timers and easy
+                navigation.
+            </p>
+            <div class="custom-select flex items-center gap-5 pt-5" id="deptSelect">
+                <div class="select-selected" id="selectBox">
+                    <span id="selectText" class="placeholder:text-purple-500 font-bold">Select Department</span>
+                    <span class="arrow ml-2">▼</span>
+                </div>
+
+                <div class="select-options" id="optionsList">
+                    <div class="select-option" data-value="cs"><span class="opt-icon">💻</span> CS/IT</div>
+                    <div class="select-option" data-value="science"><span class="opt-icon">🔬</span>Science
+                    </div>
+                    <div class="select-option" data-value="arts"><span class="opt-icon">🎨</span>Arts</div>
+                    <div class="select-option" data-value="maths"><span class="opt-icon">📐</span>Maths</div>
+                    <div class="select-option" data-value="engineer"><span class="opt-icon">📐</span>Engineer
+                    </div>
+                    <div class="select-option" data-value="commerce"><span class="opt-icon">💼</span>Commerce
+                    </div>
+                    <div class="select-option" data-value="law"><span class="opt-icon">📖</span>Law</div>
+                    <div class="select-option" data-value="MBA"><span class="opt-icon">🗣️</span>MBA</div>
+                    <div class="select-option" data-value="agri"><span class="opt-icon">📐</span>Agriculture
+                    </div>
+
+                </div>
+                <div class="btn">
+                    <button class="cssbuttons-io-button">
+                        Get started
+                        <div class="icon">
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+
+
+            </div>
+
+        </div>
     </div>
 
-    <div class="page-header">
-        <div class="topic-badge" id="topic-badge">📚 Topic</div>
-        <h1>Practice <span>Questions</span></h1>
-        <p id="topic-desc">Test your knowledge</p>
+    <div class="breadcrumb flex items-center gap-2 lg:mt-1 px-6 md:px-10 lg:px-14 pt-5 text-sm text-[#8588ad]">
+
+        <span>Practice</span>
+
+        <span class="sep text-[#c4c5dc]">›</span>
+
+        <span id="breadcrumb-dept">-</span>
+
+        <span class="sep text-[#c4c5dc]">›</span>
+
+        <span class="active text-[#30318a] font-semibold" id="breadcrumb-topic">
+            -
+        </span>
+
     </div>
 
-    <div class="stats-bar">
-        <div class="stat">
-            <div class="stat-number" id="total-count">0</div>
-            <div class="stat-label">Total</div>
+
+    <!-- ================= HERO ================= -->
+
+    <div class="page-header relative text-center px-5 pt-12 pb-10 overflow-hidden">
+
+
+        <!-- Topic Badge -->
+        <div class="topic-badge relative inline-flex items-center gap-2 bg-[#eeedff] border border-[#dcd9ff] text-[#4035d4] px-5 py-2 rounded-full text-sm font-semibold shadow-sm mb-5"
+            id="topic-badge">
+            📚 Topic
         </div>
-        <div class="stat">
-            <div class="stat-number" id="easy-count" style="color:#43e97b;">0</div>
-            <div class="stat-label">Easy</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number" id="medium-count" style="color:#ffe259;">0</div>
-            <div class="stat-label">Medium</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number" id="hard-count" style="color:#ff6584;">0</div>
-            <div class="stat-label">Hard</div>
-        </div>
+
+        <!-- Heading -->
+        <h1 class="relative text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#11145c] mb-3">
+
+            Practice
+
+            <span class="bg-gradient-to-r from-[#4035d4] to-[#685ce8] bg-clip-text text-transparent">
+                Questions
+            </span>
+
+        </h1>
+
+        <p class="relative text-base md:text-lg text-[#686b98]" id="topic-desc">
+            Test your knowledge
+        </p>
+
     </div>
 
-    <div class="filter-tabs">
-        <button class="tab active" data-filter="all">All</button>
-        <button class="tab" data-filter="Easy">Easy</button>
-        <button class="tab" data-filter="Medium">Medium</button>
-        <button class="tab" data-filter="Hard">Hard</button>
+
+    <!-- ================= STATS ================= -->
+
+    <div class="stats-bar flex justify-center items-center gap-4 md:gap-5 flex-wrap px-5 mb-10">
+
+        <!-- Total -->
+        <div
+            class="stat w-32 md:w-36 text-center bg-white border border-[#e5e5f6] rounded-2xl px-5 py-5 shadow-[0_10px_30px_rgba(67,60,180,0.08)] hover:-translate-y-1 transition">
+
+            <div class="stat-number text-2xl font-extrabold text-[#3033a2]" id="total-count">
+                0
+            </div>
+
+            <div class="stat-label text-xs font-medium text-[#77799e] mt-1">
+                Total
+            </div>
+
+        </div>
+
+
+        <!-- Easy -->
+        <div
+            class="stat w-32 md:w-36 text-center bg-white border border-[#e5e5f6] rounded-2xl px-5 py-5 shadow-[0_10px_30px_rgba(67,60,180,0.08)] hover:-translate-y-1 transition">
+
+            <div class="stat-number text-2xl font-extrabold text-[#20b86a]" id="easy-count">
+                0
+            </div>
+
+            <div class="stat-label text-xs font-medium text-[#77799e] mt-1">
+                Easy
+            </div>
+
+        </div>
+
+
+        <!-- Medium -->
+        <div
+            class="stat w-32 md:w-36 text-center bg-white border border-[#e5e5f6] rounded-2xl px-5 py-5 shadow-[0_10px_30px_rgba(67,60,180,0.08)] hover:-translate-y-1 transition">
+
+            <div class="stat-number text-2xl font-extrabold text-[#e7ad18]" id="medium-count">
+                0
+            </div>
+
+            <div class="stat-label text-xs font-medium text-[#77799e] mt-1">
+                Medium
+            </div>
+
+        </div>
+
+
+        <!-- Hard -->
+        <div
+            class="stat w-32 md:w-36 text-center bg-white border border-[#e5e5f6] rounded-2xl px-5 py-5 shadow-[0_10px_30px_rgba(67,60,180,0.08)] hover:-translate-y-1 transition">
+
+            <div class="stat-number text-2xl font-extrabold text-[#ef5d79]" id="hard-count">
+                0
+            </div>
+
+            <div class="stat-label text-xs font-medium text-[#77799e] mt-1">
+                Hard
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="questions-wrapper" id="questions-container">
-        <div class="loading">⏳ Loading questions...</div>
+
+    <!-- ================= FILTER ================= -->
+    <div class="filter-tabs flex justify-center items-center gap-3 flex-wrap px-5 mb-9">
+
+        <button
+            class="tab active px-6 py-2.5 rounded-full border border-[#d2d0ef] bg-white text-[#5558a0] text-sm font-semibold transition hover:-translate-y-0.5"
+            data-filter="all">
+            All
+        </button>
+
+        <button
+            class="tab px-6 py-2.5 rounded-full border border-[#d2d0ef] bg-white text-[#5558a0] text-sm font-semibold transition hover:-translate-y-0.5"
+            data-filter="Easy">
+            Easy
+        </button>
+
+        <button
+            class="tab px-6 py-2.5 rounded-full border border-[#d2d0ef] bg-white text-[#5558a0] text-sm font-semibold transition hover:-translate-y-0.5"
+            data-filter="Medium">
+            Medium
+        </button>
+
+        <button
+            class="tab px-6 py-2.5 rounded-full border border-[#d2d0ef] bg-white text-[#5558a0] text-sm font-semibold transition hover:-translate-y-0.5"
+            data-filter="Hard">
+            Hard
+        </button>
+
     </div>
+    <!-- All → initial active -->
+    <!-- ================= QUESTIONS ================= -->
+
+    <div class="questions-wrapper mx-auto w-full max-w-[1050px] px-5 flex flex-col gap-5
+
+        [&_.question-card]:relative
+        [&_.question-card]:overflow-hidden
+        [&_.question-card]:bg-white
+        [&_.question-card]:border
+        [&_.question-card]:border-[#dedff2]
+        [&_.question-card]:rounded-2xl
+        [&_.question-card]:p-6
+        [&_.question-card]:shadow-[0_10px_30px_rgba(50,45,150,0.07)]
+        [&_.question-card]:transition-all
+        [&_.question-card:hover]:-translate-y-0.5
+        [&_.question-card:hover]:shadow-[0_15px_35px_rgba(50,45,150,0.11)]
+
+        [&_.question-top]:flex
+        [&_.question-top]:items-start
+        [&_.question-top]:justify-between
+        [&_.question-top]:gap-4
+        [&_.question-top]:mb-5
+
+        [&_.question-number]:text-xs
+        [&_.question-number]:font-bold
+        [&_.question-number]:text-[#7c7fa8]
+        [&_.question-number]:whitespace-nowrap
+
+        [&_.question-text]:flex-1
+        [&_.question-text]:text-base
+        [&_.question-text]:font-semibold
+        [&_.question-text]:text-[#15175e]
+        [&_.question-text]:leading-relaxed
+
+        [&_.diff-badge]:px-3
+        [&_.diff-badge]:py-1
+        [&_.diff-badge]:rounded-full
+        [&_.diff-badge]:text-xs
+        [&_.diff-badge]:font-semibold
+
+        [&_.options-grid]:grid
+        [&_.options-grid]:grid-cols-1
+        md:[&_.options-grid]:grid-cols-2
+        [&_.options-grid]:gap-3
+
+        [&_.option]:flex
+        [&_.option]:items-center
+        [&_.option]:gap-3
+        [&_.option]:p-3
+        [&_.option]:rounded-xl
+        [&_.option]:border
+        [&_.option]:border-[#dedff2]
+        [&_.option]:bg-[#fbfbff]
+        [&_.option]:text-[#55598b]
+        [&_.option]:text-sm
+        [&_.option]:cursor-pointer
+        [&_.option]:transition-all
+        [&_.option:hover]:border-[#aaa5ee]
+        [&_.option:hover]:bg-[#f4f3ff]
+        [&_.option:hover]:text-[#33358c]
+
+        [&_.option-label]:w-8
+        [&_.option-label]:h-8
+        [&_.option-label]:min-w-8
+        [&_.option-label]:rounded-full
+        [&_.option-label]:bg-[#e9e8ff]
+        [&_.option-label]:text-[#4136d5]
+        [&_.option-label]:flex
+        [&_.option-label]:items-center
+        [&_.option-label]:justify-center
+        [&_.option-label]:font-bold
+        [&_.option-label]:text-xs
+
+        [&_.answer-reveal]:mt-3
+        [&_.answer-reveal]:p-3
+        [&_.answer-reveal]:rounded-xl
+        [&_.answer-reveal]:bg-[#effcf5]
+        [&_.answer-reveal]:border
+        [&_.answer-reveal]:border-[#bcefd2]
+        [&_.answer-reveal]:text-[#20a861]
+        [&_.answer-reveal]:text-sm
+
+        [&_.question-footer]:flex
+        [&_.question-footer]:items-center
+        [&_.question-footer]:justify-between
+        [&_.question-footer]:mt-5
+        [&_.question-footer]:pt-4
+        [&_.question-footer]:border-t
+        [&_.question-footer]:border-[#eeeeF8]
+
+        [&_.topic-tag]:text-xs
+        [&_.topic-tag]:text-[#8588aa]
+
+        [&_.loading]:text-center
+        [&_.loading]:text-[#77799e]
+        [&_.loading]:py-10
+        [&_.loading]:text-sm" id="questions-container">
+
+        <div class="loading">
+            ⏳ Loading questions...
+        </div>
+
+    </div>
+
+
+    <!-- Existing container - ID/class unchanged -->
     <div id="questions-container" class="layout-panel-grid">
     </div>
 
-    <div class="action-footer-row">
+
+    <!-- ================= ACTION FOOTER ================= -->
+
+    <div class="action-footer-row flex justify-center mt-8">
+
         <button id="complete-assessment-trigger-btn" onclick="evaluateAssessmentAnswers()"
-            class="assessment-trigger-btn" style="display: none;">Complete Assessment</button>
-    </div>
+            class="assessment-trigger-btn hidden px-7 py-3 rounded-full bg-[#4b3ee3] text-white font-semibold shadow-lg shadow-[#4b3ee3]/20 hover:bg-[#392fc8] transition"
+            style="display: none;">
+            Complete Assessment
+        </button>
+
     </div>
 
-    <div id="assessment-score-overlay" class="assessment-blur-screen-overlay hide">
-        <div class="gauge-dynamic-presentation-box" style="position: relative;">
 
-            <svg class="gauge-vector-canvas" viewBox="0 0 200 120">
+    <!-- ================================================= -->
+    <!-- SCORE OVERLAY -->
+    <!-- ================================================= -->
+
+    <div id="assessment-score-overlay"
+        class="assessment-blur-screen-overlay hide fixed inset-0 z-[9999999] bg-[#15143d]/70 backdrop-blur-md flex flex-col items-center justify-center opacity-100 transition-all duration-500">
+
+
+        <!-- Gauge Box -->
+
+        <div class="gauge-dynamic-presentation-box relative w-[520px] max-w-[90vw] h-[360px] flex justify-center">
+
+            <svg class="gauge-vector-canvas w-full h-auto" viewBox="0 0 200 120">
+
                 <path class="gauge-track-line" d="M 25 110 A 75 75 0 0 1 175 110" fill="none"
-                    stroke="rgba(255, 255, 255, 0.05)" stroke-width="10" stroke-linecap="round" />
+                    stroke="rgba(255,255,255,0.08)" stroke-width="10" stroke-linecap="round" />
+
                 <path id="gauge-progress" class="gauge-dynamic-fill" d="M 25 110 A 75 75 0 0 1 175 110" fill="none"
-                    stroke="url(#reference-speed-gradient)" stroke-width="10" stroke-linecap="round" />
+                    stroke="url(#reference-speed-gradient)" stroke-width="10" stroke-linecap="round"
+                    style="stroke-dasharray:240; stroke-dashoffset:240; transition:stroke-dashoffset 2.5s cubic-bezier(0.1,0.8,0.24,1);" />
+
                 <defs>
+
                     <linearGradient id="reference-speed-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+
                         <stop offset="0%" stop-color="#ff6b81" />
+
                         <stop offset="50%" stop-color="#ffa502" />
+
                         <stop offset="100%" stop-color="#2ed573" />
+
                     </linearGradient>
+
                 </defs>
+
             </svg>
 
-            <div class="gauge-numerical-core">
-                <span id="score-percentage-text" class="minimal-score-val">0%</span>
-                <span class="minimal-score-tag">SCORE</span>
+
+            <!-- Score -->
+
+            <div class="gauge-numerical-core absolute bottom-[24%] left-1/2 -translate-x-1/2 text-center">
+
+                <span id="score-percentage-text"
+                    class="minimal-score-val block text-[5rem] font-extrabold leading-none text-[#f7d070] drop-shadow-[0_5px_25px_rgba(247,208,112,0.3)]">
+                    0%
+                </span>
+
+                <span class="minimal-score-tag inline-block mt-2 text-sm tracking-[3px] font-bold text-white/40">
+                    SCORE
+                </span>
+
             </div>
 
-            <div id="gauge-rotator-group" class="gauge-rotator-harness">
-                <div class="indicator-pointer-node"></div>
-            </div>
 
-            <div class="avatar-illustration-container"
-                style="position: absolute !important; transform: rotate(0deg) !important; animation: none !important;">
-                <div id="avatar-speech-bubble" class="speech-bubble-popup" style="transform: rotate(0deg) !important;">
-                    Keep going! 💪</div>
+            <!-- Pointer -->
 
-                <div id="avatar-render-graphics" class="avatar-dynamic-graphic-box class-high-zone"
-                    style="transform: rotate(0deg) !important;">
-                    <div class="character-hair"></div>
-                    <div class="character-face">
-                        <div class="char-eye left"></div>
-                        <div class="char-eye right"></div>
-                        <div class="char-mouth"></div>
-                    </div>
-                    <div class="character-suit-body"></div>
+            <div id="gauge-rotator-group"
+                class="gauge-rotator-harness absolute inset-0 w-full h-full origin-[50%_74.5%] rotate-[-90deg] transition-transform duration-[2500ms] ease-out">
+
+                <div
+                    class="indicator-pointer-node absolute w-[14px] h-[14px] border-[3px] border-white bg-transparent rounded-full left-[calc(50%-10px)] bottom-[23%] shadow-[0_0_12px_white] z-[100]">
                 </div>
+
+            </div>
+
+
+            <!-- Avatar -->
+
+            <div class="avatar-illustration-container absolute w-[95px] h-[115px] right-[4%] bottom-[11%]">
+
+                <div id="avatar-speech-bubble"
+                    class="speech-bubble-popup absolute -top-6 left-1/2 -translate-x-1/2 w-[140px] bg-white text-[#111125] text-sm font-bold px-3 py-2 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.4)] text-center whitespace-nowrap z-[200]">
+
+                    Keep going! 💪
+
+                </div>
+
+
+                <div id="avatar-render-graphics"
+                    class="avatar-dynamic-graphic-box class-high-zone relative w-full h-full overflow-hidden">
+
+                    <div
+                        class="character-hair absolute w-[52px] h-[35px] bg-[#f1c40f] rounded-[25px_25px_5px_5px] top-[15px] left-[calc(50%-26px)] z-[4]">
+                    </div>
+
+                    <div
+                        class="character-face absolute w-[44px] h-[44px] bg-[#ffd0a1] rounded-full top-[25px] left-[calc(50%-22px)] z-[5]">
+
+                        <div class="char-eye left absolute w-1 h-1 bg-[#222] rounded-full top-4 left-3">
+                        </div>
+
+                        <div class="char-eye right absolute w-1 h-1 bg-[#222] rounded-full top-4 right-3">
+                        </div>
+
+                        <div
+                            class="char-mouth absolute w-[14px] h-[6px] border-b-2 border-[#222] rounded-full bottom-3 left-[calc(50%-7px)]">
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="character-suit-body absolute w-[66px] h-[50px] bg-[#4b4b75] rounded-[20px_20px_0_0] bottom-0 left-[calc(50%-33px)] z-[3]">
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
-        <div class="minimal-banner-row">
-            <button id="score-status-banner-btn" onclick="location.reload()" class="minimal-status-btn-badge">👍 Good
-                Work!</button>
+
+        <!-- ================= SCORE BUTTON ================= -->
+
+        <div class="minimal-banner-row mt-10 z-50">
+
+            <button id="score-status-banner-btn" onclick="location.reload()"
+                class="minimal-status-btn-badge bg-white text-[#4035d4] font-sans text-base font-bold px-10 py-3 rounded-full border border-[#e5e3ff] cursor-pointer tracking-wide shadow-[0_8px_25px_rgba(0,0,0,0.15)] transition-all hover:-translate-y-1 hover:bg-[#f3f1ff]">
+
+                👍 Good Work!
+
+            </button>
+
         </div>
+
     </div>
-    <script src="./JS/Question.js"></script>
+    <footer class="bg-[#2724cede] mt-10 text-white">
+        <div class="container mx-auto px-6 py-12">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-10">
+
+                <div class='col-span-2'>
+                    <div class="flex items-center mb-4">
+                        <div class="w-[48px] h-[48px]
+                           rounded-[14px]
+                           bg-[#eef0ff]
+                           flex items-center justify-center
+                           text-[#3429d9]
+                           text-[24px]">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-send preview-icon">
+                                <path
+                                    d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                                <path d="m21.854 2.147-10.94 10.939" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-semibold ml-2">StudyPilot</h2>
+                    </div>
+
+                    <p class="text-white text-sm leading-6 max-w-[260px] text-start">
+                        Your all-in-one platform to learn, practice, build and grow.
+                        Let's build the future together.
+                    </p>
+
+                    <div class="flex items-center gap-3 mt-5 text-[#2724ce] ">
+                        <a
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white transition">
+                            f
+                        </a>
+
+                        <a
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white  transition">
+                            𝕏
+                        </a>
+
+                        <a
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white  transition">
+                            in
+                        </a>
+
+                        <a
+                            class="w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-[#3F20B9] hover:text-white  transition">
+                            ◎
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="uppercase text-white font-semibold text-sm tracking-wider mb-4 text-start">
+                        Pages
+                    </h4>
+
+                    <ul class="space-y-3 text-sm text-white/70 text-start">
+                        <li>
+                            <a class="hover:text-white transition text-white">Home</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Study</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Practice</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Projects</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Interview</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="uppercase text-white font-semibold text-sm tracking-wider mb-4 text-start">
+                        Resources
+                    </h4>
+
+                    <ul class="space-y-3 text-sm text-white/70 text-start">
+                        <li>
+                            <a class="hover:text-white transition text-white">Tutorials</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Practice Questions</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Project Guides</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">Career Tips</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-white transition text-white">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="uppercase text-white font-semibold text-sm tracking-wider mb-4 text-start">
+                        Get in Touch
+                    </h4>
+
+                    <p class="text-white text-sm leading-6 mb-4 text-start">
+                        Have questions or need help?
+                        We're here for you.
+                    </p>
+
+                    <div class="space-y-3 text-sm text-white">
+                        <p class="flex items-center gap-2">
+                            ✉
+                            support@studypilot.com
+                        </p>
+
+                        <p class="flex items-center gap-2">
+                            ☎
+                            +91 12345 67890
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10"></div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-5 text-sm text-white">
+
+                <p>
+                    © 2026 StudyPilot. All rights reserved.
+                </p>
+
+                <div class="flex gap-5">
+                    <a class="hover:text-white transition">
+                        Privacy Policy
+                    </a>
+
+                    <a class="hover:text-white transition">
+                        Terms and Conditions
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="./assets/JS/Question.js"></script>
+    <script>
+        const selectBox = document.getElementById('selectBox');
+        const selectText = document.getElementById('selectText');
+        const optionsList = document.getElementById('optionsList');
+
+        selectBox.addEventListener('click', () => {
+            selectBox.classList.toggle('active');
+            optionsList.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.select-option').forEach(option => {
+            option.addEventListener('click', function () {
+                const value = this.dataset.value;
+                if (!value) return;
+
+                selectText.textContent = this.textContent.trim();
+                selectBox.classList.add('has-value');
+
+                document.querySelectorAll('.select-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+
+                selectBox.classList.remove('active');
+                optionsList.classList.remove('open');
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('deptSelect').contains(e.target)) {
+                selectBox.classList.remove('active');
+                optionsList.classList.remove('open');
+            }
+        });
+        let selectedDept = "";
+
+        document.querySelectorAll('.select-option').forEach(option => {
+            option.addEventListener('click', function () {
+                selectedDept = this.dataset.value;
+            });
+        });
+
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('deptSelect').contains(e.target)) {
+                selectBox.classList.remove('active');
+                optionsList.classList.remove('open');
+            }
+        });
+        const deptStartBtn = document.querySelector('.cssbuttons-io-button');
+
+        deptStartBtn.addEventListener('click', () => {
+
+            if (!selectedDept) {
+                alert("Select any Department");
+                return;
+            }
+
+            localStorage.setItem("dept", selectedDept);
+            localStorage.setItem("mode", "study");
+
+            window.location.href = `${selectedDept}.html`;
+
+        });
+    </script>
+
+
 
 </body>
 

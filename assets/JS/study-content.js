@@ -2,38 +2,7 @@ const menuIcon = document.getElementById("menu_icon");
 const iconWrapper = document.getElementById("background");
 const menuText = document.getElementById("menuText");
 const menu = document.getElementById("menu");
-const heroContent = document.querySelector(".hero"); // Hero section element
-
-// OPEN MENU
-menuIcon.addEventListener("click", function (e) {
-    e.stopPropagation();
-    menu.classList.add("open"); // Left-to-Right smooth-ah varum
-    heroContent.classList.add("push-content"); // Content right-la move aagum
-
-    iconWrapper.classList.add("hide");
-    menuText.classList.add("hide");
-});
-
-// CLOSE MENU (When clicking menu items)
-menu.addEventListener("click", function (e) {
-    e.stopPropagation();
-    closeMenu();
-});
-
-// CLOSE MENU (Outside click)
-document.addEventListener("click", function () {
-    closeMenu();
-});
-
-// Common function to close
-function closeMenu() {
-    menu.classList.remove("open"); // Right-to-Left smooth-ah pogum
-    heroContent.classList.remove("push-content"); // Content normal-ah maarum
-
-    iconWrapper.classList.remove("hide");
-    menuText.classList.remove("hide");
-}
-
+const heroContent = document.querySelector(".hero"); 
 document.addEventListener("DOMContentLoaded", function () {
     const topicList = document.getElementById("topic-list");
     const container = document.getElementById("questions-container");
@@ -88,20 +57,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    function displayQuestions(subName, questionsArray) {
+    function displayQuestions(subName, questionsData) {
         document.getElementById('empty-view').style.display = 'none';
         document.getElementById('topic-real-content').style.display = 'block';
+
         container.innerHTML = "";
         title.innerText = subName;
 
-        questionsArray.forEach((q, index) => {
-            const div = document.createElement('div');
-            div.className = 'question-item';
-            div.innerHTML = `
+        Object.keys(questionsData).forEach((topicName) => {
+
+            const topicHeading = document.createElement('h3');
+            topicHeading.innerText = topicName;
+            container.appendChild(topicHeading);
+
+            questionsData[topicName].forEach((q, index) => {
+
+                const div = document.createElement('div');
+                div.className = 'question-item';
+
+                div.innerHTML = `
                 <span class="q-number">${index + 1}.</span>
                 <p class="q-text">${q}</p>
             `;
-            container.appendChild(div);
+
+                container.appendChild(div);
+            });
         });
     }
 });
@@ -365,7 +345,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (progressFillBar) {
             const fillWidthPercentage = (savedAttended / savedTotal) * 100;
             progressFillBar.style.width = `${fillWidthPercentage}%`;
-            
+
             // Full complete clean check glow styling
             if (savedAttended === savedTotal) {
                 progressFillBar.style.background = 'linear-gradient(90deg, #4ade80, #22c55e)';
@@ -381,7 +361,7 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         } else {
             topicCheckBoxes.forEach(box => {
-                box.checked = false; 
+                box.checked = false;
             });
         }
 
